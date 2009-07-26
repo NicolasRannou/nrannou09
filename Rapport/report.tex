@@ -1,0 +1,153 @@
+\documentclass[a4paper,11pt]{report}
+%
+%--------------------   start of the 'preamble'
+%
+\usepackage{graphicx,amssymb,amstext,amsmath}
+%
+%\usepackage{a4wide}
+%
+%\usepackage{geometry}
+%%    homebrew commands -- to save typing
+\newcommand\etc{\textsl{etc}}
+\newcommand\eg{\textsl{eg.}\ }
+\newcommand\etal{\textsl{et al.}}
+\newcommand\Quote[1]{\lq\textsl{#1}\rq}
+\newcommand\fr[2]{{\textstyle\frac{#1}{#2}}}
+\newcommand\miktex{\textsl{MikTeX}}
+\newcommand\comp{\textsl{The Companion}}
+\newcommand\nss{\textsl{Not so Short}}
+
+%
+%---------------------   end of the 'preamble'
+%
+\begin{document}
+%-----------------------------------------------------------
+%\title{Parameter space exploration and fast visualization tools for EM Segmentation and MRI Bias field correction in Slicer 3}
+%\author{Nicolas Rannou}
+%\fbox{Text in the box}
+%\maketitle
+
+
+\begin{titlepage}
+
+%\addtolength{\topmargin}{-3cm}
+%\addtolength{\textheight}{28cm}
+%\setlength{\textwidth}{19cm}
+%\setlength{\oddsidemargin}{-1cm}
+%\setlength{\footskip}{-3cm}
+%\addtolength{\textheight}{2cm}
+%\addtolength{\hoffset}{-1cm}
+%\addtolength{\textwidth}{2cm} 
+%\enlargethispage{2cm}
+\begin{center}
+%\vspace{4in}
+
+\begin{center}
+\begin{minipage}[c]{.55\textwidth}\centering
+\includegraphics[width=1\textwidth]{logo_ISEN.jpg}
+\begin{small}\textbf{Institut Supérieur de l'Electronique et du Numérique}\\Tel. : +33 (0)2.98.03.84.00\\Fax : +33 (0)2.98.03.84.10\\CS 42807 - 29228 BREST Cedex 2 - FRANCE\end{small}
+\end{minipage}
+\hfill\begin{minipage}[c]{0.3\textwidth} 
+\begin{center}\textbf{
+\begin{Huge}N5\end{Huge}
+\begin{normalsize}\\School Year 2008/2009\\Training Period\end{normalsize}}
+\end{center}
+
+\end{minipage}
+\end{center}
+
+\bigskip
+\bigskip
+\bigskip
+
+\hrule
+\bigskip
+\begin{minipage}{1\textwidth}
+\begin{center}\begin{LARGE} Parameter space exploration and tools for fast visualization in EM segmentation and MRI bias field correction in Slicer 3
+\end{LARGE}\end{center}
+\end{minipage}
+\bigskip
+\hrule
+
+\bigskip
+\bigskip
+\bigskip
+
+\begin{small}From April 6th to Septemner 11th \\ 
+At \\ 
+Surgical Planning Laboratory (SPL)
+\end{small}
+
+\includegraphics[width=.3\textwidth]{logo_spl.jpg}
+\begin{small}\\Brigham \& Women's Hospital\\
+ Harvard Medical School \\
+ 75 Francis St. \\
+ Boston, MA 02115\end{small}
+%\vskip 1in
+\end{center}
+
+\begin{flushleft}
+\begin{small}
+Supervisors:
+\begin{itemize}
+\item Ron KIKINIS, Surgical Planning Laboratory, Harvard Medical School, Boston, MA - USA
+\item Sylvain JAUME, CSAIL, Massachusset's Insitut of Technologies, Boston, MA - USA
+\end{itemize}
+Referring teachers:
+\begin{itemize}
+\item Dominique MARATRAY, Institut Superieur de l'Electronique et du Numerique, Brest - FRANCE
+\item Christine CAVARO-MENARD, Universite de Angers, Angers - FRANCE
+\end{itemize}
+Student:
+\begin{itemize}
+\item Nicolas RANNOU, Institut Superieur de l'Electronique et du Numerique, Brest
+\end{itemize}
+\end{small}
+\end{flushleft}
+
+\end{titlepage}
+%-----------------------------------------------------------
+\begin{abstract}\centering
+A couple of sentences on three or four lines to summarise your work.\\ 
+This is a \LaTeX\ template for undergraduate project reports.\\
+Its detailed contents evolve to reflect FAQs.\\
+Expectation-maximization is very popular for segmentation but it can be tricky to understand and to use.
+A full description of the EMS algorithm is done in this report.
+Different methods for fast parameters exploration are described.
+As part of the research, preprocessing methods like MRI bias field correction will be explained.
+The results obtained will be presented.
+Following the new workflow should allow the user to segment more datasets, more accurately.\\
+
+
+\bigskip
+
+\begin{center}\textbf{ Resume }\end{center}
+Quelques phrases pour resumer mon travail.\\ 
+C'est un template \LaTeX\ pour les rapport.\\
+Le contenu peut evoluer.
+
+\bigskip
+
+\end{abstract}
+
+%-----------------------------------------------------------
+\tableofcontents
+%-----------------------------------------------------------
+\listoffigures
+%-----------------------------------------------------------
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+%-----------------------------------------------------------
+\addcontentsline{toc}{chapter}{\numberline{}Bibliography}
+\include{biblio}
+%-----------------------------------------------------------
+\appendix
+\include{app4}
+\include{app1}
+\include{app2}
+\include{app5}
+\include{app3}
+%-----------------------------------------------------------
+\end{document}
