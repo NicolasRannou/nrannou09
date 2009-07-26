@@ -1,0 +1,362 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  23 JUL 2009 01:36
+entering extended mode
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (./report.aux
+(./chap1.aux) (./chap2.aux) (./chap3.aux) (./chap4.aux) (./biblio.aux)
+(./app4.aux) (./app1.aux) (./app2.aux) (./app5.aux) (./app3.aux))
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+
+<logo_ISEN.jpg, id=1, 554.7927pt x 327.1422pt>
+File: logo_ISEN.jpg Graphic file (type jpg)
+ <use logo_ISEN.jpg>
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no © in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no © in font cmbx10!
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+<logo_spl.jpg, id=2, 150.5625pt x 120.45pt>
+File: logo_spl.jpg Graphic file (type jpg)
+ <use logo_spl.jpg>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 93.
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo_ISEN.jpg> <./logo_s
+pl.jpg>] [2] [1]
+(./report.toc [1
+
+])
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [2] (./report.lof)
+\tf@lof=\write4
+\openout4 = `report.lof'.
+
+ [3
+
+]
+\openout2 = `chap1.aux'.
+
+ (./chap1.tex
+Chapter 1.
+[4
+
+
+]) [5]
+\openout2 = `chap2.aux'.
+
+ (./chap2.tex
+Chapter 2.
+[6
+
+
+
+] [7] [8]) [9]
+\openout2 = `chap3.aux'.
+
+ (./chap3.tex
+Chapter 3.
+[10
+
+
+
+] <pic1.jpg, id=63, 180.675pt x 103.70744pt>
+File: pic1.jpg Graphic file (type jpg)
+ <use pic1.jpg> [11 <./pic1.jpg>] <pic2.jpg, id=69, 481.8pt x 361.35pt>
+File: pic2.jpg Graphic file (type jpg)
+ <use pic2.jpg>
+<pic3.jpg, id=70, 481.8pt x 361.35pt>
+File: pic3.jpg Graphic file (type jpg)
+ <use pic3.jpg> [12 <./pic2.jpg> <./pic3.jpg>] <pic4.jpg, id=74, 481.8pt x 361.
+35pt>
+File: pic4.jpg Graphic file (type jpg)
+ <use pic4.jpg>
+<pic5.jpg, id=75, 481.8pt x 361.35pt>
+File: pic5.jpg Graphic file (type jpg)
+ <use pic5.jpg> [13 <./pic4.jpg> <./pic5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--212
+
+ []
+
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 195--215
+[]$[]$ 
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 217--226
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 291--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--322
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--326
+
+ []
+
+[16]) [17]
+\openout2 = `chap4.aux'.
+
+ (./chap4.tex
+Chapter 4.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+[18
+
+
+
+]) [19]
+\openout2 = `biblio.aux'.
+
+ (./biblio.tex [20
+
+
+
+]) [21]
+\openout2 = `app4.aux'.
+
+ (./app4.tex
+Appendix A.
+[22
+
+
+
+] [23]) [24]
+\openout2 = `app1.aux'.
+
+ (./app1.tex
+Appendix B.
+) [25
+
+
+
+]
+\openout2 = `app2.aux'.
+
+ (./app2.tex
+Appendix C.
+) [26
+
+
+
+]
+\openout2 = `app5.aux'.
+
+ (./app5.tex
+Appendix D.
+) [27
+
+
+
+]
+\openout2 = `app3.aux'.
+
+ (./app3.tex
+Appendix E.
+) [28
+
+
+
+] (./report.aux (./chap1.aux) (./chap2.aux) (./chap3.aux) (./chap4.aux)
+(./biblio.aux) (./app4.aux) (./app1.aux) (./app2.aux) (./app5.aux) (./app3.aux)
+) ) 
+Here is how much of TeX's memory you used:
+ 1715 strings out of 95086
+ 19215 string characters out of 1183255
+ 70491 words of memory out of 1500000
+ 4801 multiletter control sequences out of 10000+50000
+ 16919 words of font info for 64 fonts, out of 1200000 for 2000
+ 28 hyphenation exceptions out of 8191
+ 27i,12n,24p,785b,295s stack positions out of 5000i,500n,6000p,200000b,5000s
+</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texm
+f-texlive/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/typ
+e1/bluesky/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmex
+10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/
+texmf-texlive/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/
+type1/bluesky/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr
+10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/t
+exmf-texlive/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/bluesky/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr8.p
+fb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr9.pfb></usr/share/texmf-
+texlive/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share/texmf-texlive/fonts/type1
+/bluesky/cm/cmsl8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy10.p
+fb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy6.pfb></usr/share/texmf
+-texlive/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1
+/bluesky/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmti9.p
+fb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texm
+f-texlive/fonts/type1/bluesky/cm/cmtt9.pfb></usr/share/texmf-texlive/fonts/type
+1/bluesky/ams/msbm10.pfb>
+Output written on report.pdf (31 pages, 543250 bytes).
+PDF statistics:
+ 201 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

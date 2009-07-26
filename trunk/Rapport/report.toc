@@ -1,0 +1,52 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {1.1}Context and motivation}{4}
+\contentsline {section}{\numberline {1.2}Contents}{5}
+\contentsline {chapter}{\numberline {2}Expectation-maximization applied to brain segmentation}{6}
+\contentsline {section}{\numberline {2.1}Presentation of the EM segmentation}{6}
+\contentsline {section}{\numberline {2.2}Fundamentals}{7}
+\contentsline {subsection}{\numberline {2.2.1}Statistical model used for the brain}{7}
+\contentsline {subsection}{\numberline {2.2.2}Gaussian mixture model}{7}
+\contentsline {subsection}{\numberline {2.2.3}Maximum likelihood model}{7}
+\contentsline {section}{\numberline {2.3}Expectation maximization algorithm}{7}
+\contentsline {subsubsection}{Simplified algorithm}{8}
+\contentsline {subsubsection}{Expectation maximization algorithm}{8}
+\contentsline {section}{\numberline {2.4}Expectation maximization algorithm used in Slicer 3}{9}
+\contentsline {subsection}{\numberline {2.4.1}Spatial information}{9}
+\contentsline {subsection}{\numberline {2.4.2}Structure information}{9}
+\contentsline {subsection}{\numberline {2.4.3}Intensity inhomogeneities information}{9}
+\contentsline {subsubsection}{Discussion}{9}
+\contentsline {section}{\numberline {2.5}Nothing}{9}
+\contentsline {chapter}{\numberline {3}The contributions}{10}
+\contentsline {section}{\numberline {3.1}MRI Bias Field correction}{10}
+\contentsline {subsection}{\numberline {3.1.1}Interest}{10}
+\contentsline {subsection}{\numberline {3.1.2}Our approach}{10}
+\contentsline {subsection}{\numberline {3.1.3}Results}{11}
+\contentsline {section}{\numberline {3.2}Intensity Normalization}{12}
+\contentsline {subsection}{\numberline {3.2.1}Interest}{12}
+\contentsline {subsection}{\numberline {3.2.2}Our approach}{12}
+\contentsline {subsection}{\numberline {3.2.3}Our implementation}{12}
+\contentsline {section}{\numberline {3.3}Class Distribution visualization}{13}
+\contentsline {subsection}{\numberline {3.3.1}Interest}{14}
+\contentsline {subsection}{\numberline {3.3.2}Method used}{14}
+\contentsline {subsubsection}{Problem's description}{14}
+\contentsline {subsubsection}{Choices}{14}
+\contentsline {subsubsection}{Background creation}{14}
+\contentsline {subsubsection}{Ellipse representation}{15}
+\contentsline {subsection}{\numberline {3.3.3}Results}{15}
+\contentsline {section}{\numberline {3.4}Global Prior Estimation}{16}
+\contentsline {subsection}{\numberline {3.4.1}Presentation of the problem}{16}
+\contentsline {subsection}{\numberline {3.4.2}Our approach}{16}
+\contentsline {subsubsection}{Fast user feedback}{16}
+\contentsline {subsubsection}{Global priors evaluation}{16}
+\contentsline {subsection}{\numberline {3.4.3}Results and discussion}{17}
+\contentsline {chapter}{\numberline {4}Results and discussion}{18}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{19}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{20}
+\contentsline {chapter}{\numberline {A}About references}{22}
+\contentsline {section}{\numberline {A.1}Organisation}{22}
+\contentsline {section}{\numberline {A.2}Doing it}{23}
+\contentsline {chapter}{\numberline {B}Long proofs}{25}
+\contentsline {section}{\numberline {B.1}Proof of theorem 2.4\hbox {}}{25}
+\contentsline {chapter}{\numberline {C}Computer programs}{26}
+\contentsline {chapter}{\numberline {D}Using a PC}{27}
+\contentsline {chapter}{\numberline {E}Typography and grammar}{28}

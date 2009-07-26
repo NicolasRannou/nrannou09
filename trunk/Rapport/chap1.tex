@@ -1,0 +1,121 @@
+\chapter{Introduction}
+%The first chapter of a well-structured report is always an
+%introduction, setting the scene with motivation and context (as in
+%Sec.~\ref{context}) and then looking ahead to summarise what's in the
+%rest of the report (as in Sec.~\ref{intro:contents}). It's the
+%bit that readers look at first --- {\em so make sure it hooks them!}
+%
+%\section{Presentation of the laboratory}\label{intro}
+%%
+%\subsection{Harvard Medical School}
+%Harvard Medical School (HMS) is one of the graduate schools of Harvard University. It is currently ranked first among American medical schools by U.S. News and World Report.\\
+%%
+%\begin{figure}[!h] % Un peu plus impératif que le h
+%\begin{center}
+%\includegraphics[width=0.3\textwidth, scale=0.25]{Harvard_shield_Medical.jpg}                                                                                    
+%\end{center}
+%\caption{Harvard Medical School's shield}
+%\end{figure}
+%%
+%Located in the Longwood Medical Area of the Mission Hill neighborhood of Boston, Massachusetts, H.M.S. is home to more than 1200 students.\\
+%The school has a large and distinguished faculty to support its missions of education, research, and clinical care. These faculty hold appointments in the basic science departments on the HMS Quadrangle, and in the clinical departments located in multiple Harvard-affiliated hospitals and institutions in Boston. There are approximately 2,900 full- and part-time voting faculty members consisting of assistant, associate, and full professors, and over 5,000 full or part-time non-voting instructors.
+%%
+%\subsection{The Brigham \& Women's Hospital}
+%Recognized internationally for its excellence in patient care, its outstanding reputation in biomedical research, and its commitment to educating and training physicians, research scientists and other health care professionals, Brigham \& Women's Hospital (BWH) is a 777-bed teaching affiliate of Harvard Medical School located in the heart of Boston's renowned Longwood Medical Area. Along with its modern inpatient facilities, BWH boasts extensive outpatient services and clinics, neighborhood primary care health centers, state-of-the art diagnostic and treatment technologies and research laboratories.
+%%
+%\begin{figure}[!h] % Un peu plus impératif que le h
+%\begin{center}
+%\includegraphics[width=0.3\textwidth, scale=0.25]{brigham_and_womens.jpg}                                                                                    
+%\end{center}
+%\caption{BWH's shield}
+%\end{figure}
+%%
+%\subsection{The Surgical Planning Laboratory}
+%The  Surgical Planning Laboratory (SPL) is a research laboratory in the Department of Radiology of Brigham and Women's Hospital. The Core Mission of the SPL is the extraction of medically relevant information from diagnostic imaging data and to concepts of computation and image analysis to new field of biomedical research. The lab collaborates with groups within Brigham and Women's Hospital, with other researchers at the Harvard Medical School, with local universities such as Harvard and MIT, and with clinicians, researchers, and engineers throughout the world.
+%%
+%\begin{figure}[!h] % Un peu plus impératif que le h
+%\begin{center}
+%\includegraphics[width=0.3\textwidth, scale=0.25]{logo_spl.jpg}                                                                                    
+%\end{center}
+%\caption{SPL's shield}
+%\end{figure}
+%
+\section{Context and motivation}\label{intro:context}
+%My training...
+
+Nowadays, medical image processing is becoming a major field of research in most of the laboratories. Indeed, because of the increasing complexity of the data they have to deal with,  physicists need something to help. Help must be provided in many different ways. Before the surgery, to etablish a fast and accurate diagnosis. During the surgery to prevent the physicist from errors and to help him to proceed to more precise moves. After the surgery, to see if the surgery succeed, or to follow the pathology of a patent. Nevertheless, the informations bring to the physicist by the tool must be accurate, robust and provide a fast feedback.
+%
+\par
+%
+In the context of pre and post operation, plenty of work as already been done. Thus, there is still a lot of work to achieve. Regarding data storage and exchange, the increasing among of informations NOUS OBLIGE to find other and more approriate methods. Another interesting contribution is images segmentation. New methods have to be developped for a better diagnosis, or to detect new pathologies. A lot of methods appears like level-set segmentation, region growing or texture based segmentation. Each one is adapted for a specific problem like vessels segmentation, tumors detection or SDFSF lungs detection. Another remarquable contribution is the segmentation based on expectation maximization (EM), which is very well suited for brain segmentation. 
+%
+\par
+%
+In the MR images segmentation context, the Surgical Planning Laboratory (SPL), Harvard Medical School, has developped an EM algorithm to segment brain's MR images. The results obtained are very good until we segment small structures. The approach used for the intensity inhomogeinities estimation appears less efficient for the particuliar purpose of large structures segmentation WHY. Moreover, the implementation is not widely used so far, regarding the complexity of the segmentation process. In this report we will present an approach to enhance the segmentation for large structures, correctiong the intensity inhomogeinities in large structures and providing the end-user tools for an easier segmentation process.
+%
+%BUT -  So far, the expectation maximization segmentation (EMS) module not used by physicists.
+%Indeed, the results are highly dependents on chosen parameters and some parameters estimation may be hard to do.
+%Making something easy to use and one which one the user has more control appears to be an obligation.\\
+%FINALLY - OR LATER - In this report, we will first introduce you to the EMS algorithms, especially the one implemented in Slicer 3.
+%Then, the new tools available in this EMS workflow will be presented.
+%Finally, the new results obtained with the new segmentation process will be evaluated through some experiments.
+%
+%
+%This is a template for \LaTeX\ project reports in the Department of
+%Mathematical Sciences. It shows a good overall structure for the
+%printed document, and shows how to construct it with a master file
+%(\texttt{report.tex}) plus subsidiary files (\texttt{chap1.tex},
+%\dots, \texttt{app1.tex}, \dots, \texttt{biblio.tex}).
+%\par
+%At the same time, features of the current version of \LaTeX\ (\LaTeXe)
+%are illustrated --- such as mathematical expressions, numbering and
+%cross-referencing, bibliography and citations, graphics and tables.
+%Comparison of the source files with the printer-ready document will
+%answer a few FAQs: \Quote{How can I do \dots\ in \LaTeX?}.
+%\par
+%However, this is {\em not} a textbook on \LaTeX\ --- for that, use the
+%\lq\nss\rq\ notes by Oetiker \etal\ \cite{NSS}. They are written for
+%novices, and are a pleasure to read. They are available free on-line,
+%and are kept up-to-date. The \LaTeX\ book at \textsl{Wikipedia}
+%\cite{WL} includes the \nss\ material and is good for reference too.
+%Access these via the \LaTeX\ resources page \cite{LAT}.
+%\par
+%For more advanced features see \eg\lq\comp\rq\ \cite{MG}.
+%\par
+%Well-meant advice on \LaTeX\ for report-writing and poster-making is
+%available\footnote{From  \texttt{bob.johnson@dur.ac.uk}} in room CM315,
+%where there are reference copies of both \comp\ \cite{MG} and
+%\textsl{The Graphics Companion} \cite{GRM}.
+%\par
+%Even if you are misguided enough \cite{AC} to prepare your report in
+%\textsl{Word}, this template at least exemplifies a good structure ---
+%and gives advice about references and help with typography.
+
+%
+\section{Contents}\label{intro:contents}
+The main body of this report is divided as follows.
+\par
+Chap.~\ref{sec:EM} deals with the EM segmentation. Fundamentals will be reminded and the algorithm used will be described. Will will also present in this chapter the limitations of the current implementation.
+Chap.~\ref{sec:contributions} explains our contribution. It explains the solution we choose to correct the intensity inhomogeinities. It also presents the tools we provide to the user for an easy segmentation worflow.
+Chap.~\ref{sec:results} shows the results achieved and discussed about what have been done, and the future work.
+%
+%The main body of this report is divided as follows.
+%\par
+%Chap.~\ref{sec:formulas} has some examples of mathematics, then
+%Chap.~\ref{sec:graphics} deals with graphics and includes
+%Sec.~\ref{sec:tables} about tables. The Conclusion, in
+%Chap.~\ref{andfinally}, summarises what's been achieved, the open
+%questions and what could be done next.
+%\par
+%Then comes the Bibliography, listing all sources of material, data and
+%computer programs used, \etc. Its construction is explained in
+%\cite[Sec.~4.2]{NSS} and there's more about it in App.~\ref{app:refs}.
+%\par
+%Otherwise appendices typically hold basic background theory, or
+%additional or similar examples, or longer proofs (App.~\ref{app:proofs})
+% --- anything you need but which would hold up the main flow of the
+%story. You could also use an appendix for listings of any computer
+%programs that you've written (App.~\ref{app:programs}).
+%\par
+%Here there's information about using a PC (App.~\ref{app:pc}) plus
+%brief advice on grammar and typography (App.~\ref{app:typo}).
