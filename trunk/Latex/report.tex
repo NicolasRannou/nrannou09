@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{report}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+%\usepackage{fancyhdr}
+\usepackage{indentfirst}
+
+
+
+
+
+
+%marges
+\geometry{ hmargin=2.489cm, vmargin=1.6cm }%1.245
+
+
+\begin{document}
+%\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt} 
+%\chead{{\footnotesize Training Period Report - Vista Laboratory}}
+%\lfoot{{\footnotesize Vincent SIMOES - 2009}}
+%\cfoot{}
+%\rfoot{{\footnotesize Page \thepage}}
+%-----------------------------------------------------------
+\begin{titlepage}
+
+\begin{center}
+
+% entete
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}cc}
+\includegraphics[scale=0.25]{images/logo_ISEN.jpg}& {\textbf{\Huge N5}}\\
+{\small \textbf{\textit{Institut Sup\'erieur de l'Electronique}}} \\
+{\small \textbf{\textit{et du Num\'erique}}} & {\large School Year - 2008/2009}\\
+{\footnotesize T\'el. : +33 (0)2.98.03.84.00}& {\large Training Period}\\
+{\footnotesize Fax : +33 (0)2.98.03.84.10} \\ 
+{\footnotesize CS 42807 - 29228 BREST Cedex 2 - FRANCE}
+\end{tabular*}
+\end{center}
+\bigskip
+\bigskip
+
+%titre
+\hrule
+\bigskip
+\begin{center}
+{\textbf{\Large NIMS: Neurobiological Image Management System}}\\{\large Improving the storage, sharing, mining and analysis of neuroimaging data using specific data management system}
+\end{center}
+\bigskip
+\hrule
+\bigskip
+
+%Page de garde
+\begin{center}
+%date
+From April 6\textsuperscript{th} to August 31\textsuperscript{st}\vspace{0.8cm}
+%lieu
+\\at\\Vision, Imaging Sciences and Technology Activities (VISTA) Laboratory\\Department of Psychology – Stanford University\vspace{0.5cm}\\
+\includegraphics[scale=0.9]{images/Logo_vista.png}\vspace{0.5cm}\\
+Jordan Hall - 450 Serra Mall - Stanford University\\CA 94305 Stanford - USA\\Phone: +01 650-725-2466\\
+\end{center}
+\bigskip
+\bigskip
+\bigskip
+%supervisors
+\begin{tabular}{*{2}ll}
+\underline{Supervisors:} &Brian WANDELL, Vista Laboratory - Stanford University, wandell@stanford.edu\\
+&Jorge PHILLIPS, ConjureLLC, jp@alum.mit.edu\\
+\end{tabular}
+\vspace{0.5cm}\\
+%referring tearchers
+\begin{tabular}{*{2}l}
+\underline{Referring Tearchers:} &Eric STINDEL - Master SIBM\\
+&Dominique MARATRAY - ISEN Brest
+\end{tabular}
+\vspace{0.7cm}\\
+%Etudiant
+\begin{flushright}by Vincent SIMOES\end{flushright}
+\end{titlepage}
+
+%-----------------------------------------------------------
+%Remerciements
+\include{acknowledgment}
+
+\tableofcontents
+\addcontentsline{toc}{section}{Acknowledgment}
+\addcontentsline{toc}{section}{Abstract}
+\addcontentsline{toc}{section}{R\'esum\'e}
+\addcontentsline{toc}{section}{Introduction}
+\listoffigures
+%-----------------------------------------------------------
+%absract/resume
+\include{abstract}
+
+%-----------------------------------------------------------
+%introduction
+\include{introduction}
+
+\include{chap1}
+\include{chap2}
+
+\end{document}
+
+
