@@ -6,8 +6,8 @@
 %dsfdfs
 %\par
 %
-Here we get going with theory of the expectation-maximization, applied to brain segmentation and show firstly a simple approach of the problem. Then there's a
-more realistic approach of the problem with different constraints, followed by a presentation of the algorithm used in Slicer 3\footnote{open source software developped in the SPL for biomedical engineering purpose}.
+Here we get going with theory of the expectation-maximization, applied to brain segmentation and show firstly a simple approach of the problem followed by a
+more realistic approach of the problem with different constraints. These two parts are mainly inspired from \cite{4}, \cite{5} and \cite{6}. Finally, there will be a presentation of the algorithm used in Slicer 3\footnote{open source software developped in the SPL for biomedical engineering purpose}.
 %
 \section{Presentation of the EM segmentation}
 %Magnetic resonance imaging (MRI) is very well suited for analyzing human soft tissue anatomy. It provides high resolution high resolution 3D volumetric data with high resolution between soft tissues. Nevertheless, this technique has some disavantages. Indeed MRI images can be alterated by some artifacts as movement, magnetic suceptibility, http://www.e-mri.org, aliasing, etc.. Another main problem is the apparition of a bias on MRIs. This bias results from QDSFQSDF. Correcting this problem is very important in the purpose of image processing. If we don't, the same tissue will have different intensities through the volume, which can bree mistakes during the segmentation process.
@@ -20,9 +20,24 @@ In the SPL, the algorithm developped uses spatial, structural and intensity inho
 %
 
 \section{Fundamentals}
-you should read this part if..
+%
+Here we get going with a description of the fundamentals. We begin with a description of the model statistical model used for the brain then present all the related elements to have a good understanding of the EM Segmentation algorithm in the section SDFSDFSD.
+%
 \subsection{Statistical model used for the brain}
+%
+We define the voxel intensities of a MR image as $Y=\lbrace y_1, ..., y_n\rbrace$ when the image consisted in $n$ voxels. Each $y$ intensity is called \textit{observed data} because this is the the data we see when we observe the image. Each $y$ is a realization of the random variable $Y$. The real labelling of the image, after segmentation is $Z$. $Z$ is called \textit{hidden data} because we don't know the value of each label. This is precisely the purpose of the segmentation: estimating the \textit{hidden data} from the \textit{observed data}. We assume that the \textit{observed data} is generated from the \textit{hidden data} and a parameter $\Phi$. The parameter $\Phi$ can describe either noise, bias field, etc., depending on the model.
+\par
+$Y$ and $Z$ can be viewed as $n$-dimensional random variables $Y=\lbrace Y_1, ..., Y_n\rbrace$ and $Z=\lbrace Z_1, ..., Z_n\rbrace$ then each $y_i$ is a realisation of $Y_i$ and each $z_i$ is a realization of $Z_i$.So, the conditional probability function describing $Y_i$ is $p(Y_i|Z_i,\Phi)$.
+\par
+The easiest model assumes that each intensity in one class is the same, but this intensity is corrupted by a factor with a Gaussian Distribution like noise for example. We can describe the relationship as below:
+\begin{equation*}
+  y_i=\mu_k+n_i
+\end{equation*}
+where $\mu_k$ is the intensity of the $k^th$ tissue and $n_i$ a random sample.
+
+%
 \subsection{Gaussian mixture model}
+%
 \subsection{Maximum likelihood model}
 Here's an inline formula: \(E=mc^2\), and here's the same
 thing displayed:\[E=mc^2.\]A matrix needs to be displayed:

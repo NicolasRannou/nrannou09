@@ -7,46 +7,64 @@
 \contentsline {subsection}{\numberline {2.2.1}Statistical model used for the brain}{7}
 \contentsline {subsection}{\numberline {2.2.2}Gaussian mixture model}{7}
 \contentsline {subsection}{\numberline {2.2.3}Maximum likelihood model}{7}
-\contentsline {section}{\numberline {2.3}Expectation maximization algorithm}{7}
+\contentsline {section}{\numberline {2.3}Expectation maximization algorithm}{8}
 \contentsline {subsubsection}{Simplified algorithm}{8}
 \contentsline {subsubsection}{Expectation maximization algorithm}{8}
 \contentsline {section}{\numberline {2.4}Expectation maximization algorithm used in Slicer 3}{9}
-\contentsline {subsection}{\numberline {2.4.1}Spatial information}{9}
-\contentsline {subsection}{\numberline {2.4.2}Structure information}{9}
-\contentsline {subsection}{\numberline {2.4.3}Intensity inhomogeneities information}{9}
-\contentsline {subsubsection}{Discussion}{9}
-\contentsline {section}{\numberline {2.5}Nothing}{9}
-\contentsline {chapter}{\numberline {3}The contributions}{10}
-\contentsline {section}{\numberline {3.1}MRI Bias Field correction}{10}
-\contentsline {subsection}{\numberline {3.1.1}Interest}{10}
-\contentsline {subsection}{\numberline {3.1.2}Our approach}{10}
-\contentsline {subsection}{\numberline {3.1.3}Results}{11}
-\contentsline {section}{\numberline {3.2}Intensity Normalization}{12}
-\contentsline {subsection}{\numberline {3.2.1}Interest}{12}
-\contentsline {subsection}{\numberline {3.2.2}Our approach}{12}
-\contentsline {subsection}{\numberline {3.2.3}Our implementation}{12}
-\contentsline {section}{\numberline {3.3}Class Distribution visualization}{13}
-\contentsline {subsection}{\numberline {3.3.1}Interest}{14}
-\contentsline {subsection}{\numberline {3.3.2}Method used}{14}
-\contentsline {subsubsection}{Problem's description}{14}
-\contentsline {subsubsection}{Choices}{14}
-\contentsline {subsubsection}{Background creation}{14}
-\contentsline {subsubsection}{Ellipse representation}{15}
-\contentsline {subsection}{\numberline {3.3.3}Results}{15}
-\contentsline {section}{\numberline {3.4}Global Prior Estimation}{16}
-\contentsline {subsection}{\numberline {3.4.1}Presentation of the problem}{16}
-\contentsline {subsection}{\numberline {3.4.2}Our approach}{16}
-\contentsline {subsubsection}{Fast user feedback}{16}
-\contentsline {subsubsection}{Global priors evaluation}{16}
-\contentsline {subsection}{\numberline {3.4.3}Results and discussion}{17}
-\contentsline {chapter}{\numberline {4}Results and discussion}{18}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{19}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{20}
-\contentsline {chapter}{\numberline {A}About references}{22}
-\contentsline {section}{\numberline {A.1}Organisation}{22}
-\contentsline {section}{\numberline {A.2}Doing it}{23}
-\contentsline {chapter}{\numberline {B}Long proofs}{25}
-\contentsline {section}{\numberline {B.1}Proof of theorem 2.4\hbox {}}{25}
-\contentsline {chapter}{\numberline {C}Computer programs}{26}
-\contentsline {chapter}{\numberline {D}Using a PC}{27}
-\contentsline {chapter}{\numberline {E}Typography and grammar}{28}
+\contentsline {subsection}{\numberline {2.4.1}Spatial information}{10}
+\contentsline {subsection}{\numberline {2.4.2}Structure information}{10}
+\contentsline {subsection}{\numberline {2.4.3}Intensity inhomogeneities information}{10}
+\contentsline {subsubsection}{Discussion}{10}
+\contentsline {section}{\numberline {2.5}Nothing}{10}
+\contentsline {chapter}{\numberline {3}The contributions}{11}
+\contentsline {section}{\numberline {3.1}MRI Bias Field correction}{11}
+\contentsline {subsection}{\numberline {3.1.1}Interest}{11}
+\contentsline {subsection}{\numberline {3.1.2}Our approach}{11}
+\contentsline {subsection}{\numberline {3.1.3}Results}{12}
+\contentsline {section}{\numberline {3.2}Intensity Normalization}{13}
+\contentsline {subsection}{\numberline {3.2.1}Interest}{13}
+\contentsline {subsection}{\numberline {3.2.2}Our approach}{13}
+\contentsline {subsection}{\numberline {3.2.3}Our implementation}{13}
+\contentsline {section}{\numberline {3.3}Class Distribution selection}{14}
+\contentsline {subsection}{\numberline {3.3.1}Interest}{15}
+\contentsline {subsection}{\numberline {3.3.2}Method used}{15}
+\contentsline {section}{\numberline {3.4}Class Distribution visualization}{15}
+\contentsline {subsection}{\numberline {3.4.1}Interest}{15}
+\contentsline {subsection}{\numberline {3.4.2}Method used}{15}
+\contentsline {subsubsection}{Problem's description}{15}
+\contentsline {subsubsection}{Choices}{17}
+\contentsline {subsubsection}{Background creation}{17}
+\contentsline {subsubsection}{Ellipse representation}{17}
+\contentsline {subsection}{\numberline {3.4.3}Results}{17}
+\contentsline {section}{\numberline {3.5}Global Prior Estimation}{18}
+\contentsline {subsection}{\numberline {3.5.1}Presentation of the problem}{18}
+\contentsline {subsection}{\numberline {3.5.2}Our approach}{18}
+\contentsline {subsubsection}{Fast user feedback}{19}
+\contentsline {subsubsection}{Global priors evaluation}{19}
+\contentsline {subsection}{\numberline {3.5.3}Results and discussion}{20}
+\contentsline {chapter}{\numberline {4}Results and discussion}{21}
+\contentsline {section}{\numberline {4.1}Results}{21}
+\contentsline {subsection}{\numberline {4.1.1}Bias correction}{21}
+\contentsline {subsubsection}{Testing process}{21}
+\contentsline {subsubsection}{Results}{21}
+\contentsline {subsubsection}{Specialist's point of view}{23}
+\contentsline {subsection}{\numberline {4.1.2}Global Prior estimation}{23}
+\contentsline {subsubsection}{Testing process}{23}
+\contentsline {subsubsection}{Results}{23}
+\contentsline {subsubsection}{Specialist's point of view}{23}
+\contentsline {subsection}{\numberline {4.1.3}Class Selection}{23}
+\contentsline {subsubsection}{Testing process}{23}
+\contentsline {subsubsection}{Results}{23}
+\contentsline {subsubsection}{Specialist's point of view}{23}
+\contentsline {section}{\numberline {4.2}Limitations}{23}
+\contentsline {section}{\numberline {4.3}Future work}{23}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{24}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{25}
+\contentsline {chapter}{\numberline {A}About references}{27}
+\contentsline {section}{\numberline {A.1}Organisation}{27}
+\contentsline {section}{\numberline {A.2}Doing it}{28}
+\contentsline {chapter}{\numberline {B}Long proofs}{30}
+\contentsline {section}{\numberline {B.1}Proof of theorem 2.4\hbox {}}{30}
+\contentsline {chapter}{\numberline {C}Computer programs}{31}
+\contentsline {chapter}{\numberline {D}Using a PC}{32}
+\contentsline {chapter}{\numberline {E}Typography and grammar}{33}

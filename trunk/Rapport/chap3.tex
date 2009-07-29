@@ -20,7 +20,8 @@ Here is a colour \texttt{.jpg} file, inserted in place without caption
 and without a number for cross-reference. It's suitable only for a
 simple self-explanatory diagram, used here and not again.
 
-Bias correction is not efficient so we propose an other method, as part of the segmentation process.
+Bias correction is not efficient so we propose an other method, as part of the segmentation process.\\
+Rescaling
 
 \subsection{Interest}
 
@@ -148,6 +149,44 @@ first skim the Introduction and Conclusions --- and then look at the
 pictures. If you want (really really want) to hook them, make sure that
 every important figure plus its caption is as self-explanatory as
 possible.
+%
+\section{Class Distribution selection}\label{sec:CDS}
+%
+During parameters initialization, the user has to define each class distribution. The current methods presents some troubles so we present here a new approach to estimate each class distribution.
+%
+\subsection{Interest}
+%
+So far, the user haf two choices to define each class distribution. He could enter manually the intensities mean value and variance for each class, for each volume to be processed. This way, the user can be very precise and accurate when he defines each class. But it is very hard for the user to found the good mean value and variance for each class for each volume. Morever, each time he wants to process a new volume, he will have to redefine mean values and variances. This is not convenient and it can takes a ot of time. The next approch consisted in defining a class model by manual sampling. For each class, the user clics in the related part of the volume. With this methos, the problem is that you compute your mean value and variance using a few samples. Then, your mean values and variances are not accurate. That's why we proposed a new approach using a label map, to estimate each class model.
+%
+\subsection{Method used}
+%
+Create a label map. colors we choose a the same as the one we defined for each class.
+then run algorithm which will estimate the mean value and covariance values.
+\par
+%
+Algorithm..?
+%
+\par
+Explain each colors
+\par
+\begin{figure}\centering
+\begin{minipage}[c]{.45\textwidth}\centering
+  \includegraphics[width=.95\textwidth]{Images/Screenshots/T1ForLabel.png}
+  \caption{Axial view of a T1 volume without the label map.}\label{fig:T1ForLabel}
+\end{minipage}\hfill
+\begin{minipage}[c]{.45\textwidth}\centering
+  \includegraphics[width=.95\textwidth]{Images/Screenshots/LabelT1.png}
+  \caption{Axial view of a T1 volume with the label map.}\label{fig:LabelT1}
+\end{minipage}
+\begin{minipage}[c]{.45\textwidth}\centering
+  \includegraphics[width=.95\textwidth]{Images/Screenshots/T2ForLabel.png}
+  \caption{Axial view of a T2 volume without the label map.}\label{fig:T2ForLabel}
+\end{minipage}\hfill
+\begin{minipage}[c]{.45\textwidth}\centering
+  \includegraphics[width=.95\textwidth]{Images/Screenshots/LabelT2.png}
+  \caption{Axial view of a T2 volume with the label map.}\label{fig:LabelT2}
+\end{minipage}
+\end{figure}
 %
 \section{Class Distribution visualization}\label{sec:tables}
 %Besides figures you may want to include tables. Like figures, tables may
