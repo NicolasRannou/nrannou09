@@ -47,11 +47,11 @@ Nowadays, medical image processing is becoming a major field of research in most
 %
 \par
 %
-In the context of pre and post operation, plenty of work as already been done. Thus, there is still a lot of work to achieve. Regarding data storage and exchange, the increasing among of informations NOUS OBLIGE to find other and more approriate methods. Another interesting contribution is images segmentation. New methods have to be developped for a better diagnosis, or to detect new pathologies. A lot of methods appears like level-set segmentation, region growing or texture based segmentation. Each one is adapted for a specific problem like vessels segmentation, tumors detection or SDFSF lungs detection. Another remarquable contribution is the segmentation based on expectation maximization (EM), which is very well suited for brain segmentation. 
+In this context of pre and post operation, plenty of work as already been done. Thus, there is still a lot of work to achieve. Regarding data storage and exchange, the increasing among of informations leads us to find other and more approriate methods. Another interesting contribution is images segmentation. New methods have to be developped for a better diagnosis, or to detect new pathologies. A lot of methods appears like level-set segmentation, region growing or texture based segmentation. Each one is adapted for a specific problem like vessels segmentation, tumors detection or SDFSF lungs detection. Another remarquable contribution is the segmentation based on expectation maximization (EM), which is very well suited for brain segmentation. 
 %
 \par
 %
-In the MR images segmentation context, the Surgical Planning Laboratory (SPL), Harvard Medical School, has developped an EM algorithm to segment brain's MR images. The results obtained are very good until we segment small structures. The approach used for the intensity inhomogeinities estimation appears less efficient for the particuliar purpose of large structures segmentation WHY. Moreover, the implementation is not widely used so far, regarding the complexity of the segmentation process. In this report we will present an approach to enhance the segmentation for large structures, correctiong the intensity inhomogeinities in large structures and providing the end-user tools for an easier segmentation process.
+For the MR images segmentation purpose, the Surgical Planning Laboratory (SPL), Harvard Medical School, has developped an EM algorithm to segment brain's MR images. The results obtained are very good until we segment small structures and we select the optimum parameters. The approach used for the intensity inhomogeinities estimation appears less efficient for the particuliar purpose of large structures segmentation WHY. Moreover, the implementation is not widely used so far, regarding the complexity of the segmentation process. In this report we will present an approach to enhance the segmentation for large structures, correctiong the intensity inhomogeinities in large structures and providing the end-user tools for an easier segmentation process.
 %
 %BUT -  So far, the expectation maximization segmentation (EMS) module not used by physicists.
 %Indeed, the results are highly dependents on chosen parameters and some parameters estimation may be hard to do.
@@ -95,9 +95,9 @@ In the MR images segmentation context, the Surgical Planning Laboratory (SPL), H
 \section{Contents}\label{intro:contents}
 The main body of this report is divided as follows.
 \par
-Chap.~\ref{sec:EM} deals with the EM segmentation. Fundamentals will be reminded and the algorithm used will be described. Will will also present in this chapter the limitations of the current implementation.
-Chap.~\ref{sec:contributions} explains our contribution. It explains the solution we choose to correct the intensity inhomogeinities. It also presents the tools we provide to the user for an easy segmentation worflow.
-Chap.~\ref{sec:results} shows the results achieved and discussed about what have been done, and the future work.
+Chap.~\ref{sec:EM} deals with the EM segmentation. Fundamentals will be reminded and the algorithm used will be described. We will also present in this chapter the limitations of the current implementation.
+Chap.~\ref{sec:contributions} describes our contribution. It explains the solution we choose to enhanceme the segmentation and to improve the usability of the current framework.
+Chap.~\ref{sec:results} shows the results achieved. It aslo discussed about what have been done, the limitations of the current module and the next work wich has to be done.
 %
 %The main body of this report is divided as follows.
 %\par
