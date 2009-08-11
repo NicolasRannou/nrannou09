@@ -1,5 +1,87 @@
-\chapter{Long proofs}\label{app:proofs} An Appendix is a good place
-to put lengthy proofs that must be included but would impede the
-flow if placed in the main text.
-\section{Proof of theorem \ref{angels}}\label{pf:angels}
-By inspection.
+\chapter{Statistics}\label{app:formulas} Here we present the main formulas we used in this reports and some fundamentals about probabilities.
+
+
+\section{Fundamentals}\label{f:Fundamentals}
+
+$P(A)$ is the probability that $A$ is realized.\\
+$P(A|B)$ is the probability that $A$ is realized, knowing $B$.\\
+$P(A,B)$ is the probability that $A$ and $B$ are realized at the same time.\\
+$P(A|B) = \frac{P(A,B)}{P(B)}$
+
+
+
+\section{Bayes' theorem}\label{f:Bayes}
+\subsection{Theorem}
+Let $S$ be a sample of space. If $A_1,A_2,...A_n$ are mutually exclusive and exhaustive events such as $P(A_i)\neq 0$ for all $i$.Then for any event $A$ which is a subset of $S = A1\cup A_2 \cup ... \cup A_n$ and $P(A) > 0$ we have
+\begin{equation*}
+P(A_i|A)= \frac{P(A_i)P(A|A_i)}{\sum_{j=1}^n P(A_j)P(A|A_j)}
+\end{equation*}
+
+\subsection{Proof}
+We have $S = A1\cup A_2 \cup ... \cup A_n$ and $A_i \cap A_j = \varnothing$ for $i \neq j$. Since $A \subseteq S$
+
+\begin{align*}
+\Rightarrow A &= A \cap S\\
+              &= A \cap (A1\cup A_2 \cup ... \cup A_n)\\
+              &= (A \cap A_1)\cup(A \cap A_2)\cup ... \cup(A \cap A_n)
+\end{align*}
+Moreover
+\begin{equation*}
+P(A \cap A_i) = P(A)P(A_i|A)
+\end{equation*}
+
+So
+
+\begin{align*}
+ P(A) &= P(A\cap A_1) + P(A\cap A_2) + ... + P(A\cap A_n)\\
+      &= P(A)P(A_1|A) + P(A)P(A_2|A) + ... + P(A)P(A_n|A)
+\end{align*}
+
+And
+
+\begin{equation*}
+P(A|A_i) = \frac{P(A \cap A_i}{P(A)}
+\end{equation*}
+
+Finally we obtain
+\begin{equation*}
+P(A_i|A)= \frac{P(A_i)P(A|A_i)}{\sum_{j=1}^n P(A_j)P(A|A_j)}
+\end{equation*}
+
+\section{Jensen's inequality}\label{f:Jensen}
+\subsection{Inequality}
+Let $f$ be a convex function defined on an interval $I$. If $x_1,x_2,...,x_n \in I$ and $\lambda_1, \lambda_2, ... , \lambda_n \geq 0$ with $\sum_{i=1}^n \lambda_i = 1$,
+
+  \begin{equation*}
+  f(\sum_{i=1}^n \lambda_i x_i) \leq \sum_{i=1}^n \lambda_i f(x_i)
+  \end{equation*}
+
+\subsection{Proof}
+To show that the theorem is true we proceed by induction.\\
+\begin{itemize}
+\item \textbf{Initialization}\\
+This is trivial for $n=1$.\\
+\item \textbf{Hypothesis at rank $n$} 
+
+ \begin{equation*}
+  f(\sum_{i=1}^n \lambda_i x_i \leq \sum_{i=1}^n \lambda_i f(x_i))\\
+  \end{equation*}
+
+\item \textbf{Demonstration at rank $n+1$}
+
+ \begin{align*}
+  f(\sum_{i=1}^{n+1} \lambda_i x_i ) &= f(\lambda_{n+1} x_{n+1} + \sum_{i=1}^n \lambda_i x_i)\\
+                                     &= f(\lambda_{n+1} x_{n+1} + (1-\lambda_{n+1})\frac{1}{1-\lambda_{n+1}}\sum_{i=1}^n \lambda_i x_i)\\
+                                     &\leq \lambda_{n+1} f(x_{n+1}) + (1-\lambda_{n+1})f(\frac{1}{1-\lambda_{n+1}}\sum_{i=1}^n \lambda_i x_i)\\
+                                     &= \lambda_{n+1} f(x_{n+1}) + (1-\lambda_{n+1})f(\sum_{i=1}^n \frac{\lambda_i}{1-\lambda_{n+1}} x_i)\\
+                                     &\leq \lambda_{n+1} f(x_{n+1}) + (1-\lambda_{n+1})\sum_{i=1}^n \frac{\lambda_i}{1-\lambda_{n+1}} f(x_i)\\
+                                     &= \lambda_{n+1} f(x_{n+1}) + \sum_{i=1}^n \lambda_i f(x_i)\\
+                                     &= \sum_{i=1}^{n+1} \lambda_i f(x_i)\\      
+  \end{align*}
+\end{itemize}
+
+With a concave function (in opposition to convex), the inequality becomes:
+
+ \begin{equation*}
+  f(\sum_{i=1}^n \lambda_i x_i) \geq \sum_{i=1}^n \lambda_i f(x_i)
+  \end{equation*}
