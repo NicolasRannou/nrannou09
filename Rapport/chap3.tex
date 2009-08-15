@@ -1,145 +1,107 @@
 \chapter{The contributions}\label{sec:contributions}
-
+In this chapter we will present all the contribution to enhance the segmentation workflow in Slicer 3. We propose solution to the problem cited in the previous chapter (\ref{su:limitations}). We get started with the registration problem. The we propose solutions to enhance the class selection and to allow the user to evaluate his selection. Finally, we present some tools we added to help the user to find the good intensity normalization value and an estimation of the global prior weights.
 %
 \section{MRI Bias Field correction}
 
-Bias correction is not efficient so we propose an other method, as part of the segmentation process.\\
-Rescaling
+The registration step could present some problems if the image to segment has intensities inhomogeinities. We remind the problem, then we present the solution proposed.
 
 \subsection{Interest}
 
-algorithm is only accurate for small region bias correction, because au the gaussian model he uses.
-Correction the bias in the whole volume first could enhance results.
+In the segmentation process, a registration step is required. Registration consists in finding a trasformation to fit two images as well as possible. It is described in details in DSFSDF. Only one pre-processing (intensity normalization) is done before the registration. The problem is that the algorithm is designed to treat MR images. MR images are often corrupted by a bias field. Thus, the the image to register presents intensities inhomogeinities. These inhomogeinities can deteriore a lot the registration.
+\par
+On figure (\ref{fig:bfexemple}), we present the result of the registration between an atlas and a biased MR image. Note that the target MR image has been normalized to have the same mean value as the atlas. The results is clearly bad. A solution must be brought to enhance this step and so the segmentation.
 
+  \begin{figure}[ht]\centering
+  \includegraphics[width=0.8\textwidth]{Images/Screenshots/badRegistration.png}
+  \caption{Result of registration of a biased MR image without correction}\label{fig:bfexemple}
+  \end{figure}
+  
 \subsection{Our approach}
 
-Gaussian distrib....
-ITK filter
-Automatic
-\subsection{Results}
-corrected not corrected
-parameters explanation
+The idea simply consists in correcting the bias field of the MR image before this step. Thus, the registration will be significantly enhanced.Since the registration is better, it should also increase the segmentation.
+\par
+To correct the bias field, we used the non-parametric approach presented by Styner in SDFSDF. We choose a non-parametric approach because it doesn't require prior information like the number of tissue to correct or the mean value of each tissue to correct. We implement an ITK\footnote{open-source C++ toolkit for segmentation and registration. See \cite{13}.} filter (\cite{14}) in Slicer 3. 
+\par
+We choose not to implement it in Slicer 3 as part as the EM Segment module. Indeed, users may want to correct the bias field in MR images for other purposes. Moreover, because it would be the first pre-processing step, it is possible to do so. The user will first have to correct the intensities inhomogeinities via the module then use the corrected images in the EM segmentation module.
+\par
+We can describe the new segmentation workflow in Slicer 3 as we do in figure (\ref{fig:wfwbc}).
+
+
+
+\begin{figure}[ht]\centering
+  \includegraphics[width=1\textwidth]{Images/Graphics/bfnwf.png}
+  \caption{New algorithm pipeline}\label{fig:wfwbc}
+  \end{figure}
+  
+%\subsection{Results}
+%corrected not corrected
+%parameters explanation
 
 %
+
+\section{Class Distribution selection}\label{sec:CDS}
+%
+During parameters initialization, the user has to define each class distribution. The previous method of selection presented some limitations and we proposed a new approach.
+%
+\subsection{Interest}
+%
+So far, the user had two choices to define each class distribution. 
+\par
+The first possiblity consisted in entering manually the intensities mean value and variance for each class, for each volume to be processed. This way, the user can be very precise and accurate when he defines each class. But it is very hard to find the good mean value and variance for each class for each volume. Morever, each time we want to process a new volume, we have to redefine mean values and variances. It is not convenient and it can a lot of time to find accurate values for the parameter initialization. 
+\par
+The next approch consisted in defining a class model by manual sampling. For each class, the user clics in the related part of the volume. The problem with this method is that you compute your mean value and variance using only a few samples. Your sample will never be bigger that one hundred points because it is not convenient. Then, your mean values and variances are not accurate. Moreover, results are not reproducible with this method. This the number of samples is reduced, means and variances can vary a lot with one more sample and you can never reproduce two times the same initialization.
+\par
+Because of all these limitations,  we proposed a new approach using a label map, to estimate each class model.
+%
+\subsection{Method used}
+%
+The idea is to create a label map. This map contains colors. There is one color for each class we want to segment. The relation color/class is stored in $H$ (section ), in the EM algorithm. This relation color/class is set up during the tree creation step DSFSDF.
+\par
+The user creates a label map by coloring caracterisc regions for each tissue to segment, in the appropriate color. This gives a spatial information to the algorithm. It can now estimate automaticly the mean value and covariance of each class, for each tissue, using this label map.
+
+\begin{figure}\centering
+  \includegraphics[width=1\textwidth]{Images/Screenshots/labelmaps.png}
+  \caption{Axial view of the label map.}\label{fig:labelmaps}
+\end{figure}
+
+\par 
+It is very convenient because, since the algorithm needs a good initialization, we can easily define a sample of hundred of points for each class. The results will representatives. Moreover, the results are now reproducible. Indeed, we can store then re-use the same label map. The results will remain the same.
+
+%
+\section{Class Distribution visualization}\label{sec:tables}
+
+An important contribution is a tool which allows to visualize the distribution of the classes to be segmented.
+\subsection{Interest}
+As discussed before, the algorithm is sensible to the initalization. It means that the initialization has to be good. Once the parameters are chosen, the user has no tools to know if his selection is accurate. Two classes to segment can't have too close means and variances. Even if the user sees the values he chooses, it is not easy to know if two classes to be segmented are too similar or not.
+\subsection{Our approach}
+The objective is to provide the user the most accurate and usefull vizualisation as possible.
+\par
+We first assumed that each class has a normal distribution. We first decided to plot the gaussian in 3D, using the multivariate normal distribution.
+In the 2-dimensional nonsingular case, the probability density function is 
+\begin{equation*}
+f(x,y)=\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}} \operatorname*{exp}\Big ( -\frac{1}{2(1-\rho^2)}\Big( \frac{(x-\mu_x)^2}{\sigma_x^2} + \frac{(y-\mu_y)^2}{\sigma_y^2} - \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y}\Big)\Big)   
+\end{equation*}
+(see \cite{15}). $x$ and $y$ are the position of the pixel in the 2D space. $f(x,y)$ will return the value (heigth) of the $(x,y)$ pixel. Each $X$ and  $Y$ axe represent one volume. Let's first say that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. $\mu_x$ is the mean value of the class in the $X$ volume. $\mu_y$ is the mean value of the class in the $Y$ volume. $\sigma_x$ and  $\sigma_y$ are the variance of the tissue in its respective volume. $\rho$ is the correlation between $X$ and $Y$. It indicates the strength and direction of a linear relationship between two random variables ( see \cite{16}). 
+\par
+We can easily deduce $\rho$ from the covariance matrix $\Sigma$ (see \cite{17}). Indeed, in the 2D case, the covariance matrix can be expressed as
+
+\begin{equation*}
+\mathbf{\Sigma} = 
+ \begin{bmatrix}
+   \sigma_x^2 & \rho \sigma_x \sigma_y \\
+   \rho \sigma_x \sigma_y & \sigma_y^2
+ \end{bmatrix}
+\end{equation*}
+
+
 \section{Intensity Normalization}
 \subsection{Interest}
 usefull if you need to do a lot of segmentations
 enhance the rescaling..?
 \subsection{Our approach}
 background/brain
-\subsection{Our implementation}
-show results... corrected image...
 %
-\section{Class Distribution selection}\label{sec:CDS}
-%
-During parameters initialization, the user has to define each class distribution. The current methods presents some troubles so we present here a new approach to estimate each class distribution.
-%
-\subsection{Interest}
-%
-So far, the user haf two choices to define each class distribution. He could enter manually the intensities mean value and variance for each class, for each volume to be processed. This way, the user can be very precise and accurate when he defines each class. But it is very hard for the user to found the good mean value and variance for each class for each volume. Morever, each time he wants to process a new volume, he will have to redefine mean values and variances. This is not convenient and it can takes a ot of time. The next approch consisted in defining a class model by manual sampling. For each class, the user clics in the related part of the volume. With this methos, the problem is that you compute your mean value and variance using a few samples. Then, your mean values and variances are not accurate. That's why we proposed a new approach using a label map, to estimate each class model.
-%
-\subsection{Method used}
-%
-Create a label map. colors we choose a the same as the one we defined for each class.
-then run algorithm which will estimate the mean value and covariance values.
-\par
-%
-Algorithm..?
-%
-\par
-Explain each colors
-\par
-\begin{figure}\centering
-\begin{minipage}[c]{.45\textwidth}\centering
-  \includegraphics[width=.95\textwidth]{Images/Screenshots/T1ForLabel.png}
-  \caption{Axial view of a T1 volume without the label map.}\label{fig:T1ForLabel}
-\end{minipage}\hfill
-\begin{minipage}[c]{.45\textwidth}\centering
-  \includegraphics[width=.95\textwidth]{Images/Screenshots/LabelT1.png}
-  \caption{Axial view of a T1 volume with the label map.}\label{fig:LabelT1}
-\end{minipage}
-\begin{minipage}[c]{.45\textwidth}\centering
-  \includegraphics[width=.95\textwidth]{Images/Screenshots/T2ForLabel.png}
-  \caption{Axial view of a T2 volume without the label map.}\label{fig:T2ForLabel}
-\end{minipage}\hfill
-\begin{minipage}[c]{.45\textwidth}\centering
-  \includegraphics[width=.95\textwidth]{Images/Screenshots/LabelT2.png}
-  \caption{Axial view of a T2 volume with the label map.}\label{fig:LabelT2}
-\end{minipage}
-\end{figure}
-%
-\section{Class Distribution visualization}\label{sec:tables}
 
-An important contribution is a tool which allows to visualize the classes to be segmented distribution, through 2 volumes.
-\subsection{Interest}
-As we discussed in 
-%partDFSD 
-the EMS algorithm requires variance and mean values for each class to be segmented. So far, the user defines these parameters by selecting samples on the dataset.
-%
-exampleSDFSF
-%
-A main issue is that user user can know if the pixels he selected are really representative or not of the class he wants to select. Thus, our objective  was to find a way to give the user if his samples are reprenstative of not of a tissue.
-\subsection{Method used}
-%display a 3d image to alow the user to see the distribution
-%\subsubsection{ used}
-%compute variance and covariance matrix
-\subsubsection{Problem's description}
-Here is a brief description of the situation to let you understanding the problem. As input we have N images, K classes to segment, and for each class a mean value $\mu$, a variance $\sigma$ and covariance $\zeta$. The covariance is estimated for each couple of images. We will come back on it later.
-%
-where
-%
-Using these informations, we had to find a way to give the user usefull informations about the class distribution.
-\subsubsection{Choices}
-Our first idea was to display gaussian curves in 3D, for each class. The X and Y axes would be the intensity ranges for the to images we want to use.
-The problem with this representation is that it does not contain any information about the number o
-%
-f pixels .  3d too sophisticated...?
-%
-To solve this problem, we decided to divide the problem in two parts.
-The first part will consist in creating a "temperature map" as background.
-The second part will consists in displaying ellipses over this map. This will give the user a good information about how good his selection was.
-\subsubsection{Background creation}
-First of all, the background has to be created. This background is a "temperature map".
-We can present it as a two dimensions array. The height and the lenght of the array depend of the intensity range of the 2 volumes we want to process.
-Then, we fill the array in an easy but useful way. Each 
-%
-case
-%
-of the array contains the number of occurence of an intensity pair at the same position, through the 2 volumes.
-
-\begin{minipage}{1\textwidth}
-%
-\hrule
-\textbf{\\Algorithm 1:} \textsc{BackgroundCreation}(V1,V2)
-\hrule
-%variables definition
-\textbf{\\define}  RangeI1 $\leftarrow$  intensity range in V1\\ 
-\textbf{define}  RangeI2 $\leftarrow$  intensity range in V2\\ 
-\textbf{define}  A(RangeI1,RangeI2) $\leftarrow$ background\\  
-%
-\textbf{for each} pixel \textbf{i} in V1\\
-\textbf{for each} pixel \textbf{j} in V2\\
-%
-$\triangleright$A(i,j)=A(i,j)+1\\
-%
-\textbf{return} A\\
-%
-\hrule
-%
-\end{minipage}
-
-\subsubsection{Ellipse representation}
-We will first start we a brief
-%
-rappel..
-%
-The covariance matrix is \\
-Representing ellipse associated to this covariance matrix.\\
-Maximum variance axe.Eigen values\\
-Algorithm used.
-Big and small axes of the ellipse\\
-\subsection{Results}
-show result
 
 \section{Global Prior Estimation}
 
@@ -205,10 +167,4 @@ W=E/T\\
 %
 \end{minipage}
 %
-
-\subsection{Results and discussion}
-As we can see, the results obtained are good and accurate.The time of processing is fast and most of the people are now able to understand these parameters, even they are not familiar with EMS. This is an intuitive way to get an estimation of the GPW parameters.\\
-Of course some sfsdfs must be done.
-If there is a strong bias in the images we process, the pixels of a same class will have different values. Then, a segmentation based on intensity will provide bad results. Moreover, if the user wants to segment 2 classes which have the same color, just using the spatial information for example, they won't be able to use it properly.Thus, the user must always keep in mind that it is just an estimation and that he has to check if the values are accurate.
-
 

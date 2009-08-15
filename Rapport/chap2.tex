@@ -73,7 +73,7 @@ In the case of \textit{Gaussian mixture model}, each voxel is considered to be i
 \subsection{Maximum likelihood}
 In our case, we know the intensity of each observed pixel $y_i$. $\Phi$ has to be found. The best estimation of $\Phi$ will be obtain using the maximum likelihood principle. $p(Y=y_i|\Phi)$ is called likellihood function and for it returns the value of the likelihood for $y_i$, given $\Phi$. We can generalize it to the whole image with $p(Y|\Phi)$.
 \par
-As we said in SDFSDF, the voxels are considered to be independent through the whole volume. It leads us to:
+The voxels are considered to be independent through the whole volume. It leads us to:
  
   \begin{equation}\label{ML}
   p(Y|\Phi)= \prod_{i=1}^n p(Y_i|\Phi)\\
@@ -235,7 +235,7 @@ In other words, we want to maximize the difference $L(\Phi)-L(\Phi_n)$. For conv
                     &\geq \sum_{i=1}^n\{\sum_{k=1}^K p(z_{ik}|Y_i,\Phi_n)\operatorname*{log} \frac{p(Y_i|z_{ik},\Phi)p(z_{ik}|\Phi)}{p(z_{ik}|Y_i,\Phi_n)}-\operatorname*{log} p(Y_i|\Phi_n)\}
   \end{align*}
 
-We can deduce this inequality from Jensen's inequality (see App.~\ref{app:formulas}, Sec.~\ref{f:Jensen}) since  $p(z_{ik}|Y_i,\Phi^{(m)})$ is a probability mesure and $ln$ a concave function. %Indeed, 
+We can deduce this inequality from Jensen's inequality (see App.~\ref{app:formulas}, Sec.~\ref{f:Jensen}) since  $p(z_{ik}|Y_i,\Phi^{(m)})$ is a probability mesure and $ln$ a concave function (\cite{5}). %Indeed, 
 
 %  \begin{equation*}
 %  p(z_{ik}|Y_i,\Phi_n)>0\\
@@ -294,27 +294,29 @@ This this the expectation step. During this step, we estimate the probability th
   \begin{equation}\label{ESTEP1}
   p_{ik}^{(m+1)} = \frac{p(Y_i|e_k,\Phi^{(m)})p(e_k|\Phi^{(m)})}{\sum_{j=1}^K   p(Y_i|e_j,\Phi^{(m)}) p(e_{j}|\Phi^{(m)})}  
   \end{equation}
-
-Using this probability, $E_{Z|Y,\Phi^{(m)}}$ returns the expected value of the parameter $\Phi$ regarding $\Phi_{(m)}$.\\
+$p_{ik}$ is used to fill a "map" of soft segmentation. At the end of the segmentation, This map contains the probability that the voxel $i$ belongs to class $1, 2, ..., K$. We determine the class of the pixel $i$ looking at the class which has the highest probability for this given voxel $i$.
+Using this probability, $E_{Z|Y,\Phi^{(m)}}$ returns the expected value of the parameter $\Phi$ regarding $\Phi^{(m)}$.\\
 
 
 \item \textbf{M-step}\\
-This this the maximization step. During this step $\operatorname*{arg\,max}_\Phi$ maximizes $E_{Z|Y,\Phi^{(m)}}$ for the parameter $\Phi$. It returns $\Phi_{(m+1)}$
+This this the maximization step. During this step $\operatorname*{arg\,max}_\Phi$ maximizes $E_{Z|Y,\Phi^{(m)}}$ for the parameter $\Phi$. It returns $\Phi^{(m+1)}$
   \begin{equation}
   \operatorname*{arg\,max}_\Phi \{ E_{Z|Y,\Phi^{(m)}} \{\operatorname*{log} p(Y,Z|\Phi)\}\}\\
   \end{equation}
  
 \end{itemize} 
   
-The EM algorithm iterates until convergence is reached. The condition of convergence can differ from an algorithm to another. Most of the time, convergence is reached when the differnce between the estimation of the parameter $\Phi$, at step $m$ and step $m+1$ is smaller than $\varepsilon$:
+The EM algorithm iterates until convergence is reached. The condition of convergence can differ from an algorithm to another. A possibility is to fix the number of iterations of the algorithm. Most of the time, the following approach is used; convergence is reached when the difference between the estimation of the parameter $\Phi$, at step $m$ and step $m+1$ is smaller than $\varepsilon$:
 
   \begin{equation*}
   \Phi^{(m+1)}-\Phi^{(m)} < \varepsilon
   \end{equation*}
-  
-%Algorithm will converge SDFSDFSDF  
-  
-  We are no familiar with the theory behind the EM algorithm. The logic appears clearly and we can summarize the basic algorithm with the simple schema below:
+
+If after the $C^{th}$ iteration, this condition is not satisfied, the EM algorithm is stopped. \\
+
+ 
+  \par
+  We are now familiar with the theory behind the EM algorithm. The logic appears clearly and we can summarize the basic algorithm with the figure ~(\ref{fig:EMAlgorithm}):
    
   \begin{figure}[ht]\centering
   \includegraphics[width=.6\textwidth]{Images/Graphics/EMSimple.png}
@@ -340,10 +342,10 @@ From this value, it estimates $\Phi^{(1)}$ and the algorithm iterates until conv
 
 %
 \subsection{Multichannel segmentation}\label{multichannel}
-Most of the time, several modalities are used to process brain segmentation. Indeed, the best suited modality to use depends on the tissue you want to segment. FOr example, T1 MR images are well suited to segment white matter (WM) but is really bad for cerebrospnial fluid (CSF). On the contrary, T2 MR images are well suited for CSF and not for WM. To formalize it, we will change the definition of $y_i$ and of $\mu_k$ we did at the beginning.Let $y_i = \{y_{i1},y_{i2}, ..., y_{iR}\}$ and $\mu_i = \{\mu_{i1},\mu_{i2}, ..., \mu_{iR}\}$ when we use $R$ images, from different modalities to do the segmentation. The equations will remain the same.
+Most of the time, several modalities are used to process brain segmentation. Indeed, the best suited modality to use depends on the tissue you want to segment. For example, T1\footnote{MR images acquisition sequence designed to enhance the grey matter/white matter contrast. See \cite{12}.} MR images are well suited to segment white matter (WM) but are really bad for cerebrospnial fluid (CSF). On the contrary, T2\footnote{MR images acquisition sequence designed to enhance the grey matter/cerebrospinal fluid contrast. See \cite{12}.} MR images are well suited for CSF and not for WM. To formalize the utilisation of different MR images sequences during the segmentation, we will change the definition of $y_i$ and of $\mu_k$ we did at the beginning.Let $y_i = \{y_{i1},y_{i2}, ..., y_{iR}\}$ and $\mu_i = \{\mu_{i1},\mu_{i2}, ..., \mu_{iR}\}$ when we use $R$ images, from different modalities to do the segmentation. The equations for the E-Step and the M-Step will remain the same.
 %
 \subsection{Bias field correction}\label{biasfield}
-A major issue in MR modality is that the images can be corrupted by a low field bias field. It is due to equipment limitations or/and to patient induced electrodynimic interactions.
+A major issue in MR modality is that the images can be corrupted by a low field bias field. It is due to equipment limitations or/and to patient induced electrodynimic interactions (\cite{12}). We will now present how this bias field can be estimated and corrected in the EM algorithm.
 %
 \subsubsection{Principle}
 Let $I=(I_1, ..., I_n)$ the observed intensities in an image, $I^*=(I_1^*, ..., I_n^*)$ the ideal intensities and $F=(F_1, ..., F_n)$ the bias field. Then, the degradation at each voxel can be expressed as:
@@ -364,7 +366,7 @@ We can model the PDF of the voxel intensity with a gaussian distribution
   p(y_i|e_k, \Phi, B) = G(y_i-b_i,\mu_k,\sigma_k)
   \end{equation*}
   
-The low frequency characteristic of the bias field $B$ can be modeled by a linear combination of smooth basics functions (ANNEXES) $\Psi_l(x)$. Let $b_i$ be the realisation of the random variable $B_i$ 
+The low frequency characteristic of the bias field $B$ can be modeled by a linear combination of smooth basics functions $\Psi_l(x)$ (\cite{13}). Let $b_i$ be the realisation of the random variable $B_i$ 
 
   \begin{equation*}
   b_i = \sum_{l=1}^L a_l\Psi_l(pos(i))
@@ -372,7 +374,7 @@ The low frequency characteristic of the bias field $B$ can be modeled by a linea
   
  $pos(i)$ returns the 3D position $(x,y,z)$ of the voxel $i$. $a_i$ is the $i^{(th)}$ value of the vector $A=(a_1, ..., a_L)$. $A$ represents the bias field parameters.
  \par
-In the GM model, bias field can then be estimated using EM framework. The bias field parameter $A$ will be used during the E-Step to estimate the probability that a voxel $i$ belongs to class $j$. It will be computed during the M-Step, in parallel with the maximization of the parameters (mean and variance).
+In the GM model, bias field can then be estimated using EM framework. The bias field parameter $A$ will be used during the E-Step , through $bi$ to estimate the soft segmentation. $A$ will be re-estimated during the M-Step, after the maximization of the tissue class parameters (mean, variance and weight).
 Van Leemput formalised the two steps as below (\cite{8} and \cite{9}):\\
 
 %\par
@@ -447,12 +449,12 @@ with:
 
 \end{itemize}
 
-The bias field correction step can be interpreted as follows: the estimated soft segmentation and gaussian distribution parameters are used to reconstruct the image $\tilde{Y}=(\tilde{y_1}, ..., \tilde{y_n})$. The new image is supposed not to be corrupted by the bias field. We then substract the reconstructed image $\tilde{Y}$ from the observed image $Y$. We obtain the residual image $R$. From $R$, we estimate the bias field. $F$ represents the discretized geometry of the bias field. $W$ is an inverse covariance matrix.
+The bias field correction can be interpreted as follows: the estimated soft segmentation ($p_{ik}^{(m)}$) and tissue class parameters are used to reconstruct the image $\tilde{Y}=(\tilde{y_1}, ..., \tilde{y_n})$. This new image is supposed not to be corrupted by the bias field. We then substract the reconstructed image $\tilde{Y}$ from the observed image $Y$. We obtain the residual image $R$. From $R$, we estimate the bias field. $F$ represents the discretized geometry of the bias field. $W$ is an inverse covariance matrix. It returns informations about the possible error for each voxel. The covariance matrix will be descibed in details in section (QSDQSD).
 \par
-The approach used in Slicer 3 is based on the same principle but differs regarding the parameters which are known and estimated, in the EM algorithm. 
+The approach used in Slicer 3 is based on the same principle but differs regarding the maximization method and the parameter which is maximized.
 %
 \subsubsection{Variation used in Slicer 3}
-In this method, we are working with a GMM. Moreover the parametres of this gaussian distribution are assumed to be known. The idea of estimating the field in EM framework was originally proposed by Wells \textit{et al.} (\cite{10}) The EM is used to estimate the bias field using the \textit{maximum a posteriori principle} (MAP) instead of the maximum likelihood principle (equation (~\ref{AR})):
+In this method, we are working with a GMM. Moreover the parametres of this gaussian distribution are assumed to be known. The idea of estimating the field in EM framework was originally proposed by Wells \textit{et al.} (\cite{10}). He proposed to only use maximization to re-estimate the bias field. The \textit{maximum a posteriori principle} (MAP) instead of the maximum likelihood principle (equation (~\ref{AR})) is used to find the lower bound, duringthe maaximization:
 
 \begin{align*}\label{ARMAP}
   \hat{\Phi} &=\operatorname*{arg\,max}_\Phi p(\Phi |Y)\\
@@ -464,7 +466,7 @@ In this method, we are working with a GMM. Moreover the parametres of this gauss
              %&{now we remove the terms which are constants regarding \Phi }\\
   \end{align*}
 
-Proceeding the same way we did in section~\ref{GENERAL}, the new E-Step becomes:
+Proceeding the same way as we did in section~\ref{GENERAL}, the new E-Step becomes:
 
 \begin{equation}\label{EMAP}
 E_{MAP} = E_{Z|Y,\Phi^{(m)}}\{ \operatorname*{ln} p(Y,Z|\Phi) \} + \operatorname*{ln} p(\Phi)
@@ -476,7 +478,7 @@ In Wells' method, the only parameter to be estimate is the bias field. We assume
   p(\Phi) = p(B) = G(B,0,\Sigma_B)
   \end{equation*}
   
-The equation for the bias field will change. We add the smoothness constraint in the gaussian distribution: $\Sigma_B^{-1}$. We also set $F$ to unix matrix as no parametric model for the bias field is assumed.We also define the mean residual image $\bar{M}^{(m+1)}$
+The equation for the bias field will change. We add the smoothness constraint in the gaussian distribution: $\Sigma_B^{-1}$. We also set $F$ to unix matrix as no parametric model for the bias field is assumed. Finally, we define the mean residual image $\bar{M}^{(m+1)}$
 
   \begin{equation*}
   \bar{M}^{(m+1)} = W^{(m+1)}R^{(m+1)}
@@ -490,7 +492,7 @@ The equation (~\ref{BIASFIELD}) for the bias field will then be remplaced by $(B
 
 %
 \subsection{Hierarchical information}\label{Structure}
-The last modification of the original EM algorithm is the addition of hierarchical information in the iterative process. The algorithm was described by Pohl \textit{et al.} (\cite{11}) The idea was to describe the structures we want to segment as a tree. It allows us to subdivise the segmentation process into subproblems, that are easier to solve, according to Pohl.
+The last modification of the original EM algorithm is the addition of hierarchical information in the iterative segmentation process. The algorithm was described by Pohl \textit{et al.} (\cite{11}) The idea was to describe the structures we want to segment as a tree. It allows us to subdivise the segmentation process into subproblems, that are easier to solve, according to Pohl.
   
  % \begin{center}
   \begin{figure}[ht]\centering
@@ -498,20 +500,20 @@ The last modification of the original EM algorithm is the addition of hierarchic
   \caption{A simple tree structure of the brain}\label{fig:treeStructure}
   \end{figure}
   
-Here we continue with an intuitive description of the process. It is a brief explanation of how the tree figure ~\ref{fig:treeStructure} would be segmented using the tree structure information. At the first iteration, the MR image will be segmented into the background (BG) and the intracranial cavity (ICC). At the second iteration, the BG will be segmented into the air and the skull. Finally, at the last iteration, the ICC will be segmented into white matter (WM), grey matter (GM) and cerebrospinal fluid (CSF).
+Here we continue with an intuitive description of the process. It is a brief explanation of how the tree figure (\ref{fig:treeStructure}) would be segmented using the tree structure information. At the first iteration, the MR image will be segmented into the background (BG) and the intracranial cavity (ICC) with the EM algorithm. At the second iteration, the BG will be segmented into the air and the skull. Finally, at the last iteration, the ICC will be segmented into white matter (WM), grey matter (GM) and cerebrospinal fluid (CSF).
 
-To formalize it, we incorporate $H$, a set of structure-specific information in equation (~\ref{EMAP}). $H$ contains a lot of information like the structures of the tree which have to be segmented, an approximative size of the structure to be segmented and information about which modality is the best suited to segment this structure.
+To formalize it, we incorporate $H$, a set of structure-specific information in equation (\ref{EMAP}). $H$ contains a lot of information like the structures of the tree which have to be segmented, an approximative size of the structure to be segmented and information about which modality is the best suited to segment this structure.
 \begin{equation*}
- \Phi^{(m+1)}=\operatorname*{arg\,max}_\Phi \{\sum_{k=1}^K   (p(e_{k}|Y,\Phi^{(m)},H)\operatorname*{log} p(Y,e_{k}|\Phi,H)) + \operatorname*{ln} p(\Phi) \} \\
+ \Phi^{(m+1)}=\operatorname*{arg\,max}_\Phi \{\sum_{k=1}^K   (p(e_{k}|Y,\Phi^{(m)},H)\operatorname*{log} p(Y,e_{k}|\Phi,H)) + \operatorname*{ln} p(\Phi ,H) \} \\
 \end{equation*}
 %  \end{center}
  
 \subsection{Summary}\label{SUMMARY}
-We have shown that the EM algorithm is very flexible and can be transformed to solve a lot of segmentation problems. It is very well suited for brain segmentation  and we can add a lot of informations through this algorithm to enhance the segmentation. The iterative general process is divided in two steps: the expectation (E-Step) and the maximization (the M-Step).
+We have shown that the EM algorithm is very flexible and can be transformed to solve a lot of segmentation problems. It is very well suited for segmentation of MR brain images and we can add a lot of informations through this algorithm to enhance the segmentation. The iterative general process is divided in two steps: the expectation (E-Step) and the maximization (the M-Step).
 
   \begin{itemize}
   \item \textbf{E-Step}\\  
-  Estimates a soft segmentation, given parameter $\Phi^{(m)}$.
+  Estimates a soft segmentation ($p_{ik}$), given parameter $\Phi^{(m)}$. The soft segmentation creates a map of probability. Each voxels contains the probabilities that it belongs to each class. It is used for the final segmentation.
   
   \item \textbf{M-Step}\\
   Estimates $\Phi^{(m+1)}$, using the soft segmentation done in the E-Step.
@@ -522,60 +524,66 @@ We have shown that the EM algorithm is very flexible and can be transformed to s
     \end{itemize}
   \end{itemize}
   
-This will be iterates until the whole tree has been processed as described in section~\ref{Structure}.
+Each node will then be segmented until the whole tree has been processed as described in section (\ref{Structure}).
 
   \begin{figure}[ht]\centering
   \includegraphics[width=.8\textwidth]{Images/Graphics/workflowtheorical.png}
   \caption{EM segment algorithm in Slicer}\label{fig:EMSSlicer}
   \end{figure}
   
-We can also describe the segmentation process in the figure ~\ref{fig:EMSSlicer}. To describe how it works, we use the tree structure presented in figure ~\ref{fig:treeStructure} . It first segments the node 0, i.e., BG and ICC. Once the EM Segmentation has converged, BG and ICC are segmented and we go to the next node. Air and Skull will then be segmented. Following this process, all the structures of the tree will be segmented.
+We can also describe the segmentation process in the figure (\ref{fig:EMSSlicer}). To describe how it works, we use the tree structure presented in figure (\ref{fig:treeStructure}) . It first segments the node $n=0$, i.e., BG and ICC. Once the EM Segmentation has converged, BG and ICC have been segmented and we move to the next node. Air and Skull will then be segmented. Following this process, all the structures of the tree will be segmented.
 %
 \section{Workflow in Slicer 3}
-We will now present the whole segmentation used in Slicer 3. This will describe all the initialisation steps done by the user, via the graphical user interface (GUI). It will also present how the whole algorithm works. We will remind why is each initialisation step important and where is this information used in the pre-processing treatments or in the EM algorithm.
+We will now present the whole segmentation framework used in Slicer 3. This will describe all the initialisation steps done by the user, via the graphical user interface (GUI). It will also present how the whole algorithm works. We will remind why is each initialisation step important and where is this information used.
 %
 \subsection{User interface}\label{GUI}
-\subsubsection{Step 1: Tree structure creation}
-We first create the tree structure we want to use for the segmentation. It will be used to define $H$ (section ~\ref{Structure}).
-%
-\subsubsection{Step 2: Atlas assignment}
-We assign for each node of the tree, i.e. each tissue to segment, the related atlas. It will be used for the spatial information (section ~\ref{spatial}).
-%
-\subsubsection{Step 3: Multimodal segmentation}
-We choose the images we want to use for the segmentation. As discussed in section ~\ref{multichannel}, it is usefull because some tissues are not clearly visible in some modalities. It helps us to define $Y$ ,the observed images. It will be used for the multichannel segmentation (section ~\ref{multichannel}).
-%
-\subsubsection{Step 4: Intensity normalization}
-We choose the value for the intensity normalization. We normalize the intensity of the images to be segmented, regarding the atlas. The target images are normalized. Thus, they have the same mean intensity as the related atlas. It is usefull if we want to use the command-line module. Doing an intensity normalisation, the initialisation value of each class will be the same for each volume. It is a convenient way to run a lot of segmentation.
-%
-\subsubsection{Step 5: Class definition}
-We define mean value, variance and covariance for each class and modality. Moreover, it is a more precise way to initialiase the algorithm. It it usefull because the EM algorithm used only estimates the bias field but still requires informations about the tissues to be segmented. Using these values, the algorithm estimates the bias.
-%
-\subsubsection{Step 6: Prior weights}
-We define the importance of each target image and of the atlas for each tissue to segment. It is will be usefull to define $H$ (section ~\ref{Structure}). For each tissue, $H$ knows usefull informations as which modality is the more relevant  for the class and the size that the class is supposed to be.
-\par
-For example, for the CSF. If we give a weight of one (maximum) to the T2-target volume and zero to the T1 target volume. It means that the only relevant information for CSF will be in the T2 volume. The algorithm will act in consequence and only use the information from T2 to do the segmentation. It is the same for the atlas. If we set the weight of the atlas to one, the algorithm will use the spatial information. If we set it to zero, it will not.
-%
-\subsubsection{Step 7: Registration method}
-We choose the type of registration we want. Different kind of registrations are available. The default registration method is a non-rigid registration.
+It consists in a manual initialization of the parameters which are require for the segmentation on Slicer 3. The user chooses the good values via the GUI.
 
+\begin{itemize}
+\item \textbf{Step 1: Tree structure creation}\\
+\hspace*{4 mm}We first create the tree structure we want to use for the segmentation. It will be used to define $H$ (section (\ref{Structure})).
+%
+\item \textbf{Step 2: Atlas assignment}\\
+\hspace*{4 mm}We assign to each node of the tree, i.e. to each tissue to segment, the related atlas. It will be used for the spatial information (section (\ref{spatial})). It implies that you need an atlas for each structure that you want to segment.
+%
+\item \textbf{Step 3: Multimodal segmentation}\\
+\hspace*{4 mm}We choose the images we want to use for the segmentation. As discussed in section (\ref{multichannel}), it is usefull for the mutlichannel segmentation since some tissues are not clearly visible in some modalities.
+%
+\item \textbf{Step 4: Intensity normalization}\\
+\hspace*{4 mm}We choose the value for the intensity normalization. We normalize the intensity of the images to be segmented, regarding the atlas. The target images are normalized. Thus, they have the same mean intensity as the related atlas. It is usefull if we want to use the command-line module. Doing an intensity normalisation, the initialisation value of each class will be the same for each volume. It is a convenient way to run a lot of segmentation.
+%
+\item \textbf{Step 5: Class definition}\\
+\hspace*{4 mm}We define mean value, variance and covariance for each class and modality. Moreover, it is precise way to initialiase the class tissues distribution for the algorithm. It it usefull because the EM algorithm used only estimates the bias field but still requires informations about the tissues to be segmented. Using these values, the algorithm is can be initialized then estimates the bias.
+%
+\item \textbf{Step 6: Prior weights}\\
+\hspace*{4 mm}We define the importance of each target image and of the atlas for each tissue to segment. It is will be usefull to define $H$ (section ~\ref{Structure}). For each tissue, $H$ knows usefull informations like which modality is the more relevant  for the class and the size that the class is supposed to be.
+\par
+\hspace*{4 mm}For example, for the CSF. Let's assume that we proceed to a multi channel segmentation with T1 and T2 MR images. We give a weight of one (maximum) to the T2 target volume and zero (minimum) to the T1 target volume. It means that the only relevant information for CSF will be in the T2 volume. The algorithm will act in consequence and only use the information from T2 to do the segmentation. It is the same for the atlas. If we set the weight of the atlas to one, the algorithm will use the spatial information. If we set it to zero, it will not.
+%
+\item \textbf{Step 7: Registration method}\\
+\hspace*{4 mm}We choose the type of registration we want. Different kind of registrations are available. The default registration method is a non-rigid registration. The point of choising a registration method is presented in the next section.
+\end{itemize}
 %
 \subsection{Algorithm}
 After all the initialisation steps done via the GUI (section ~\ref{GUI}), we will no present the core of the segmentation pipeline.
 %
-\subsubsection{Step 1: Intensity normalisation}
-The intensity of the target volumes are normalized to the value that the user chose in the GUI.
+\begin{itemize}
+\item \textbf{Step 1: Intensity normalisation}\\
+\hspace*{4 mm}The intensity of the target volumes are normalized to the value that the user chose in the GUI. The utility of this treatment has been discissed in the previous section, at the step 4.
 %
-\subsubsection{Step 2: Images registration}
-In order for the atlas to guide the segmentation (spatial information), it as to be aligned to the target images. The transformation is evaluated between the first normalized target image and its atlas.
+\item \textbf{Step 2: Images registration}\\
+\hspace*{4 mm}In order for the atlas to guide the segmentation (spatial information), it as to be aligned to the target images. The transformation is evaluated between the first normalized target image and its atlas.
 %
-\subsubsection{Step 3: Spatial prior alignement}
-The transformation computed during the image registration is applied to all the structure-specific atlases. 
+\item \textbf{Step 3: Spatial prior alignement}\\
+\hspace*{4 mm}The transformation computed during the image registration is applied to all the structure-specific atlases. 
 %
-\subsubsection{Step 4: EM Algorithm in the tree structure}
-The whole segment workflow is then applied (~\ref{SUMMARY}).
+\item \textbf{Step 4: EM Algorithm in the tree structure}\\
+\hspace*{4 mm}The whole segment workflow is then applied (section~\ref{SUMMARY}).
+
+\end{itemize}
 %
 \subsection{Summary}
-In Slicer 3, the whole segmentation pipeline can be described as in figure ~\ref{fig:Wpipeline}. There is first an iniatialization step, done by user via the GUI. Then, some pre-processing steps are applied in order to enhance the segmentation. Finally, the EM algorithm segments the MR images.
+In Slicer 3, the whole segmentation pipeline can be described as in figure (\ref{fig:Wpipeline}). There is first an iniatialization step, done by user via the GUI. Then, some pre-processing steps are applied in order to enhance the segmentation. Finally, the EM algorithm segments the MR images.
 
   \begin{figure}[ht]\centering
   \includegraphics[width=1\textwidth]{Images/Graphics/wholepipeline.png}
@@ -583,17 +591,17 @@ In Slicer 3, the whole segmentation pipeline can be described as in figure ~\ref
   \end{figure}
 
 %
-\section{Limitations}
+\section{Limitations}\label{su:limitations}
 Even if the EM segmentation pipeline is robust in Slicer 3, some limitations appear.
 \par
-The first problem the user has to face appears in the intensity normalization step. The user has no tools to identify the good normalization values and has to guess it. This problem will be discussed in section SDFSDF.
+The first problem the user has to face appears during the intensity normalization step. The user has no tools to find the good normalization value. He has to guess it. This problem will be discussed in section SDFSDF.
 \par
 The second problem is directly linked to the EM algorithm. As the maximization method is a local one, the class distribution, which are used for the initialization of the algorithm have to be well defined. So far, we have no possibilities to know how accurate our definition of the class is. This problem will be discussed in details in section SDFSDF.
 \par
-Another problem appears at the same steps. The actual method for defining means and variances for each class appears not as efficient as we expect it to be. This problem will be discussed in details in section SDFSDF.
+Another problem appears at the same steps. The actual method for defining means and variances for each class appears not as efficient as we want it to be. This problem will be discussed in details in section SDFSDF.
 \par 
-The last problem we encountered appeared after the initialization, during the pre-processings. Only one pre-processing (intensity normalization) is done on the target images before the registration to the atlas, to estimate the transformation. Since the EM algorithm is mainly designed to work on MR images, bias field is a recurrent problem. Proceeding to a registration before a bias correction can deteriore a lot the results of the registration. This problem will be discussed in details in section SDFSDF.\\
+The last problem we encountered appeared after the initialization, during the pre-processings. Only one pre-processing (intensity normalization) is done on the target images before the registration to the atlas. Since the EM algorithm is mainly designed to work on MR images, bias field is a recurrent problem. Proceeding to a registration before a bias correction can deteriore a lot the results of the registration. This problem will be discussed in details in section SDFSDF.\\
 
 %
 \par
-After this presentation of the main issues, we will in the next chapter explain the problems more deeply and show you the solutions we brought to try to solve the problems.
+After this presentation of the main issues, we will in the next chapter explain the problems more deeply and show you the solutions we brought to solve it.

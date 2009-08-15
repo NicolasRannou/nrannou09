@@ -1,19 +1,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Basic EM algorithm}}{16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple tree structure of the brain}}{20}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces EM segment algorithm in Slicer}}{22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The whole segmentation pipeline in Slicer 3}}{25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces This is a caption explaining the diagram clearly and fully.}}{13}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Caption to explain the diagram clearly and fully.}}{14}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Caption to explain the diagram clearly and fully.}}{14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Axial view of a T1 volume without the label map.}}{16}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Axial view of a T1 volume with the label map.}}{16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Axial view of a T2 volume without the label map.}}{16}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Axial view of a T2 volume with the label map.}}{16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of registration of a biased MR image without correction}}{27}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces New algorithm pipeline}}{28}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Axial view of the label map.}}{29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Module created for the bias correction.}}{22}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sagittal view of a biased T1 volume.}}{22}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sagittal view of the T1 volume after bias correction.}}{22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Registration after bias correction.}}{34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Axial view of the segmentation's results with a biased target and a label map sampling.}}{43}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Coronal view of the segmentation's results with a biased target and a label map sampling.}}{44}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Sagittal view of the segmentation's results with a biased target and a label map sampling.}}{45}
