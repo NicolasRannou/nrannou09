@@ -12,7 +12,7 @@ In the segmentation process, a registration step is required. Registration consi
 On figure (\ref{fig:bfexemple}), we present the result of the registration between an atlas and a biased MR image. Note that the target MR image has been normalized to have the same mean value as the atlas. The results is clearly bad. A solution must be brought to enhance this step and so the segmentation.
 
   \begin{figure}[ht]\centering
-  \includegraphics[width=0.8\textwidth]{Images/Screenshots/badRegistration.png}
+  \includegraphics[width=0.6\textwidth]{Images/Screenshots/badRegistration.png}
   \caption{Result of registration of a biased MR image without correction}\label{fig:bfexemple}
   \end{figure}
   
@@ -33,6 +33,18 @@ We can describe the new segmentation workflow in Slicer 3 as we do in figure (\r
   \caption{New algorithm pipeline}\label{fig:wfwbc}
   \end{figure}
   
+  
+\par
+After the bias correction, the result of the registration clearly appears to be better  (\ref{fig:goodRegistration}). 
+
+\begin{figure}\centering
+  \includegraphics[width=.6\textwidth]{Images/Screenshots/goodRegistration.png}
+  \caption{Registration after bias correction.}\label{fig:goodRegistration}
+\end{figure}
+\par
+We evaluated accuracy of the registration. We used the simple approach of the joint histogram.
+The joint histogram evalutaion method is basic comparaison. Let $A$ be a matrix of size $W*L$. $W$ will be the intensity range of the first image used for the comparaison. $L$ will be the intensity range of the second image to be coompared. The matrix is initialized to $0$. Each time that in the same position, there is the same intensities in the two images, we add $1$ in the good cell in the matrix.
+After the joint histogram creation, the value at the coordinate ${i,j}$ in the matrix is the number of pixel pairs having gray level $i$ at position ${x,y}$.
 %\subsection{Results}
 %corrected not corrected
 %parameters explanation
@@ -60,12 +72,14 @@ The idea is to create a label map. This map contains colors. There is one color 
 The user creates a label map by coloring caracterisc regions for each tissue to segment, in the appropriate color. This gives a spatial information to the algorithm. It can now estimate automaticly the mean value and covariance of each class, for each tissue, using this label map.
 
 \begin{figure}\centering
-  \includegraphics[width=1\textwidth]{Images/Screenshots/labelmaps.png}
+  \includegraphics[width=0.8\textwidth]{Images/Screenshots/labelmaps.png}
   \caption{Axial view of the label map.}\label{fig:labelmaps}
 \end{figure}
 
 \par 
 It is very convenient because, since the algorithm needs a good initialization, we can easily define a sample of hundred of points for each class. The results will representatives. Moreover, the results are now reproducible. Indeed, we can store then re-use the same label map. The results will remain the same.
+\\
+NUMBERS TO PROVE DIFFERENCE!!!
 
 %
 \section{Class Distribution visualization}\label{sec:tables}
@@ -93,13 +107,27 @@ We can easily deduce $\rho$ from the covariance matrix $\Sigma$ (see \cite{17}).
  \end{bmatrix}
 \end{equation*}
 
+The covariance matrix and the mean values for each class to segment for each image are computed during the labelmap sampling (section~\ref{sec:CDS}).
+\par
+We said that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. The problem with this approach appears if the classes to segment are not spread over all the intensities. Indeed, the vizualisation is not good then: the gaussian is only localized in a small portion of the 2D plane. We want to "zoom" on the region of interest. We decided to change the range of the two axes. Then range will be re-defined for each image. Let's present it for a given image $X$. It is now the difference between $Max$, the maximum value extracted with the label map, between all the samples between all the classes for the image $X$, and $Min$, its opposite.
+
+IMAGES
 
 \section{Intensity Normalization}
+Another very usefull contribution is a tool which helps the user to determine the good normalization value.
 \subsection{Interest}
-usefull if you need to do a lot of segmentations
-enhance the rescaling..?
+As discussed in section (\ref{GUI}), at the step 4, an intensity normalization is done. Will already presented the utility of an intensity normalization in the same section. The problem is that the user has no tools to find the good values for the segmentation. He has to guess the mean intensity of the voxels in the MR image, background exluded. This is of course not doingable in practise.
 \subsection{Our approach}
-background/brain
+We implemented a simple tool, to allow the user to find easily and accurately this normalization value.
+\par
+The first step of the work consited in creating the histogram associated to the image. The $Y$ axe which presents the number of pixels for each intensity in the volume uses a log-scale because the range is huge. The log scale reduces considerably the range. We then added a cursor in this histogram. Using it, the user can choose the intensity which will be the "limit" between the background and part of interest. Finally, while the cursor is moving, our algorithm computes automatically the mean value of the voxels in the volume, from this intensity range to the highest intensity range. This is the normalization value.
+\par
+We present in figure (\ref{fig:intensitynormalization}) the tool we developped. A T1 volume has been loaded. The user can move the cursor in the histogram. While moving, it returns in real-time the normalization value for the given position of the cursor in the lower frame.
+
+\begin{figure}\centering
+  \includegraphics[width=0.5\textwidth]{Images/Screenshots/intensityNormalization.png}
+  \caption{Tool developped for the intensity normalization parameter estimation}\label{fig:intensitynormalization}
+\end{figure}
 %
 
 
@@ -164,7 +192,18 @@ W=E/T\\
 %
 \textbf{return} (W)\\
 \hrule
-%
+
 \end{minipage}
+\\\\\\
+\par
+The new tool is presented in figure (A) (\ref{fig:globalpriors}). When the user moves a cursor, it changes the intensity range for each class. The figure (B) (\ref{fig:globalpriors}) is updated in consequence and provides a real time feedback to the user, about about what he is doing. Clicking on "update tree" (in (A)), the estimated size of a class is computed and is automatically fills the information into the tree structure (parameter $H$).
+\begin{figure}\centering
+  \includegraphics[width=0.7\textwidth]{Images/Screenshots/GlobalPrior.png}
+  \caption{Tool developped for the global prior weights estimation}\label{fig:globalpriors}
+\end{figure}
+
+%As we can see, the results obtained are good and accurate.The time of processing is fast and most of the people are now able to understand these parameters, even they are not familiar with EMS. This is an intuitive way to get an estimation of the GPW parameters.\\
+%Of course some sfsdfs must be done.
+%If there is a strong bias in the images we process, the pixels of a same class will have different values. Then, a segmentation based on intensity will provide bad results. Moreover, if the user wants to segment 2 classes which have the same color, just using the spatial information for example, they won't be able to use it properly.Thus, the user must always keep in mind that it is just an estimation and that he has to check if the values are accurate.
 %
 
