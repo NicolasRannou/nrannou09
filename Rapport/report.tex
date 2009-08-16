@@ -3,6 +3,12 @@
 %--------------------   start of the 'preamble'
 %
 \usepackage{graphicx,amssymb,amstext,amsmath}
+\usepackage[includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\geometry{ hmargin=2.3cm, vmargin=1.3cm }
 %
 %\usepackage{a4wide}
 %
@@ -18,14 +24,57 @@
 \newcommand\nss{\textsl{Not so Short}}
 
 %
+\hypersetup{
+     backref=true,
+     pagebackref=true,
+     hyperindex=true,
+     colorlinks=false,
+     breaklinks=true,
+     citecolor=black,
+     filecolor=black,
+     linkcolor=black,
+     linkbordercolor= {1 1 1},
+     citebordercolor= {1 1 1},
+     bookmarks=true,
+     pdftitle={Training Period Report - Surgical Planning Laboratory},
+     pdfauthor={Nicolas Rannou},
+     %&pdfsubject={NIMS: Neurobiological Imaging Management System},
+     %pdfkeywords={data sharing, database, neurobiological images, open-source, metadata, workflow, ontology}        
+}
+
 %---------------------   end of the 'preamble'
 %
 \begin{document}
 %-----------------------------------------------------------
-%\title{Parameter space exploration and fast visualization tools for EM Segmentation and MRI Bias field correction in Slicer 3}
-%\author{Nicolas Rannou}
-%\fbox{Text in the box}
-%\maketitle
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\fancyfoot[L]{Nicolas RANNOU}
+%\fancyfoot[C]{DO NOT COPY OR DISTRIBUTE}
+\fancyfoot[R]{Page \thepage}
+%\fancyhead[C]{CONFIDENTIAL}
+\fancyhead[L]{Training Period Report}
+\fancyhead[R]{Surgical Planning Laboratory}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+%Redéfinition du style fancy - plain, utilisé pour les pages de nouveau chapitre
+%Le style par défaut est un style plain
+\fancypagestyle{plain}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+ %Définition des headers identiques à une page normale
+\fancyfoot[L]{Nicolas RANNOU}
+%\fancyfoot[C]{DO NOT COPY OR DISTRIBUTE}
+\fancyfoot[R]{Page \thepage}
+%\fancyhead[C]{CONFIDENTIAL}
+\fancyhead[L]{Training Period Report}
+\fancyhead[R]{Surgical Planning Laboratory}
+}
 
 
 \begin{titlepage}
@@ -43,7 +92,7 @@
 %\vspace{4in}
 
 \begin{center}
-\begin{minipage}[c]{.55\textwidth}\centering
+\begin{minipage}[c]{.45\textwidth}\centering
 \includegraphics[width=1\textwidth]{Images/Logos/logo_ISEN.jpg}
 \begin{small}\textbf{Institut Supérieur de l'Electronique et du Numérique}\\Tel. : +33 (0)2.98.03.84.00\\Fax : +33 (0)2.98.03.84.10\\CS 42807 - 29228 BREST Cedex 2 - FRANCE\end{small}
 \end{minipage}
@@ -73,7 +122,7 @@
 \bigskip
 \bigskip
 
-\begin{small}From April 6th to Septemner 11th \\ 
+\begin{small}From April 6th to August 31th \\ 
 At \\ 
 Surgical Planning Laboratory (SPL)
 \end{small}
@@ -85,25 +134,20 @@ Surgical Planning Laboratory (SPL)
  Boston, MA 02115\end{small}
 %\vskip 1in
 \end{center}
-
-\begin{flushleft}
-\begin{small}
-Supervisors:
-\begin{itemize}
-\item Ron KIKINIS, Surgical Planning Laboratory, Harvard Medical School, Boston, MA - USA
-\item Sylvain JAUME, CSAIL, Massachusset's Insitut of Technologies, Boston, MA - USA
-\end{itemize}
-Referring teachers:
-\begin{itemize}
-\item Dominique MARATRAY, Institut Superieur de l'Electronique et du Numerique, Brest - FRANCE
-\item Christine CAVARO-MENARD, Universite de Angers, Angers - FRANCE
-\end{itemize}
-Student:
-\begin{itemize}
-\item Nicolas RANNOU, Institut Superieur de l'Electronique et du Numerique, Brest
-\end{itemize}
-\end{small}
-\end{flushleft}
+\vspace{0.5cm}
+\begin{tabular}{*{2}ll}
+\underline{Supervisors:} &Ron KIKINIS - SPL, Harvard Medical School - kikinis@bwh.harvard.edu\\
+&Sylvain JAUME - CSAIL, Massachusset's Insitut of Technologies - sylvain@csail.mit.edu\\
+\end{tabular}
+\vspace{0.5cm}\\
+%referring tearchers
+\begin{tabular}{*{2}l}
+\underline{Referring Tearchers:} &Christine CAVARO-MENARD - M2 SIBM - christine.menard@univ-angers.fr\\
+&Dominique MARATRAY - ISEN Brest - dominique.maratray@isen.fr
+\end{tabular}
+\vspace{0.5cm}\\
+%Etudiant
+\begin{flushright}by Nicolas RANNOU\end{flushright}
 
 \end{titlepage}
 %-----------------------------------------------------------
@@ -136,8 +180,9 @@ Le contenu peut evoluer.\\
 
 %-----------------------------------------------------------
 \tableofcontents
-%-----------------------------------------------------------
+\addcontentsline{toc}{chapter}{Contents}
 \listoffigures
+\addcontentsline{toc}{chapter}{List of figures}
 %-----------------------------------------------------------
 \include{chap1}
 \include{chap2}

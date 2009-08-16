@@ -1,81 +1,73 @@
-\contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {section}{\numberline {1.1}Context and motivation}{4}
-\contentsline {section}{\numberline {1.2}Contents}{5}
-\contentsline {chapter}{\numberline {2}Expectation-maximization applied to brain segmentation}{6}
-\contentsline {section}{\numberline {2.1}Presentation of the EM segmentation}{6}
-\contentsline {section}{\numberline {2.2}Fundamentals}{7}
-\contentsline {subsection}{\numberline {2.2.1}Statistical model used for the brain}{7}
-\contentsline {subsection}{\numberline {2.2.2}Gaussian mixture model}{8}
-\contentsline {subsection}{\numberline {2.2.3}Maximum likelihood}{8}
-\contentsline {section}{\numberline {2.3}Expectation maximization algorithm}{11}
-\contentsline {subsubsection}{Algorithm in case of Gaussian mixture data model}{11}
-\contentsline {subsubsection}{Generalized algorithm}{12}
-\contentsline {section}{\numberline {2.4}Expectation maximization algorithm used in Slicer 3}{15}
-\contentsline {subsection}{\numberline {2.4.1}Probabilistic atlas}{15}
-\contentsline {subsection}{\numberline {2.4.2}Multichannel segmentation}{17}
-\contentsline {subsection}{\numberline {2.4.3}Bias field correction}{17}
-\contentsline {subsubsection}{Principle}{17}
-\contentsline {subsubsection}{Variation used in Slicer 3}{19}
-\contentsline {subsection}{\numberline {2.4.4}Hierarchical information}{20}
-\contentsline {subsection}{\numberline {2.4.5}Summary}{21}
-\contentsline {section}{\numberline {2.5}Workflow in Slicer 3}{21}
-\contentsline {subsection}{\numberline {2.5.1}User interface}{22}
-\contentsline {subsection}{\numberline {2.5.2}Algorithm}{24}
-\contentsline {subsection}{\numberline {2.5.3}Summary}{24}
-\contentsline {section}{\numberline {2.6}Limitations}{24}
-\contentsline {chapter}{\numberline {3}The contributions}{26}
-\contentsline {section}{\numberline {3.1}MRI Bias Field correction}{26}
-\contentsline {subsection}{\numberline {3.1.1}Interest}{26}
-\contentsline {subsection}{\numberline {3.1.2}Our approach}{27}
-\contentsline {section}{\numberline {3.2}Class Distribution selection}{28}
-\contentsline {subsection}{\numberline {3.2.1}Interest}{28}
-\contentsline {subsection}{\numberline {3.2.2}Method used}{28}
-\contentsline {section}{\numberline {3.3}Class Distribution visualization}{29}
-\contentsline {subsection}{\numberline {3.3.1}Interest}{30}
-\contentsline {subsection}{\numberline {3.3.2}Our approach}{30}
-\contentsline {section}{\numberline {3.4}Intensity Normalization}{30}
-\contentsline {subsection}{\numberline {3.4.1}Interest}{30}
-\contentsline {subsection}{\numberline {3.4.2}Our approach}{30}
-\contentsline {section}{\numberline {3.5}Global Prior Estimation}{31}
-\contentsline {subsection}{\numberline {3.5.1}Presentation of the problem}{31}
-\contentsline {subsection}{\numberline {3.5.2}Our approach}{31}
-\contentsline {subsubsection}{Fast user feedback}{31}
-\contentsline {subsubsection}{Global priors evaluation}{31}
-\contentsline {chapter}{\numberline {4}Results and discussion}{33}
-\contentsline {section}{\numberline {4.1}Results}{33}
-\contentsline {subsection}{\numberline {4.1.1}Bias correction}{33}
-\contentsline {subsubsection}{Testing process}{33}
-\contentsline {subsubsection}{Results}{33}
-\contentsline {subsubsection}{Evaluation of the results}{33}
-\contentsline {subsection}{\numberline {4.1.2}Class Selection}{35}
-\contentsline {subsubsection}{Testing process}{35}
-\contentsline {subsubsection}{Results}{35}
-\contentsline {subsubsection}{Specialist's point of view}{35}
-\contentsline {subsection}{\numberline {4.1.3}Class visualization}{35}
-\contentsline {subsubsection}{Testing process}{35}
-\contentsline {subsubsection}{Results}{35}
-\contentsline {subsection}{\numberline {4.1.4}Intensity Normalization}{35}
-\contentsline {subsubsection}{Testing process}{35}
-\contentsline {subsubsection}{Results}{35}
-\contentsline {subsection}{\numberline {4.1.5}Global Prior estimation}{35}
-\contentsline {subsubsection}{Testing process}{35}
-\contentsline {subsubsection}{Results}{35}
-\contentsline {subsubsection}{Specialist's point of view}{35}
-\contentsline {section}{\numberline {4.2}Future work}{35}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{36}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{37}
-\contentsline {chapter}{\numberline {A}Statistics}{39}
-\contentsline {section}{\numberline {A.1}Fundamentals}{39}
-\contentsline {section}{\numberline {A.2}Bayes' theorem}{39}
-\contentsline {subsection}{\numberline {A.2.1}Theorem}{39}
-\contentsline {subsection}{\numberline {A.2.2}Proof}{39}
-\contentsline {section}{\numberline {A.3}Jensen's inequality}{40}
-\contentsline {subsection}{\numberline {A.3.1}Inequality}{40}
-\contentsline {subsection}{\numberline {A.3.2}Proof}{40}
-\contentsline {chapter}{\numberline {B}Results of the segmentation}{42}
-\contentsline {section}{\numberline {B.1}Label map sampling and biased target}{42}
-\contentsline {subsection}{\numberline {B.1.1}Axial view}{42}
-\contentsline {subsection}{\numberline {B.1.2}Coronal view}{42}
-\contentsline {subsection}{\numberline {B.1.3}Sagittal view}{42}
-\contentsline {section}{\numberline {B.2}Manual sampling and unbiased target}{42}
-\contentsline {section}{\numberline {B.3}Label map sampling and unbiased target}{42}
+\contentsline {chapter}{Contents}{2}{chapter*.1}
+\contentsline {chapter}{List of figures}{3}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Context and motivation}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Contents}{4}{section.1.2}
+\contentsline {chapter}{\numberline {2}Expectation-maximization applied to brain segmentation}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Presentation of the EM segmentation}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Fundamentals}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Statistical model used for the brain}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Gaussian mixture model}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Maximum likelihood}{7}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Expectation maximization algorithm}{8}{section.2.3}
+\contentsline {subsubsection}{Algorithm in case of Gaussian mixture data model}{8}{section*.3}
+\contentsline {subsubsection}{Generalized algorithm}{9}{section*.4}
+\contentsline {section}{\numberline {2.4}Expectation maximization algorithm used in Slicer 3}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Probabilistic atlas}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Multichannel segmentation}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Bias field correction}{13}{subsection.2.4.3}
+\contentsline {subsubsection}{Principle}{13}{section*.5}
+\contentsline {subsubsection}{Variation used in Slicer 3}{15}{section*.6}
+\contentsline {subsection}{\numberline {2.4.4}Hierarchical information}{15}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Summary}{16}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Workflow in Slicer 3}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}User interface}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Algorithm}{18}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Summary}{19}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Limitations}{19}{section.2.6}
+\contentsline {chapter}{\numberline {3}The contributions}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}MRI Bias Field correction}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Interest}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Our approach}{21}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Class Distribution selection}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Interest}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Method used}{23}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Class Distribution visualization}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Interest}{24}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Our approach}{24}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Intensity Normalization}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Interest}{25}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Our approach}{25}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Global Prior Estimation}{26}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Presentation of the problem}{26}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Our approach}{26}{subsection.3.5.2}
+\contentsline {subsubsection}{Fast user feedback}{26}{section*.7}
+\contentsline {subsubsection}{Global priors evaluation}{27}{section*.8}
+\contentsline {chapter}{\numberline {4}Results and discussion}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Results}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Bias correction}{29}{subsection.4.1.1}
+\contentsline {subsubsection}{Testing process}{29}{section*.9}
+\contentsline {subsubsection}{Results}{29}{section*.10}
+\contentsline {subsubsection}{Experts's point of view}{29}{section*.11}
+\contentsline {subsection}{\numberline {4.1.2}Class Selection}{30}{subsection.4.1.2}
+\contentsline {subsubsection}{Testing process}{30}{section*.12}
+\contentsline {subsubsection}{Results}{30}{section*.13}
+\contentsline {subsubsection}{Expert's point of view}{30}{section*.14}
+\contentsline {section}{\numberline {4.2}Future work}{31}{section.4.2}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{32}{section*.15}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{33}{section*.15}
+\contentsline {chapter}{\numberline {A}Statistics}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}Fundamentals}{35}{section.A.1}
+\contentsline {section}{\numberline {A.2}Bayes' theorem}{35}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Theorem}{35}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Proof}{35}{subsection.A.2.2}
+\contentsline {section}{\numberline {A.3}Jensen's inequality}{36}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Inequality}{36}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Proof}{36}{subsection.A.3.2}
+\contentsline {chapter}{\numberline {B}Results of the segmentation}{38}{appendix.B}
+\contentsline {section}{\numberline {B.1}Label map sampling and biased target}{38}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Axial view}{38}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Coronal view}{38}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Sagittal view}{38}{subsection.B.1.3}
+\contentsline {section}{\numberline {B.2}Manual sampling and unbiased target}{38}{section.B.2}
+\contentsline {section}{\numberline {B.3}Label map sampling and unbiased target}{38}{section.B.3}

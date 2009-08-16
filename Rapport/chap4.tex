@@ -1,96 +1,72 @@
 \chapter{Results and discussion}\label{sec:results}
-This chapter will review what has been done and
-mentions the main open questions.
-\par
-Results using different tools
-\par
-limitations
-\par
-improvement (in relation to limitations)
+This chapter will present the importance of the contribution we did, regarding the final segmentation. We will not discuss about the enhanced usability of the module. It will allow you to see how the segmentation has changed. We will then discuss about the next contribution which could be brought to enhance the segmentation and the usability of a such module. 
+
 %
 \section{Results}
 %
-Tests has been performed to show the utility of the work done. The results are presented below. The testings are comparaisons between the results obtained with the previous workflow and the new one. The results obtained will then be reviewed by a specialist to evaluate the previous and the new segmented datasets.
+Here we get going with a presentation of different results, using the different main contributions. We will conpare results obtained with the previous workflow and the new one. The results obtained will then be reviewed by a specialist to evaluate the segmentation. We always work with the same dataset. We chose intentionally a biased one.
 %
 \subsection{Bias correction}
 %
-Here we get going with the intensities inhomogeinities correction.
+Here we present the utility of the intensities inhomogeinities correction. It is usefull for the registration
 %
 \subsubsection{Testing process}
-%
-%we create a mask.
-%
-%\begin{figure}\centering
-%\includegraphics[width=1\textwidth]{Images/Screenshots/biasCorrection.png}
-%  \caption{Module created for the bias correction.% On the left panel, there are the parametersto set for the correction. On the top left red box, the 2d mask is displayed. On the top right box, the 3d mask is shown. On the lower left yellow slice, the biased volume is presented. In the lower right slice, the corrected volume is printed
-%  }\label{fig:BiasCorrection}
-%\end{figure}
-
-
+A tutorial for EM segmentation in Slicer 3 is available at SDFS. We followed it, one time with a biased image, one time with a correct image. All the parameters remains the same in the segmentation workflow.
 
 %
-\subsubsection{Results}
+\subsubsection{Results}correction
+The results of the final segmentation are presented in figure (\ref{fig:NC_C_L}). (A) presents the original biased image, (B) the corrected image, (C) the result of the segmentation with the biased image and (D) the result of the segmentation with the corrected image. The reults appears better but as long as we are not experts, an expert will estimate the result of the segmentation in the next section.
 %
-%Here are the resultsfdd ddddddddddd dddddddddddd ddddddddddd ddddddddd dddddddddd ddddddddddd dddddddddd dddddddddd ddddddddd dddddddddd ddddddddd dddddddd dddddddd dddddd dddd dddddddd..
-%
-\par
-\begin{figure}\centering
-  \includegraphics[width=.95\textwidth]{Images/Screenshots/goodRegistration.png}
-  \caption{Registration after bias correction.}\label{fig:goodRegistration}
-\end{figure}
+  \begin{figure}\centering
+  \includegraphics[width=0.55\textwidth]{Images/Screenshots/NC_C_L.png}
+  \caption{Results of the segmentation with bias correction}\label{fig:NC_C_L}
+  \end{figure}
+
+
 %
 \par
 %more comments ttttttttttttttttttttt ttttttttttttt ttttttttttt tttttttttttt ttttttttttt ttttttttttt tttttttttttttt ttttttttttttt tttttttttttttt tttttttttttt ttttttttttttttt\\
 %
-\subsubsection{Evaluation of the results}
-
-After the bias correction, the result of the registration clearly appears to be better. We evaluated accuracy of the regisstration. We used the simple approach of the joint histogram.
 \par
-The joint histogram evalutaion method is basic comparaison. Let $A$ be a matrix of size $W*L$. $W$ will be the intensity range of the first image used for the comparaison. $L$ will be the intensity range of the second image to be coompared. The matrix is initialized to $0$. Each time that in the same position, there is the same intensities in the two images, we add $1$ in the good cell in the matrix.
-After the joint histogram creation, the value at the coordinate ${i,j}$ in the matrix is the number of pixel pairs having gray level $i$ at position ${x,y}$.
-%
+Nevertheless, we can explain the difference. It is due to a better registration and a better class distribution. QSDFQ
+More images with better resolution in annexes SFDSDF.
 
+%
+\subsubsection{Experts's point of view}
+%
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF\\FFFFFFFFFFFFFFFFFF\\FFFFFFFFFFFFFFFFFFF\\FFFFFFFFFFFFFFFFFFFFFFFFFF\\FFFFFFFFFFFFFFFFFFFF\\FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 %
 \subsection{Class Selection}
+compare results regarding accuracy of distribution
 %
 \subsubsection{Testing process}
+We followed the same tutorial as in the previous section. We used each time a corrected image
 %
 \subsubsection{Results}
 
-%
-\subsubsection{Specialist's point of view}
-%
-
-\subsection{Class visualization}
-%
-\subsubsection{Testing process}
-%
-\subsubsection{Results}
-%
-\subsection{Intensity Normalization}
-%
-\subsubsection{Testing process}
-%
-\subsubsection{Results}
-
-\subsection{Global Prior estimation}
-%
-\subsubsection{Testing process}
-%
-\subsubsection{Results}
-As we can see, the results obtained are good and accurate.The time of processing is fast and most of the people are now able to understand these parameters, even they are not familiar with EMS. This is an intuitive way to get an estimation of the GPW parameters.\\
-Of course some sfsdfs must be done.
-If there is a strong bias in the images we process, the pixels of a same class will have different values. Then, a segmentation based on intensity will provide bad results. Moreover, if the user wants to segment 2 classes which have the same color, just using the spatial information for example, they won't be able to use it properly.Thus, the user must always keep in mind that it is just an estimation and that he has to check if the values are accurate.
+  \begin{figure}\centering
+  \includegraphics[width=0.55\textwidth]{Images/Screenshots/C_M_L.png}
+  \caption{Results of the segmentation with label map}\label{fig:C_M_L}
+  \end{figure}
+  
+underestimation
+overestimation
+holes filled
 
 %
-\subsubsection{Specialist's point of view}
-
+\subsubsection{Expert's point of view}
+%
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
 \section{Future work}
+
+PRIOR
+A major issue of this approach is that when the image is biased and when some class have a close distribution. It is no longer effective because it is only based on the intensity of the voxels. Integrate the gaussian distribution in the estimation process.
+
 \newpage
 \section*{Acknowledgements}
 \addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}
 Ron Kikinis who gave me the opportunity to carry out my intersnship in the SPL.
 Sylvain Jaume who supervises me during all my work.
-Andryi, Daniel, Steve?
+Steve  helped a lot
 

@@ -1,17 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Basic EM algorithm}}{16}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple tree structure of the brain}}{20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces EM segment algorithm in Slicer}}{22}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces The whole segmentation pipeline in Slicer 3}}{25}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Basic EM algorithm}}{12}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple tree structure of the brain}}{16}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces EM segment algorithm in Slicer}}{17}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The whole segmentation pipeline in Slicer 3}}{19}{figure.2.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of registration of a biased MR image without correction}}{27}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces New algorithm pipeline}}{28}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Axial view of the label map.}}{29}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Result of registration of a biased MR image without correction}}{22}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces New algorithm pipeline}}{22}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Registration after bias correction.}}{23}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Axial view of the label map.}}{24}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Tool developped for the intensity normalization parameter estimation}}{26}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Tool developped for the global prior weights estimation}}{28}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Registration after bias correction.}}{34}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Results of the segmentation with bias correction}}{30}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results of the segmentation with label map}}{30}{figure.4.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Axial view of the segmentation's results with a biased target and a label map sampling.}}{43}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Coronal view of the segmentation's results with a biased target and a label map sampling.}}{44}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Sagittal view of the segmentation's results with a biased target and a label map sampling.}}{45}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Axial view of the segmentation's results with a biased target and a label map sampling.}}{39}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Coronal view of the segmentation's results with a biased target and a label map sampling.}}{40}{figure.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Sagittal view of the segmentation's results with a biased target and a label map sampling.}}{41}{figure.B.3}
