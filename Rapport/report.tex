@@ -10,6 +10,7 @@
 
 \geometry{ hmargin=2.3cm, vmargin=1.3cm }
 %
+\sloppy
 %\usepackage{a4wide}
 %
 %\usepackage{geometry}
@@ -112,7 +113,8 @@
 \hrule
 \bigskip
 \begin{minipage}{1\textwidth}
-\begin{center}\begin{LARGE} Parameter space exploration and tools for fast visualization in EM segmentation and MRI bias field correction in Slicer 3
+\begin{center}\begin{LARGE} 
+New Expectation Maximization segmentation workflow in Slicer 3
 \end{LARGE}\end{center}
 \end{minipage}
 \bigskip
@@ -151,32 +153,36 @@ Surgical Planning Laboratory (SPL)
 
 \end{titlepage}
 %-----------------------------------------------------------
-\begin{abstract}
-A couple of sentences on three or four lines to summarise your work.\\ 
-This is a \LaTeX\ template for undergraduate project reports.\\
-Its detailed contents evolve to reflect FAQs.\\
-Expectation-maximization is very popular for segmentation but it can be tricky to understand and to use.
-A full description of the EMS algorithm is done in this report.
-Different methods for fast parameters exploration are described.
-As part of the research, preprocessing methods like MRI bias field correction will be explained.
-The results obtained will be presented.
-Following the new workflow should allow the user to segment more datasets, more accurately.\\
+\include{acknowledgment}
+%-----------------------------------------------------------
+\include{abstract}
+%-----------------------------------------------------------
+%\begin{abstract}
+%A couple of sentences on three or four lines to summarise your work.\\ 
+%This is a \LaTeX\ template for undergraduate project reports.\\
+%Its detailed contents evolve to reflect FAQs.\\
+%Expectation-maximization is very popular for segmentation but it can be tricky to understand and to use.
+%A full description of the EMS algorithm is done in this report.
+%Different methods for fast parameters exploration are described.
+%As part of the research, preprocessing methods like MRI bias field correction will be explained.
+%The results obtained will be presented.
+%Following the new workflow should allow the user to segment more datasets, more accurately.\\
 %
-\textbf{\underline{Keywords:}} segmentation, expectation, maximization, correction, bias.\\
+%\textbf{\underline{Keywords:}} segmentation, expectation, maximization, correction, bias.\\
 
-\bigskip
+%\bigskip
 
-\begin{center}\textbf{ Resum\'e }\end{center}
-Quelques phrases pour resumer mon travail.\\ 
-C'est un template \LaTeX\ pour les rapport.\\
-Le contenu peut evoluer.\\
+%\begin{center}\textbf{ Resum\'e }\end{center}
+%Quelques phrases pour resumer mon travail.\\ 
+%C'est un template \LaTeX\ pour les rapport.\\
+%Le contenu peut evoluer.\\
 %
-\textbf{\underline{Mots cl\'es :}}segmentation, expectation, maximisation, correction, biais.
+%\textbf{\underline{Mots cl\'es :}}segmentation, expectation, maximisation, correction, biais.
 %
 
-\bigskip
+%\bigskip
 
-\end{abstract}
+%\end{abstract}
 
 %-----------------------------------------------------------
 \tableofcontents
@@ -188,6 +194,7 @@ Le contenu peut evoluer.\\
 \include{chap2}
 \include{chap3}
 \include{chap4}
+\include{conclusion}
 %-----------------------------------------------------------
 \addcontentsline{toc}{chapter}{\numberline{}Bibliography}
 \include{biblio}

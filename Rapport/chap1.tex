@@ -43,15 +43,15 @@
 \section{Context and motivation}\label{intro:context}
 %My training...
 
-Nowadays, medical image processing is becoming a major field of research in most of the laboratories. Indeed, because of the increasing complexity of the data they have to deal with,  physicists need something to help. Help must be provided in many different ways. Before the surgery, to etablish a fast and accurate diagnosis. During the surgery to prevent the physicist from errors and to help him to proceed to more precise moves. After the surgery, to see if the surgery succeed, or to follow the pathology of a patent. Nevertheless, the informations bring to the physicist by the tool must be accurate, robust and provide a fast feedback.
+Nowadays, medical image processing is becoming a major field of research in most of the laboratories. Indeed, because of the increasing complexity of the data they have to deal with,  physicists need something to help. Help must be provided in many different ways. Before the surgery, to etablish a fast and accurate diagnosis. During the surgery to prevent physicists from errors and to help him to proceed to more precise moves. After the surgery, to see if it succeeded, or to follow the pathology of a patent. The informations brought to the physicists by the tools must be accurates, robusts and provide a fast feedback.
 %
 \par
 %
-In this context of pre and post operation, plenty of work as already been done. Thus, there is still a lot of work to achieve. Regarding data storage and exchange, the increasing among of informations leads us to find other and more approriate methods. Another interesting contribution is images segmentation. New methods have to be developped for a better diagnosis, or to detect new pathologies. A lot of methods appears like level-set segmentation, region growing or texture based segmentation. Each one is adapted for a specific problem like vessels segmentation, tumors detection or SDFSF lungs detection. Another remarquable contribution is the segmentation based on expectation maximization (EM), which is very well suited for brain segmentation. 
+In this context of pre and post operation, plenty of work as already been done. Nevertheless, there is still a lot of work to achieve. Regarding data storage and exchange, the increasing among of informations leads us to find more approriate methods for the same purpose. Another interesting contribution of computer sciences to medicine is images segmentation. New methods have to be developped for a better diagnosis, or to detect new pathologies. A lot of segmentation's techniques appeared like level-set segmentation, region growing or texture based segmentation. Each one is adapted to a specific problem like vessels segmentation or tumors detection. Another remarquable contribution is the segmentation based on expectation maximization (EM). It is very well suited for brain's tissues segmentation. 
 %
 \par
 %
-For the MR images segmentation purpose, the Surgical Planning Laboratory (SPL), Harvard Medical School and Brigham and Women's Hospital, has developped an EM algorithm to segment brain's MR images. The results obtained are very good until we segment small structures and we select the optimum parameters. The approach used for the intensity inhomogeinities estimation appears less efficient for the particuliar purpose of large structures segmentation WHY. Moreover, the implementation is not widely used so far, regarding the complexity of the segmentation process. In this report we will present an approach to enhance the segmentation for large structures, correctiong the intensity inhomogeinities in large structures and providing the end-user tools for an easier segmentation process.
+For the MR images segmentation purpose, the Surgical Planning Laboratory (SPL), Harvard Medical School and Brigham and Women's Hospital, has developped an EM algorithm to segment brain's magnettic resonance (MR) images. The results obtained are good until the intensity of the image to segment is homogeneous. Moreover, the implementation is not widely used so far, regarding the complexity of the segmentation process. Finally, some procedures seems not very accurate. In this report we will present an approach to enhance the segmentatin for inhomogenous MR images, correctiong intensity bias field. We will also provide tools to the end-user for an easier and more accurate segmentation process.
 %
 %BUT -  So far, the expectation maximization segmentation (EMS) module not used by physicists.
 %Indeed, the results are highly dependents on chosen parameters and some parameters estimation may be hard to do.
@@ -95,9 +95,9 @@ For the MR images segmentation purpose, the Surgical Planning Laboratory (SPL), 
 \section{Contents}\label{intro:contents}
 The main body of this report is divided as follows.
 \par
-Chap.~\ref{sec:EM} deals with the EM segmentation. Fundamentals will be reminded and the algorithm used will be described. We will also present in this chapter the limitations of the current implementation.
-Chap.~\ref{sec:contributions} describes our contribution. It explains the solution we choose to enhanceme the segmentation and to improve the usability of the current framework.
-Chap.~\ref{sec:results} shows the results achieved. It aslo discussed about what have been done, the limitations of the current module and the next work wich has to be done.
+Chap.~\ref{sec:EM} deals with the EM segmentation. Fundamentals will be reminded and the algorithm used in the SPL will be fully described. We will also present in this chapter the limitations of the current implementation.
+Chap.~\ref{sec:contributions} describes our contributions. It explains the solutions brought to enhance the segmentation and to improve the usability of the current framework.
+Chap.~\ref{sec:results} shows the results obtained. It aslo discussed about what have been done, the limitations of the new workflow and the next work wich has to be done.
 %
 %The main body of this report is divided as follows.
 %\par
