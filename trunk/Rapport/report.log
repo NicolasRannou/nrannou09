@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  16 AUG 2009 07:07
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  20 AUG 2009 18:59
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -193,40 +193,45 @@ File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
 )
 
 Package hyperref Warning: Option `backref' has already been used,
-(hyperref)                setting the option has no effect on input line 43.
+(hyperref)                setting the option has no effect on input line 44.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 43.
+(hyperref)                setting the option has no effect on input line 44.
 
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 43.
+(hyperref)                setting the option has no effect on input line 44.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 43.
-Package hyperref Info: Option `breaklinks' set `true' on input line 43.
+Package hyperref Info: Option `colorlinks' set `false' on input line 44.
+Package hyperref Info: Option `breaklinks' set `true' on input line 44.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 43.
+(hyperref)                setting the option has no effect on input line 44.
 
-(./report.aux (./chap1.aux) (./chap2.aux) (./chap3.aux) (./chap4.aux)
-(./biblio.aux) (./app1.aux) (./app3.aux))
+(./report.aux (./acknowledgment.aux) (./abstract.aux) (./chap1.aux)
+(./chap2.aux) (./chap3.aux) (./chap4.aux) (./conclusion.aux) (./biblio.aux)
+(./app1.aux) (./app3.aux
+
+LaTeX Warning: Label `fig:NC_C_L' multiply defined.
+
+))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 -------------------- Geometry parameters
 paper: a4paper
 landscape: --
@@ -266,9 +271,8 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-Package hyperref Info: Link coloring OFF on input line 47.
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package hyperref Info: Link coloring OFF on input line 48.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -276,14 +280,14 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count111
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
  (./report.out)
 (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
- <Images/Logos/logo_ISEN.jpg, id=250, 554.7927pt x 327.1422pt>
+ <Images/Logos/logo_ISEN.jpg, id=249, 554.7927pt x 327.1422pt>
 File: Images/Logos/logo_ISEN.jpg Graphic file (type jpg)
 
 <use Images/Logos/logo_ISEN.jpg>
@@ -291,31 +295,31 @@ Missing character: There is no Ã in font cmbx10!
 Missing character: There is no © in font cmbx10!
 Missing character: There is no Ã in font cmbx10!
 Missing character: There is no © in font cmbx10!
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-<Images/Logos/logo_spl.jpg, id=251, 150.5625pt x 120.45pt>
+<Images/Logos/logo_spl.jpg, id=250, 150.5625pt x 120.45pt>
 File: Images/Logos/logo_spl.jpg Graphic file (type jpg)
 
 <use Images/Logos/logo_spl.jpg>
-Overfull \hbox (39.44925pt too wide) in paragraph at lines 138--150
+Overfull \hbox (39.44925pt too wide) in paragraph at lines 140--152
 []
  []
 
 
-Overfull \hbox (24.78838pt too wide) in paragraph at lines 138--150
+Overfull \hbox (24.78838pt too wide) in paragraph at lines 140--152
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--150
+Underfull \hbox (badness 10000) in paragraph at lines 140--152
 
  []
 
@@ -323,21 +327,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--150
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/Logos/logo_ISEN.j
 pg> <./Images/Logos/logo_spl.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 155--166
+\openout2 = `acknowledgment.aux'.
+
+ (./acknowledgment.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \end{abstract}
-                     [1] (./report.tocpdfTeX warning (ext4): destination with t
-he same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.46 ... {4}Results and discussion}{29}{chapter.4}
-                                                  
+l.156 \include{acknowledgment}
+                              
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -346,22 +358,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
+
+]
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--21
+
+ []
+
+) [2
+
+
+] (./report.toc [3
+
+
 ])
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
- [2] (./report.lof)
+ [4] (./report.lof)
 \tf@lof=\write5
 \openout5 = `report.lof'.
 
- [3
+ [5
 
 ]
 \openout2 = `chap1.aux'.
 
  (./chap1.tex
 Chapter 1.
-) [4
+) [6
 
 
 ]
@@ -369,305 +396,299 @@ Chapter 1.
 
  (./chap2.tex
 Chapter 2.
-[5
+[7
 
 
 
-]
-Overfull \hbox (1.11708pt too wide) in paragraph at lines 30--31
-[]$\OML/cmm/m/it/10.95 Y$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 Z$ \OT1/c
-mr/m/n/10.95 can be viewed as $\OML/cmm/m/it/10.95 n$\OT1/cmr/m/n/10.95 -dimens
-ional ran-dom vari-ables $\OML/cmm/m/it/10.95 Y \OT1/cmr/m/n/10.95 = \OMS/cmsy/
-m/n/10.95 f\OML/cmm/m/it/10.95 Y[]; :::; Y[]\OMS/cmsy/m/n/10.95 g$ \OT1/cmr/m/n
-/10.95 and $\OML/cmm/m/it/10.95 Z \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OM
-L/cmm/m/it/10.95 Z[]; :::; Z[]\OMS/cmsy/m/n/10.95 g$
- []
-
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 190.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 190.
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
-
- []
-
-[9]
-Overfull \hbox (5.719pt too wide) in paragraph at lines 238--239
-[]\OT1/cmr/m/n/10.95 We can de-duce this in-equal-ity from Jensen's in-equal-it
-y (see App. []A[], Sec. []A.3[]) since $\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95
- (\OML/cmm/m/it/10.95 z[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 Y[]; \OT1/cmr
-/m/n/10.95 ^^H[])$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--299
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-[11] <Images/Graphics/EMSimple.png, id=476, 435.6275pt x 772.8875pt>
+<Images/Graphics/EMSimple.png, id=481, 435.6275pt x 772.8875pt>
 File: Images/Graphics/EMSimple.png Graphic file (type png)
 
-<use Images/Graphics/EMSimple.png> [12 <./Images/Graphics/EMSimple.png (PNG cop
-y)>]
-Overfull \hbox (19.45454pt too wide) in paragraph at lines 357--358
-[]\OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 Y \OT1/cmr/m/n/10.95 = (\OML/cmm/
-m/it/10.95 Y[]; :::; Y[]\OT1/cmr/m/n/10.95 )$ and $\OML/cmm/m/it/10.95 Y[] \OT1
-/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 Y[]; :::; Y[]\OT1/cmr/m/n/10.95 )$ be the
- log-transformed ob-served and ideal intensities.$\OML/cmm/m/it/10.95 B \OT1/cm
-r/m/n/10.95 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+<use Images/Graphics/EMSimple.png> [13] [14 <./Images/Graphics/EMSimple.png (PN
+G copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
-[14] <Images/Graphics/treeStructure.png, id=514, 513.92pt x 245.91875pt>
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
+
+ []
+
+[16] <Images/Graphics/treeStructure.png, id=531, 513.92pt x 245.91875pt>
 File: Images/Graphics/treeStructure.png Graphic file (type png)
 
-<use Images/Graphics/treeStructure.png> [15]
-<Images/Graphics/workflowtheorical.png, id=527, 676.5275pt x 796.9775pt>
-File: Images/Graphics/workflowtheorical.png Graphic file (type png)
+<use Images/Graphics/treeStructure.png> [17 <./Images/Graphics/treeStructure.pn
+g (PNG copy)>] <Images/Graphics/newem.png, id=544, 698.61pt x 676.5275pt>
+File: Images/Graphics/newem.png Graphic file (type png)
 
-<use Images/Graphics/workflowtheorical.png> [16 <./Images/Graphics/treeStructur
-e.png (PNG copy)>] [17 <./Images/Graphics/workflowtheorical.png (PNG copy)>]
-[18] <Images/Graphics/wholepipeline.png, id=550, 965.6075pt x 893.3375pt>
+<use Images/Graphics/newem.png> [18] [19 <./Images/Graphics/newem.png (PNG copy
+)>] <Images/Graphics/previousalgo.png, id=565, 1104.125pt x 401.5pt>
+File: Images/Graphics/previousalgo.png Graphic file (type png)
+
+<use Images/Graphics/previousalgo.png>
+<Images/Graphics/wholepipeline.png, id=567, 965.6075pt x 893.3375pt>
 File: Images/Graphics/wholepipeline.png Graphic file (type png)
 
-<use Images/Graphics/wholepipeline.png>
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
-
- []
-
-[19 <./Images/Graphics/wholepipeline.png (PNG copy)>]) [20]
+<use Images/Graphics/wholepipeline.png> [20]) [21 <./Images/Graphics/previousal
+go.png>] [22 <./Images/Graphics/wholepipeline.png (PNG copy)>]
 \openout2 = `chap3.aux'.
 
  (./chap3.tex
 Chapter 3.
-<Images/Screenshots/badRegistration.png, id=561, 642.4pt x 564.1075pt>
-File: Images/Screenshots/badRegistration.png Graphic file (type png)
-
-<use Images/Screenshots/badRegistration.png> [21
+[23
 
 
 
-]
-<Images/Graphics/bfnwf.png, id=572, 1467.4825pt x 531.9875pt>
-File: Images/Graphics/bfnwf.png Graphic file (type png)
-
-<use Images/Graphics/bfnwf.png>
-<Images/Screenshots/goodRegistration.png, id=574, 642.4pt x 564.1075pt>
-File: Images/Screenshots/goodRegistration.png Graphic file (type png)
-
-<use Images/Screenshots/goodRegistration.png> [22 <./Images/Screenshots/badRegi
-stration.png> <./Images/Graphics/bfnwf.png (PNG copy)>]
-<Images/Screenshots/labelmaps.png, id=580, 642.4pt x 564.1075pt>
+] <Images/Screenshots/labelmaps.png, id=594, 642.4pt x 281.05pt>
 File: Images/Screenshots/labelmaps.png Graphic file (type png)
 
-<use Images/Screenshots/labelmaps.png> [23 <./Images/Screenshots/goodRegistrati
-on.png>] [24 <./Images/Screenshots/labelmaps.png>]
-<Images/Screenshots/intensityNormalization.png, id=598, 280.32pt x 244.09561pt>
+<use Images/Screenshots/labelmaps.png>
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+[24 <./Images/Screenshots/labelmaps.png>]
+<Images/Screenshots/classdistribution.png, id=610, 433.62pt x 226.3pt>
+File: Images/Screenshots/classdistribution.png Graphic file (type png)
+
+<use Images/Screenshots/classdistribution.png> [25]
+<Images/Screenshots/badRegistration.png, id=621, 642.4pt x 564.1075pt>
+File: Images/Screenshots/badRegistration.png Graphic file (type png)
+
+<use Images/Screenshots/badRegistration.png> [26 <./Images/Screenshots/classdis
+tribution.png>] <Images/Graphics/newalgo.png, id=633, 1304.875pt x 401.5pt>
+File: Images/Graphics/newalgo.png Graphic file (type png)
+
+<use Images/Graphics/newalgo.png> [27 <./Images/Screenshots/badRegistration.png
+> <./Images/Graphics/newalgo.png>]
+<Images/Screenshots/goodRegistration.png, id=644, 642.4pt x 564.1075pt>
+File: Images/Screenshots/goodRegistration.png Graphic file (type png)
+
+<use Images/Screenshots/goodRegistration.png>
+<Images/Screenshots/jointhistograms1.png, id=646, 438.0pt x 221.2347pt>
+File: Images/Screenshots/jointhistograms1.png Graphic file (type png)
+
+<use Images/Screenshots/jointhistograms1.png>
+<Images/Screenshots/jointhistograms2.png, id=648, 438.0pt x 221.2347pt>
+File: Images/Screenshots/jointhistograms2.png Graphic file (type png)
+
+<use Images/Screenshots/jointhistograms2.png> [28 <./Images/Screenshots/goodReg
+istration.png>] [29 <./Images/Screenshots/jointhistograms1.png> <./Images/Scree
+nshots/jointhistograms2.png (PNG copy)>]
+<Images/Screenshots/biasedunbiased.png, id=661, 438.0pt x 221.2347pt>
+File: Images/Screenshots/biasedunbiased.png Graphic file (type png)
+
+<use Images/Screenshots/biasedunbiased.png> [30 <./Images/Screenshots/biasedunb
+iased.png>]
+<Images/Screenshots/intensityNormalization.png, id=672, 280.32pt x 244.09561pt>
 File: Images/Screenshots/intensityNormalization.png Graphic file (type png)
-<use Images/Screenshots/intensityNormalization.png> [25]
-Underfull \hbox (badness 10000) in paragraph at lines 163--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--198
-
- []
-
-[26 <./Images/Screenshots/intensityNormalization.png (PNG copy)>]
-<Images/Screenshots/GlobalPrior.png, id=613, 803.0pt x 602.25pt>
+<use Images/Screenshots/intensityNormalization.png> [31 <./Images/Screenshots/i
+ntensityNormalization.png (PNG copy)>]
+<Images/Screenshots/GlobalPrior.png, id=678, 803.0pt x 602.25pt>
 File: Images/Screenshots/GlobalPrior.png Graphic file (type png)
 
-<use Images/Screenshots/GlobalPrior.png>) [27] [28 <./Images/Screenshots/Global
-Prior.png>]
+<use Images/Screenshots/GlobalPrior.png>
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+) [32 <./Images/Screenshots/GlobalPrior.png>]
 \openout2 = `chap4.aux'.
 
  (./chap4.tex
 Chapter 4.
-<Images/Screenshots/NC_C_L.png, id=626, 722.7pt x 511.0pt>
-File: Images/Screenshots/NC_C_L.png Graphic file (type png)
 
-<use Images/Screenshots/NC_C_L.png> [29
+Underfull \hbox (badness 2359) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/10.95 Thanks to So-nia Pu-jol, a tu-to-rial for the EM seg-men-t
+a-tion in Slicer 3 is avail-
+ []
+
+
+Underfull \hbox (badness 7981) in paragraph at lines 12--13
+\OT1/cmr/m/n/10.95 able at []$\OT1/cmtt/m/n/10.95 http : / / www . na-[]mic . o
+rg / Wiki / images / 2 / 2f / AutomaticSegmentation _ SoniaPujol _
+ []
+
+<Images/Screenshots/NC.png, id=690, 730.0pt x 368.72449pt>
+File: Images/Screenshots/NC.png Graphic file (type png)
+
+<use Images/Screenshots/NC.png> [33
 
 
 
 ]
-<Images/Screenshots/C_M_L.png, id=635, 722.7pt x 511.0pt>
+<Images/Screenshots/C_M_L.png, id=705, 730.0pt x 368.72449pt>
 File: Images/Screenshots/C_M_L.png Graphic file (type png)
 
-<use Images/Screenshots/C_M_L.png> [30 <./Images/Screenshots/NC_C_L.png> <./Ima
-ges/Screenshots/C_M_L.png>] [31]) [32]
+<use Images/Screenshots/C_M_L.png> [34 <./Images/Screenshots/NC.png (PNG copy)>
+] <Images/Screenshots/NC_C_L.png, id=718, 730.0pt x 368.72449pt>
+File: Images/Screenshots/NC_C_L.png Graphic file (type png)
+
+<use Images/Screenshots/NC_C_L.png> [35 <./Images/Screenshots/C_M_L.png (PNG co
+py)>]) [36 <./Images/Screenshots/NC_C_L.png (PNG copy)>]
+\openout2 = `conclusion.aux'.
+
+ (./conclusion.tex)
+[37
+
+
+
+]
 \openout2 = `biblio.aux'.
 
  (./biblio.tex
-Underfull \hbox (badness 2671) in paragraph at lines 29--31
-[]\OT1/cmr/m/n/10.95 N. Tusti-son, "Nick's N3 ITK Im-ple-men-ta-tion For MRI Bi
-as Field Cor-rec-tion",
+Underfull \hbox (badness 1552) in paragraph at lines 13--15
+[]\OT1/cmr/m/n/10.95 Wikipedia, "Expectation-Maximization al-go-rithm", []$\OT1
+/cmtt/m/n/10.95 http : / / en . wikipedia . org / wiki /
  []
 
 
-Overfull \hbox (98.55403pt too wide) in paragraph at lines 31--33
-[]\OT1/cmr/m/n/10.95 Wikipedia, "Mul-ti-vari-ate Nor-mal Dis-tri-bu-tion", \OT1
-/cmr/m/sl/10.95 http://en.wikipedia.org/wiki/Multivariate$[]$normal$[]$distribu
-tion\OT1/cmr/m/n/10.95 ,
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+[]\OT1/cmr/m/n/10.95 Wikipedia, "Co-vari-ance ma-trix", []$\OT1/cmtt/m/n/10.95 
+http : / / en . wikipedia . org / wiki / Covariance$ _
  []
 
-[33
+[38
 
 
 
-]) [34]
+]) [39]
 \openout2 = `app1.aux'.
 
  (./app1.tex
 Appendix A.
-[35
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[40
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[36]) [37]
+[41]) [42]
 \openout2 = `app3.aux'.
 
  (./app3.tex
 Appendix B.
-<Images/Screenshots/EMS_MANUAL_AXIAL.png, id=678, 361.35pt x 511.0pt>
-File: Images/Screenshots/EMS_MANUAL_AXIAL.png Graphic file (type png)
+<Images/Screenshots/axialcomp.png, id=771, 794.97pt x 511.0pt>
+File: Images/Screenshots/axialcomp.png Graphic file (type png)
 
-<use Images/Screenshots/EMS_MANUAL_AXIAL.png>
-<Images/Screenshots/EMS_MANUAL_CORONAL.png, id=679, 325.215pt x 511.0pt>
-File: Images/Screenshots/EMS_MANUAL_CORONAL.png Graphic file (type png)
+<use Images/Screenshots/axialcomp.png>
+<Images/Screenshots/coronalcomp.png, id=772, 722.7pt x 511.0pt>
+File: Images/Screenshots/coronalcomp.png Graphic file (type png)
 
-<use Images/Screenshots/EMS_MANUAL_CORONAL.png>
+<use Images/Screenshots/coronalcomp.png>
+<Images/Screenshots/sagittalcomp.png, id=773, 939.51pt x 511.0pt>
+File: Images/Screenshots/sagittalcomp.png Graphic file (type png)
 
-LaTeX Warning: Float too large for page by 68.51042pt on input line 21.
-
-<Images/Screenshots/EMS_MANUAL_SAGITTAL.png, id=680, 433.62pt x 511.0pt>
-File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
-
-<use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>) [38
+<use Images/Screenshots/sagittalcomp.png>) [43
 
 
 
-] [39 <./Images/Screenshots/EMS_MANUAL_AXIAL.png>] [40 <./Images/Screenshots/EM
-S_MANUAL_CORONAL.png>]
-[41 <./Images/Screenshots/EMS_MANUAL_SAGITTAL.png>] (./report.aux (./chap1.aux)
-(./chap2.aux) (./chap3.aux) (./chap4.aux) (./biblio.aux) (./app1.aux)
-(./app3.aux)) ) 
+ <./Images/Screenshots/axialcomp.png (PNG copy)>] [44 <./Images/Screenshots/cor
+onalcomp.png (PNG copy)> <./Images/Screenshots/sagittalcomp.png (PNG copy)>] (.
+/report.aux (./acknowledgment.aux) (./abstract.aux) (./chap1.aux) (./chap2.aux)
+ (./chap3.aux) (./chap4.aux)
+(./conclusion.aux) (./biblio.aux) (./app1.aux) (./app3.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4321 strings out of 95086
- 57998 string characters out of 1183255
- 121762 words of memory out of 1500000
- 7201 multiletter control sequences out of 10000+50000
- 16775 words of font info for 61 fonts, out of 1200000 for 2000
+ 4396 strings out of 95086
+ 59477 string characters out of 1183255
+ 123037 words of memory out of 1500000
+ 7236 multiletter control sequences out of 10000+50000
+ 15938 words of font info for 59 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 27i,11n,50p,1034b,473s stack positions out of 5000i,500n,6000p,200000b,5000s
-</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx10.pfb></us
-r/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texli
-ve/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/blues
-ky/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmex10.pfb><
-/usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf-te
-xlive/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/bl
-uesky/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr10.pfb><
-/usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf-tex
-live/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/blue
-sky/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr9.pfb></usr
-/share/texmf-texlive/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share/texmf-texliv
-e/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/blues
-ky/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy8.pfb></us
-r/share/texmf-texlive/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf-texli
-ve/fonts/type1/bluesky/ams/msam10.pfb></usr/share/texmf-texlive/fonts/type1/blu
-esky/ams/msbm10.pfb>
-Output written on report.pdf (43 pages, 1103507 bytes).
+ 27i,11n,51p,1107b,463s stack positions out of 5000i,500n,6000p,200000b,5000s
+</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf
+-texlive/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type
+1/bluesky/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmex10.
+pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/tex
+mf-texlive/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/typ
+e1/bluesky/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr10.
+pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texm
+f-texlive/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1
+/bluesky/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr9.pfb>
+</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share/texmf-t
+exlive/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/
+bluesky/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy8.pfb
+></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf-
+texlive/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texmf-texlive/fonts/type1
+/bluesky/ams/msam10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/ams/msbm1
+0.pfb>
+Output written on report.pdf (45 pages, 2271015 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
- 171 named destinations out of 1000 (max. 131072)
- 590 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 886 PDF objects out of 1000 (max. 8388607)
+ 186 named destinations out of 1000 (max. 131072)
+ 620 words of extra memory for PDF output out of 10000 (max. 10000000)
 
