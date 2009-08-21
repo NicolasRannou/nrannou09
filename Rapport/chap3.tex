@@ -25,11 +25,11 @@ The user creates a labelmap by coloring characterisc regions for each tissue to 
 \par 
 The labelmap sampling is a convenient solution because a large number of sample can be drawn for each class. Besides the sampling is now reproducible since we can store then re-use it later.
 
-Figure (\ref{fig:labelmaps}) illustrates an example of a labelmap. Left image (A) represents an axial view of the volume to be segmented and right image (B) the labelmap created for this volume. Each color represents a tissue to be segmented.
+Figure (\ref{fig:labelmaps}) illustrates an example of a labelmap. Left image (A) represents an axial view of the T1 volume to be segmented and right image (B) the labelmap created for this volume. Each color represents a tissue to be segmented.
 
 \begin{figure}\centering
   \includegraphics[width=0.9\textwidth]{Images/Screenshots/labelmaps.png}
-  \caption{Axial view of the labelmap}{Left image (A) represents an axial view of the volume to be segmented. Right image (B) represents the volume overlays by the labelmap. Pink represents the air. White represents the skull. Yellow represents the white matter (WM). Blue represents the grey matter (GM). Red represents the cerebrospnial fluid(CSF).}\label{fig:labelmaps}
+  \caption{Axial view of the labelmap}{Left image (A) represents an axial view of the T1 volume to be segmented. Right image (B) represents the volume overlays by the labelmap. Pink represents the air. White represents the skull. Yellow represents the white matter (WM). Blue represents the grey matter (GM). Red represents the cerebrospnial fluid(CSF).}\label{fig:labelmaps}
 \end{figure}
 \subsection{Evaluation}
 To estimate the importance of this contribution, we perform a simple comparison. We select manually ten points of the white matter as accurately as possible. With this manual sampling method, we estimate mean value and covariance matrix, within two volumes. The second step of the evaluation consists of estimating the same values for the same tissue using a labelmap (more than 200 sampling points). \\ \\
@@ -96,7 +96,7 @@ $A$ is the amplitude of the Gaussian.
 \par
 We said that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. The problem with this approach appears if the classes to segment are not spread over all the intensities. Indeed, the vizualisation is poor then: the Gaussian is only localized in a small portion of the 2D plane. We want to "zoom" on the region of interest. We decided to change the range of the two axes. Then range will be redefined for each image. Let's present it for a given image $X$. The range is now defined as the difference between $Max$, the maximum value extracted with the labelmap, between all the samples between all the classes for the image $X$, and $Min$, its opposite.
 \par
-For our particular purpose of tissues distributions vizualisation we did not use exactly the formulas (\ref{GDDDPGDGS}) and (\ref{GDPGDGS}). Indeed, we do not normalize the curves: we set $\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}}$ to $1$ in (\ref{GDDDPGDGS}) and $A$ to $1$ in (\ref{GDPGDGS}). We do it because we do not know the importance of each class so we do not want to "disavantage" any one in the visualization. A compromise could be to have an amplitude factor proportional to the number of pixels which constitute the class.
+For our particular purpose of tissues distributions vizualisation we did not use exactly the formulas (\ref{GDDDPGDGS}) and (\ref{GDPGDGS}). Indeed, we do not normalize the curves: we set $\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}}$ to $1$ in Equations \ref{GDDDPGDGS} and $A$ to $1$ in Equation \ref{GDPGDGS}. We do it because we do not know the importance of each class so we do not want to "disavantage" any one in the visualization. A compromise could be to have an amplitude factor proportional to the number of pixels which constitute the class.
 \subsection{Evaluation}
 \par 
 We finally obtain the results Figure \ref{fig:intensitynormalization} for different sampling methods.
@@ -104,7 +104,7 @@ We finally obtain the results Figure \ref{fig:intensitynormalization} for differ
   \includegraphics[width=0.9\textwidth]{Images/Screenshots/classdistribution.png}
   \caption{Distribution of the class to be segmented in an homogeneous volume}{Left image (A) represents the distribution of the class after a manual sampling. Right (B) image represents the class distribution after a labelmap sampling. Air is plotted in dark blue, skull in blue, WM in yellow, GM in green and CSF in red. X axis represents a T1 volume and Y axis represents a T2 volume.}\label{fig:intensitynormalization}
  \end{figure}
-The left Figure (A) illustrates the visualization we obtain after a manual sampling and (B) the results after a labelmap sampling. The distributions slightly differ. The dark blue point, on the left corner represents the air. The skull is represented in purple, the white matter in yellow, the gray matter in green and the cerebrospinal fluid (CSF) in red. The X axis represents the T1 volume and the Y axis the T2 volume. In left image (A), the skull is significantly more spread than in right image (B), especially along the X axis (T1). According to a clinician expert, the labelmap sampling offers better results. Indeed, the skull should almost have the same variance through T1 and T2, which is illustrated in Figure (B). According to the same expert, the intensities of CSF and grey matter, in the T1 volume can not be as distant as these are in image (A). The distributions of these two tissues should be close, as it is in right image (B). These two observations validates the utility of the labelmap sampling in order to have accurate tissue distributions.
+The left Figure (A) illustrates the visualization we obtain after a manual sampling and (B) the results after a labelmap sampling. The distributions slightly differ. The dark blue point, on the left corner represents the air. The skull is represented in purple, the white matter in yellow, the gray matter in green and the cerebrospinal fluid (CSF) in red. The X axis represents the T1 volume and the Y axis the T2 volume. In left image (A), the skull is significantly more spread than in right image (B), especially along the X axis (T1). According to a clinician expert, the labelmap sampling offers better results. Indeed, the skull should almost have the same variance in the T1 and T2 images, which is illustrated in Figure (B). According to the same expert, the intensities of CSF and grey matter, in the T1 volume can not be as distant as these are in image (A). The distributions of these two tissues should be close, as it is in right image (B). These two observations validates the utility of the labelmap sampling in order to have accurate tissue distributions.
 
 
 \section{MRI Bias Field Correction}\label{biasfieldcorrectionregistration}
@@ -123,7 +123,7 @@ On Figure \ref{fig:bfexemple}, we present the result of the registration between
   \end{figure}
   
 \par
-Moreover this bias field leads to another important issue. Indeed, if the MR image intensities are biased, a given tissue will vary a lot through the volume, even if it should not. Then the algorithm will be initialized with wrong mean and variance values and the segmentation will not be as good as it should be.
+Moreover this bias field leads to another important issue. Indeed, if the MR image intensities are biased, the intensity of a given tissue varies significantly  in the volume, even if it should not. Then the algorithm will be initialized with wrong mean and variance values and the segmentation will not be as good as it should be.
   
 \subsection{Solution}
 

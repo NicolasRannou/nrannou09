@@ -1,47 +1,47 @@
 \chapter{Results and discussion}\label{sec:results}
-This chapter presents the impact of our contributions on the segmentation results. We will now discuss the enhanced usability of the module. It will allow to see how the segmentation has changed. We will then suggest some potential improvements for the EM segment module in Slicer. 
+We will now discuss the impact of the enhanced usability on the segmentation results. Firstly we present the influence of each contribution on the final segmentation. Secondly suggest some potential improvements for the EM segment module in Slicer. 
 
 %
 \section{Results}
 %
-Here we start with a presentation of different results, using the different contributions. The results obtained will then be reviewed by a expert radiologist to evaluate the segmentation. The expert who accepted to evaluate the results is Dr. KIKINIS, professor of radiology at Harvard Medical School. We work with the same dataset for all the segmentation. We chose the datasets with significant intensity inhomogeneity in order to show the importance of our contributions.
+Here we start with a presentation of different results, using the different contributions. The results obtained will then be reviewed by a expert radiologist. The expert who accepted to evaluate the results is Dr. KIKINIS, professor of radiology at Harvard Medical School. We report his assessments for each segmentation in the "expert's validation" section. We work with the same dataset for all the segmentation. We chose the datasets with significant intensity inhomogeneity in order to show the importance of our contributions.
 %
 \subsection{Original segmentation}
-First we present the segmentation obtained without any contribution. From these results, it will show the importance of the contributions done. Second we describe the testing process. Then we will present the results of the segmentation and finally, we present the evaluation of the clinical expert.
+First we present the segmentation obtained without any contribution. Based on this segmentation, the importance of the contributions will be presented in the next sections. First we describe the testing process. Second we present the results of the segmentation. Then the clinical expert's assessment will be reported. Finally, we discuss about the expert's observations.
 \subsubsection{Method}
-Thanks to Sonia Pujol, a tutorial for the EM segmentation in Slicer 3 is available at \url{http://www.na-mic.org/Wiki/images/2/2f/AutomaticSegmentation_SoniaPujol_Munich2008.ppt}. We followed it with a biased image. The atlases we used for the segmentation are the one available at \url{http://www.na-mic.org/Wiki/images/b/b7/AutomaticSegmentation.tar.gz}.
+Thanks to Sonia Pujol, a tutorial for the EM segmentation in Slicer 3 is available at \url{http://www.na-mic.org/Wiki/images/2/2f/AutomaticSegmentation_SoniaPujol_Munich2008.ppt}. We follow it with an image which exhibits intensity inhomogeneity. The atlases we use for the segmentation are the one available at \url{http://www.na-mic.org/Wiki/images/b/b7/AutomaticSegmentation.tar.gz}.
 
 \subsubsection{Results}
-Figure \ref{fig:NC} shows the result of the segmentation.
+Figure \ref{fig:NC} shows the result of the segmentation. The left image (A) presents an axial view of the T1 target volume to be segmented. The right image (B) presents and axial view of the segmentation's results.
   \begin{figure}\centering
   \includegraphics[width=0.95\textwidth]{Images/Screenshots/NC.png}
-  \caption{Results of the segmentation without bias field correction}{Left figure (A) is the target volume to be segmented. Right figure (B) is the result of the segmentation. Air is representted in pink, skull in white, WM in yelo, GM in blue and CSF in red.}\label{fig:NC}
+  \caption{Results of the segmentation without bias field correction}{Left figure (A) is an axial view of the T1 the target volume to be segmented. Right figure (B) is an axial view of the segmentation's result. Air is represented in pink, skull in white, white matter in yellow, grey matter in blue and cerebrospinal fluid in red.}\label{fig:NC}
   \end{figure}
   
   %
 % In addition to the problem of intensities inhomogeinities during the tissue distributions initialization, we did a manual sampling. As presented in section \ref{sec:CDS}, it can have importance during the segmentation.  
   
 \subsubsection{Expert's validation}
-Based on the assessment of the expert, the grey matter is over estimated. This is also illustrated Figure \ref{fig:biasedunbiased} where the right image shows that grey matter (light blue) is overestimated in the right image (B) in comparison to the left image (A).
+Based on the assessment of the expert, the grey matter is significantly over estimated in the whole volume. The segmentation is poor and can not be use for any medical application purpose. 
 
 \subsubsection{Discussion}
-We speculate that the reasons of the poor segmentation are the incorrect registration and the class ditributions which is poorly defined. It leads to inaccurate means and excessively large variances which deteriorate a lot the segmentation.
+We speculate that the reasons of the poor segmentation are the incorrect registration and the class ditributions which is poorly defined. It leads to inaccurate means and excessively large variances which deteriorate a lot the segmentation. This is also illustrated Figure \ref{fig:biasedunbiased} where the right image shows that grey matter (light blue) is overestimated in the right image (B) in comparison to the left image (A).
 
 \subsection{Bias corrected segmentation}
 %
-Here we present the results of a segmentation using the intensities inhomogeinities correction. We first describe the testing process. Then we present and interpret the results obtained. Finally we report the assessments of an expert.
+Here we present the results of a segmentation using the intensity inhomogeinity correction tool developped. First we describe the testing process. Second we present the results of the segmentation. Then the clinical expert's assessment will be reported. Finally, we discuss about the expert's observations.
 %
 \subsubsection{Method}
 Similarly to the previous section, we follow the EM segmentation tutorial with one extra-step: the bias field correction.
 
 %
 \subsubsection{Results}
-The results of the final segmentation are presented in Figure \ref{fig:C_M_L}. The left image (A) presents the original unbiased image and the right image (B) the segmented image, using a manual sampling. 
+The results of the final segmentation are presented in Figure \ref{fig:C_M_L}. The left image (A) presents an axial view of the T1 target volume to be segmented. The right image (B) presents and axial view of the segmentation's results.
 %
 
   \begin{figure}\centering
   \includegraphics[width=0.95\textwidth]{Images/Screenshots/C_M_L.png}
-  \caption{Results of the segmentation with bias correction}{Left figure (A) is the target volume to be segmented. Right figure (B) is the result of the segmentation. Air is representted in pink, skull in white, WM in yelo, GM in blue and CSF in red.}\label{fig:C_M_L}
+  \caption{Results of the segmentation with bias correction}{Left figure (A) is an axial view of the T1 the target volume to be segmented. Right figure (B) is an axial view of the segmentation's result. Air is represented in pink, skull in white, white matter in yellow, grey matter in blue and cerebrospinal fluid in red.}\label{fig:C_M_L}
   \end{figure}
 
 %
@@ -49,34 +49,34 @@ The results of the final segmentation are presented in Figure \ref{fig:C_M_L}. T
 %
 
 \subsubsection{Expert's validation}
-The expert pointed  misegmentation in the skull area. Indeed, some voxels in the skull are incorrectly classified as grey matter and white matter. The expert explained that this misclassification is due to partial volume effect. The partial volume effect is caused by imaging voxels containing two different tissues (skull and air in our case). The mesured intensity for that voxel will be an average of the two tissue at that location. Another misclassification occurs in areas where the skull is classified as air. The reason is that air and skull exhibit similar intensities in MR images.
+The expert pointed  misegmentation in the skull area. Indeed, some voxels in the skull are incorrectly classified as grey matter and white matter. The expert explained that this misclassification is due to partial volume effect. The partial volume effect is caused by imaging voxels containing two different tissues (skull and air in our case). The mesured intensity for that voxel will be an average of the two tissues at that location. Another misclassification occurs in areas where the skull is classified as air. The reason is that in some regions, the skull is porous and contains air. Even is pores are not significant, it leads to partial volume effect the misclassification.
 
 \subsubsection{Discussion}
 Based on our understanding of the algorithm this better segmentation can be explained by a better registration as shown section (\ref{biasfieldcorrectionregistration}). Moroever, as demonstrated it in Figure \ref{fig:biasedunbiased}, the tissues have a better distribution, especially the grey matter (light blue) in this case. The misclassifications in the skull could be corrected by a pre-processing step using skull stripping algorithm.
 %
 %
 \subsection{Label map sampling segmentation}
-The segmentation  will now let us evaluate the influence of the sampling method on the segmentation. We first describe the testing process. Then we present and interpret the results obtained. Finally an expert evaluates the results.
+This segmentation  will now let us evaluate the influence of the sampling method on the segmentation. First we describe the testing process. Second we present the results of the segmentation. Then the clinical expert's assessment will be reported. Finally, we discuss about the expert's observations.
 %
 \subsubsection{Method}
-Similarly to the previous section, we follow the EM segmentation tutorial . The extra step that we take is to initialize the class distribution using a labelmap sampling.
+Similarly to the previous section, we follow the EM segmentation tutorial . The extra step that we take are the bias field correction and the initialization of the class distribution using a labelmap sampling.
 %
 \subsubsection{Results}
 
-The results of the final segmentation are presented in Figure \ref{fig:NC_C_L}. The left image (A) presents the original corrected image and the right image (B) the result of the segmentation. 
+The results of the final segmentation are presented in Figure \ref{fig:NC_C_L}.  The left image (A) presents an axial view of the T1 target volume to be segmented. The right image (B) presents and axial view of the segmentation's results.
 
   \begin{figure}\centering
   \includegraphics[width=0.95\textwidth]{Images/Screenshots/NC_C_L.png}
-  \caption{Results of the segmentation with labelmap sampling}{Left figure (A) is the target volume to be segmented. Right figure (B) is the result of the segmentation. Air is representted in pink, skull in white, WM in yelo, GM in blue and CSF in red.}\label{fig:NC_C_L}
+  \caption{Results of the segmentation with labelmap sampling}{Left figure (A) is an axial view of the T1 the target volume to be segmented. Right figure (B) is an axial view of the segmentation's result. Air is represented in pink, skull in white, white matter in yellow, grey matter in blue and cerebrospinal fluid in red.}\label{fig:NC_C_L}
   \end{figure}
  
 %
 \subsubsection{Expert's validation}
-The skull is better segmented. Nevertheless, in cerebulum, the segmentation differs from the previous one. It is underestimated  with the labelmap sampling whereas before it was over estimated. The cerebulum is a specific area of the brain because there is a lot of white and grey matter in a small area. The segmentation is challenging and similarly as the point raised during the validation of the bias field correction segmentation, the results are due to partial volume effects. According to our expert segmentation of this area is a complex task. A solution to improve the segmention the cerebrulum properly, would be to extract the region of interest and to apply a finer algorithm to this area.
+The skull is better segmented than in the manual sampling segmentation. Moreover, there is less misclassification than before. Nevertheless, in cerebulum, the segmentation differs from the previous one. It is underestimated  with the labelmap sampling whereas before it was over estimated. The cerebulum is a specific area of the brain because there is a lot of white and grey matter in a small area. The segmentation is challenging and similarly as the point raised during the validation of the bias field correction segmentation, the results are due to partial volume effects. According to our expert segmentation of this area is a complex task. A solution to improve the segmention the cerebrulum properly, would be to extract the region of interest and to apply a finer algorithm to this area.
 
 \subsubsection{Discussion}
 %
-This time, the classes are supposed to have a better distribution than in the previous segmentation, as we saw in Figure \ref{fig:intensitynormalization}. Misclassification within the white matter is reduced because of the better class initialization with the labelmap sampling. More screenshots with a better resolution are presented in App.~\ref{app:results} to have a better understanding of the differences between manual and labelmap sampling.
+We explain the enhanced classification because the tissues have more located distributions than in the previous segmentation, as we se in Figure \ref{fig:intensitynormalization}. More screenshots with a better resolution are presented in App.~\ref{app:results} to have a better understanding of the interest of of a manual sampling instead of a labelmap sampling.
 
 %
 %

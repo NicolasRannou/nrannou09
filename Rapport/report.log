@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  21 AUG 2009 14:55
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  21 AUG 2009 18:45
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -599,11 +599,10 @@ File: Images/Screenshots/C_M_L.png Graphic file (type png)
 File: Images/Screenshots/NC_C_L.png Graphic file (type png)
 
 <use Images/Screenshots/NC_C_L.png> [36 <./Images/Screenshots/C_M_L.png (PNG co
-py)>]) [37 <./Images/Screenshots/NC_C_L.png (PNG copy)>]
+py)>] [37 <./Images/Screenshots/NC_C_L.png (PNG copy)>]) [38]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex)
-[38
+ (./conclusion.tex) [39
 
 
 
@@ -622,11 +621,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
 http : / / en . wikipedia . org / wiki / Covariance$ _
  []
 
-[39
+[40
 
 
 
-]) [40]
+]) [41]
 \openout2 = `app1.aux'.
 
  (./app1.tex
@@ -646,7 +645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[41
+[42
 
 
 
@@ -660,27 +659,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[42]) [43]
+[43]) [44]
 \openout2 = `app3.aux'.
 
  (./app3.tex
 Appendix B.
-<Images/Screenshots/axialcomp.png, id=774, 794.97pt x 511.0pt>
+<Images/Screenshots/axialcomp.png, id=778, 794.97pt x 511.0pt>
 File: Images/Screenshots/axialcomp.png Graphic file (type png)
 
 <use Images/Screenshots/axialcomp.png>
-<Images/Screenshots/coronalcomp.png, id=775, 722.7pt x 511.0pt>
+<Images/Screenshots/coronalcomp.png, id=779, 722.7pt x 511.0pt>
 File: Images/Screenshots/coronalcomp.png Graphic file (type png)
 
 <use Images/Screenshots/coronalcomp.png>
-<Images/Screenshots/sagittalcomp.png, id=776, 939.51pt x 511.0pt>
+<Images/Screenshots/sagittalcomp.png, id=780, 939.51pt x 511.0pt>
 File: Images/Screenshots/sagittalcomp.png Graphic file (type png)
 
-<use Images/Screenshots/sagittalcomp.png>) [44
+<use Images/Screenshots/sagittalcomp.png>) [45
 
 
 
- <./Images/Screenshots/axialcomp.png (PNG copy)>] [45 <./Images/Screenshots/cor
+ <./Images/Screenshots/axialcomp.png (PNG copy)>] [46 <./Images/Screenshots/cor
 onalcomp.png (PNG copy)> <./Images/Screenshots/sagittalcomp.png (PNG copy)>] (.
 /report.aux (./acknowledgment.aux) (./abstract.aux) (./chap1.aux) (./chap2.aux)
  (./chap3.aux) (./chap4.aux)
@@ -690,13 +689,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4379 strings out of 95086
- 59328 string characters out of 1183255
+ 4380 strings out of 95086
+ 59335 string characters out of 1183255
  123294 words of memory out of 1500000
  7227 multiletter control sequences out of 10000+50000
  13122 words of font info for 48 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 27i,11n,51p,1095b,463s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 27i,11n,51p,1101b,463s stack positions out of 5000i,500n,6000p,200000b,5000s
 </usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf
 -texlive/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type
 1/bluesky/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmex10.
@@ -712,9 +711,9 @@ b></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf
 fb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texm
 f-texlive/fonts/type1/bluesky/ams/msam10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/bluesky/ams/msbm10.pfb>
-Output written on report.pdf (46 pages, 2265643 bytes).
+Output written on report.pdf (47 pages, 2268019 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
- 188 named destinations out of 1000 (max. 131072)
+ 891 PDF objects out of 1000 (max. 8388607)
+ 189 named destinations out of 1000 (max. 131072)
  628 words of extra memory for PDF output out of 10000 (max. 10000000)
 
