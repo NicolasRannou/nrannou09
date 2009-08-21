@@ -1,36 +1,38 @@
 \chapter{Contributions}\label{sec:contributions}
-In this chapter we will present all the contribution brought to enhance the segmentation workflow in Slicer 3. We propose solution to the problem cited in the previous chapter (\ref{su:limitations}). We propose solutions to enhance the class selection method and to allow the user to evaluate his selection. We deal with the registration problem in a third step. The Finally, we present some tools we added to help the user to find the good intensity normalization value and an estimation of the hierarchical parameters.
+In this chapter we will present all the contribution realized to enhance the segmentation workflow in Slicer 3. 
+%We propose some solutions to the problems mentionned in the previous chapter (\ref{su:limitations}). 
+We propose solutions to enhance the class selection method and to allow the user to evaluate the selection. We will address the registration problem in a third step. Finally, we present the tools that we have added to help the user to find the optimum intensity normalization value and to estimate the hierarchical parameters.
 %
-\section{Class Distribution selection}\label{sec:CDS}
+\section{Class Distribution Selection}\label{sec:CDS}
 %
 During parameters initialization, the user has to define each class distribution. The previous method of selection presents some limitations and we propose a new approach.
 %
-\subsection{Interest}
+\subsection{Motivation}
 %
 So far, the user has two choices to define each class distribution. 
 \par
-The first possiblity consists in entering manually the intensities mean value and variance for each class, for each volume to be processed. This way, the user can be very precise and accurate when he defines each class. But it is very hard to find the good mean value and variance for each class for each volume. Morever, each time we want to process a new volume, we have to redefine mean values and variances. It is not convenient and it can a lot of time to find accurate values for the parameter initialization. 
+The first possiblity consists of entering manually the intensities mean value and variance for each class, for each volume to be processed. This way, the user is precise to define each class. However it is challenging to find the optimum mean value and variance for each class for each volume. Morever, each time the user wants to process a new volumen, mean values and variances have to be redefined. It is not convenient and it can be time-consuming to find accurate values for the parameter initialization. 
 \par
-The next approch consisted in defining a class model by manual sampling. For each class, the user clics in the related part of the volume. The problem with this method is that you compute your mean value and variance using only a few samples. Your sample will never be bigger that one hundred points because it is not convenient. Then, your mean values and variances are not accurate. Moreover, results are not reproducible with this method. This the number of samples is reduced, means and variances can vary a lot with one more sample and you can never reproduce two times the same initialization.
+The next approach consists of defining a class model by manual sampling. For each class, the user clicks in the related part of the volume. The problem with this method is that the computation of the mean value and variance only uses a few samples. Because manual sampling is time consuming, the user will only select a reduced number of sample compared to the total number of voxels in the volume. Consequently mean values and variances are not accurate. Besides, reproducibility is an issue. Indeed it is challenging for an user to perform an identical sampling on two volumes.
 \par
-Because of all these limitations,  we proposed a new approach using a label map, to estimate each class model.
+Because of all these limitations,  we proposed a new approach using a labelmap, to estimate each class model.
 %
-\subsection{Method used}
+\subsection{Solution}
 %
-The idea is to create a label map. This map contains colors. There is one color for each class we want to segment. The relation color/class is stored in parameter $H$, in the EM algorithm. This relation color/class is set up during the tree creation step (section  \ref{GUI}).
+Our solution is to create a labelmap where each tissue class is given a label and a color. The relation color/class is stored in parameter $H$, in the EM algorithm. This relation color/class is set up during the tree creation step (section  \ref{GUI}).
 \par
-The user creates a label map by coloring caracterisc regions for each tissue to segment, in the appropriate color. This gives a spatial information to the algorithm. It can now estimate automaticly the mean value and covariance of each class, for each tissue, using this label map. The reason why covariance matrix is estimated, instead of the simple variance is presented in the next section.
+The user creates a labelmap by coloring characterisc regions for each tissue to segment in the appropriate color. This gives a spatial information to the algorithm. The labelmap allows to compute automatically the mean value and covariance of each class, for each tissue. In the next section we explain why we compute the covariance matrix instead of the variance.
 \par 
-It is very convenient because, since the algorithm needs a good initialization, we can easily define a sample of hundred of points for each class. The results will representatives. Moreover, the results are now reproducible. Indeed, we can store then re-use the same label map. The results will remain the same.
+The labelmap sampling is a convenient solution because a large number of sample can be drawn for each class. Besides the sampling is now reproducible since we can store then re-use it later.
 
-Figure (\ref{fig:labelmaps}) represent an example of a label map. (A) represent an axial view of the vloume to be segmented and (B) the label map created for this volume. Each color represents a tissue to be segmented.
+Figure (\ref{fig:labelmaps}) illustrates an example of a labelmap. Left image (A) represents an axial view of the volume to be segmented and right image (B) the labelmap created for this volume. Each color represents a tissue to be segmented.
 
 \begin{figure}\centering
   \includegraphics[width=0.9\textwidth]{Images/Screenshots/labelmaps.png}
-  \caption{Axial view of the label map.}\label{fig:labelmaps}
+  \caption{Axial view of the labelmap}{Left image (A) represents an axial view of the volume to be segmented. Right image (B) represents the volume overlays by the labelmap. Pink represents the air. White represents the skull. Yellow represents the white matter (WM). Blue represents the grey matter (GM). Red represents the cerebrospnial fluid(CSF).}\label{fig:labelmaps}
 \end{figure}
 \subsection{Evaluation}
-To estimate the influence of the contribution, we processed to a simple comparaison. We selected manually ten points of the white matter as fine as possible. With this sample, we estimate mean value and covariance matrix, through 2 volumes. The second step of the evaluation consisted in estimating the same values for the same tissue using a label map (sample bigger than 200 points). \\ \\
+To estimate the importance of this contribution, we perform a simple comparison. We select manually ten points of the white matter as accurately as possible. With this manual sampling method, we estimate mean value and covariance matrix, within two volumes. The second step of the evaluation consists of estimating the same values for the same tissue using a labelmap (more than 200 sampling points). \\ \\
 \textbf{Results:}
 
 \begin{equation*}
@@ -50,25 +52,26 @@ To estimate the influence of the contribution, we processed to a simple comparai
 \end{equation*}
 
 \par
-The mean values ($\mu_{Manual}$ and $\mu_{Labell}$) differs slightly and covariance matrices ($\Sigma_{Manual}$ and $\Sigma_{Label}$) differ significantly. It means that our approach is usefull and it shows the importance of having a large sample to evaluate means and covariance values in a such process. The square variance of the class, is in position $(1,1)$ in the covariance matrix for the first volume. For the second volume, it is in position $(2,2)$. Variance expresses the range through which the class is expected to be. The estimation of this interval is way more precise with label map than with manual sampling. We can explain it with the important number of samples used for the estimation.
+The mean values ($\mu_{Manual}$ and $\mu_{Label}$) differ slightly and covariance matrices ($\Sigma_{Manual}$ and $\Sigma_{Label}$) differ significantly. It means that our approach is useful and it shows the importance of having a large sample to evaluate means and covariance values. The square variance of the class  for the first volume, is in position $(1,1)$ in the covariance matrix. For the second volume, it is in position $(2,2)$. Variance expresses the range through which the class is expected to be. The estimation of this interval is significantly more accurate with labelmap sampling than manual sampling. We can explain it with the important number of samples used for the estimation.
 
 %
 \section{Class Distribution visualization}\label{sec:tables}
 
 An important contribution is a tool which allows to visualize the distribution of the classes to be segmented.
-\subsection{Interest}
-As discussed before, the algorithm is sensible to the initalization. It means that the initialization has to be good. Once the parameters are chosen, the user has no tools to know if his selection is accurate. Two classes to segment can't have too close means and variances. Even if the user sees the values he chooses, it is not easy to know if two classes to be segmented are too similar or not.
-\subsection{Our approach}
-The objective is to provide the user the most accurate and usefull vizualisation as possible.
+
+\subsection{Motivation}
+As discussed before, the algorithm is sensible to the initalization. In other words, the quality of the initialization is important. Once the parameters are chosen, the user has no tools to know if his selection is accurate. Two classes to segment can not have too close means and variances and even if the user sees the values obtained after sampling, it is challenging to know if two classes to be segmented are too similar or not.
+\subsection{Solution}
+The objective is to provide the user the most accurate and usefull vizualisation tool as possible.
 \par
-We first assumed that each class has a normal distribution. We first decided to plot the gaussian in 3D, using the multivariate normal distribution.
-In the 2-dimensional nonsingular case, the probability density function is 
+We first assume that each class has a normal distribution. This assumption is correct since the EM algorithm present in Slicer 3 is based on Gaussian mixture models. We decided to plot the Gaussian in the 3D space, using the multivariate normal distribution.
+In the 2D non-singular case, the probability density function is 
 
 \begin{equation}\label{GDDDPGDGS}
 f(x,y)=\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}} \operatorname*{exp}\Big ( -\frac{1}{2(1-\rho^2)}\Big( \frac{(x-\mu_x)^2}{\sigma_x^2} + \frac{(y-\mu_y)^2}{\sigma_y^2} - \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y}\Big)\Big)   
 \end{equation}
 
-(see \cite{15}). $x$ and $y$ are the position of the pixel in the 2D space. $f(x,y)$ will return the value (heigth) of the $(x,y)$ pixel. Each $X$ and  $Y$ axe represent one volume. Let's first say that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. $\mu_x$ is the mean value of the class in the $X$ volume. $\mu_y$ is the mean value of the class in the $Y$ volume. $\sigma_x$ and  $\sigma_y$ are the variance of the tissue in its respective volume. $\rho$ is the correlation between $X$ and $Y$. It indicates the strength and direction of a linear relationship between two random variables ( see \cite{16}). 
+(see \cite{15}). $x$ and $y$ are the positions of the pixel in the plane. $f(x,y)$ will return the value (height) of the $(x,y)$ pixel. The $X$ axis represents a volume while the $Y$ axis represents another volume. Let's first say that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. $\mu_x$ is the mean value of the class in the $X$ volume. $\mu_y$ is the mean value of the class in the $Y$ volume. $\sigma_x$ and  $\sigma_y$ are the variance of the tissue in its respective volume. $\rho$ is the correlation between $X$ and $Y$. It indicates the strength and direction of a linear relationship between two random variables ( see \cite{16}). 
 
 
 \par
@@ -84,154 +87,157 @@ We can easily deduce $\rho$ from the covariance matrix $\Sigma$ (see \cite{17}).
 
 The covariance matrix and the mean values for each class to segment for each image are computed during the labelmap sampling (section~\ref{sec:CDS}). 
 \par
-Please note that if $\rho = 1$, it means that the two radom variables are the same and we can't use the same density probability function anymore. We use the classic normal distribution's formulation
+Please note that if $\rho = 1$, it means that the two radom variables are the same and we can not use the same density probability function anymore. We express the classic normal distribution
 \begin{equation}\label{GDPGDGS}
 f(x,y)=A\operatorname*{exp}-\Big ( \frac{x-\mu_x}{2\sigma_X^2} + \frac{y-\mu_y}{2\sigma_Y^2}\Big)   
 \end{equation}
 
-$A$ is the amplitude of the gaussian.
+$A$ is the amplitude of the Gaussian.
 \par
-We said that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. The problem with this approach appears if the classes to segment are not spread over all the intensities. Indeed, the vizualisation is not good then: the gaussian is only localized in a small portion of the 2D plane. We want to "zoom" on the region of interest. We decided to change the range of the two axes. Then range will be re-defined for each image. Let's present it for a given image $X$. It is now the difference between $Max$, the maximum value extracted with the label map, between all the samples between all the classes for the image $X$, and $Min$, its opposite.
+We said that the range of the $X$ and $Y$ axes are the intensity range of the $X$ and $Y$ volumes. The problem with this approach appears if the classes to segment are not spread over all the intensities. Indeed, the vizualisation is poor then: the Gaussian is only localized in a small portion of the 2D plane. We want to "zoom" on the region of interest. We decided to change the range of the two axes. Then range will be redefined for each image. Let's present it for a given image $X$. The range is now defined as the difference between $Max$, the maximum value extracted with the labelmap, between all the samples between all the classes for the image $X$, and $Min$, its opposite.
 \par
-For our particular purpose of tissues' distributions' vizualisation we didn't use exactly the formulas (\ref{GDDDPGDGS}) and (\ref{GDPGDGS}). Indeed, we don't normalize the curves: we set $\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}}$ to $1$ in (\ref{GDDDPGDGS}) and $A$ to $1$ in (\ref{GDPGDGS}). We do it because we have no clue about the importance of each class so we don't want to "disavantage" any one. A compromise could be to have an amplitude factor proportional to the number of pixels which are supposed to constitute the class.
+For our particular purpose of tissues distributions vizualisation we did not use exactly the formulas (\ref{GDDDPGDGS}) and (\ref{GDPGDGS}). Indeed, we do not normalize the curves: we set $\frac{1}{2 \pi \sigma_y \sigma_y \sqrt{1-\rho^2}}$ to $1$ in (\ref{GDDDPGDGS}) and $A$ to $1$ in (\ref{GDPGDGS}). We do it because we do not know the importance of each class so we do not want to "disavantage" any one in the visualization. A compromise could be to have an amplitude factor proportional to the number of pixels which constitute the class.
+\subsection{Evaluation}
 \par 
-We finally obtain the results figure (\ref{fig:intensitynormalization}) for different sampling methods.
+We finally obtain the results Figure \ref{fig:intensitynormalization} for different sampling methods.
 \begin{figure}\centering\label{classdistribution}
   \includegraphics[width=0.9\textwidth]{Images/Screenshots/classdistribution.png}
-  \caption{Distribution of the class to be segmented}\label{fig:intensitynormalization}
+  \caption{Distribution of the class to be segmented in an homogeneous volume}{Left image (A) represents the distribution of the class after a manual sampling. Right (B) image represents the class distribution after a labelmap sampling. Air is plotted in dark blue, skull in blue, WM in yellow, GM in green and CSF in red. X axis represents a T1 volume and Y axis represents a T2 volume.}\label{fig:intensitynormalization}
  \end{figure}
- 
-(A) present the visualization we obtain after a manual sampling and (B) the results after a label map sampling. The distributions slightly differ. The dark blue point, on the left corner represents the air. The skull is represented in purple, the white matter in yellow, the gray matter in green and the cerebrospinal fluid (CSF) in red. The X axis represents the T1 volume and the Y axis the T2 volume. On (A), the skull is significantly more spreaded than in (B), especially along the X axe (T1). According to an expert, this result is better in the case of labelmap sampling, indeed, the skull should almost have the same variance through T1 and T2, what is almost the case in (B). Moreover, regarding the CSF and the grey matter, the distribution is better in (B) again. According to the same expert, the intensities of CSF and grey matter, in the T1 volume are close and can't be as distant as in (A). These two observations show the utility of the labelmap sampling in order to have accurate tissue distributions.
+The left Figure (A) illustrates the visualization we obtain after a manual sampling and (B) the results after a labelmap sampling. The distributions slightly differ. The dark blue point, on the left corner represents the air. The skull is represented in purple, the white matter in yellow, the gray matter in green and the cerebrospinal fluid (CSF) in red. The X axis represents the T1 volume and the Y axis the T2 volume. In left image (A), the skull is significantly more spread than in right image (B), especially along the X axis (T1). According to a clinician expert, the labelmap sampling offers better results. Indeed, the skull should almost have the same variance through T1 and T2, which is illustrated in Figure (B). According to the same expert, the intensities of CSF and grey matter, in the T1 volume can not be as distant as these are in image (A). The distributions of these two tissues should be close, as it is in right image (B). These two observations validates the utility of the labelmap sampling in order to have accurate tissue distributions.
 
 
-\section{MRI Bias Field correction}\label{biasfieldcorrectionregistration}
+\section{MRI Bias Field Correction}\label{biasfieldcorrectionregistration}
 
-The registration step could present some problems if the image to segment has intensities inhomogeinities. Moreover, bias field canal present problems regarding the classes distribution. We will first remind the problems, then we present the solutions proposed.
+The registration step could present some problems if the image to segment exhibits intensity inhomogineity. Moreover, bias field can also be a problem regarding the accuracy of the class distributions. We will first remind the problems and then propose some solutions.
 
-\subsection{Interest}
+\subsection{Motivation}
 
-In the segmentation process, a registration step is required. Registration consists in finding a trasformation to fit two images as well as possible. The main methods are described in \cite{21}. Only one pre-processing (intensity normalization) is done before the registration. The problem is that the algorithm is designed to treat MR images. MR images are often corrupted by a bias field. Thus, the image to register present intensities inhomogeinities. These inhomogeinities can deteriore a lot the registration.
+In the segmentation process, a registration step is required. Registration consists of finding a transformation to fit two images as well as possible. The main methods are described in \cite{21}. Only one pre-processing (intensity normalization) is done before the registration. The problem is that the algorithm is designed to process MR images. MR images are often corrupted by a bias field. Thus, the image to register exhibits intensity inhomogeneity. These inhomogeinities significantly affect the registration.
 \par
-On figure (\ref{fig:bfexemple}), we present the result of the registration between an atlas and a biased MR image. Note that the target MR image has been normalized to have the same mean value as the atlas. The results is clearly bad. A solution must be brought to enhance this step and so the segmentation.
+On Figure \ref{fig:bfexemple}, we present the result of the registration between an atlas (left image (A)) and a biased MR image (right image (B)). Note that the target MR image has been normalized to have the same mean value as the atlas. The image (C) shows that the registration is poor.
 
   \begin{figure}[ht]\centering
   \includegraphics[width=0.5\textwidth]{Images/Screenshots/badRegistration.png}
-  \caption{Result of registration of a biased MR image without correction}\label{fig:bfexemple}
+  \caption{Registration of a MR image which exhibits intensity inhomogeneity}{Image (A) is the atlas to be registered. Image (B) is the target of the registration. Image (C) is the image (A) after registration to image (B)}\label{fig:bfexemple}
   \end{figure}
   
 \par
-Moreover, this bias field lead to another main issue. Indeed, if the MR image is biased, a the intensity of a given tissue will vary a lot through the volume, even if it should not. Then the algorithm will be initialized with wrong mean and variance values and the segmentation won't be as good as it would be with a corrected image.
+Moreover this bias field leads to another important issue. Indeed, if the MR image intensities are biased, a given tissue will vary a lot through the volume, even if it should not. Then the algorithm will be initialized with wrong mean and variance values and the segmentation will not be as good as it should be.
   
-\subsection{Our approach}
+\subsection{Solution}
 
-The idea simply consists in correcting the bias field of the MR image before this step. Thus, the registration will be significantly enhanced.Since the registration is better, it should also increase the segmentation.
+The idea simply consists of correcting the bias field of the MR image before the intensity normalization step. Thus, the registration and the class distributions will be significantly enhanced. Since the registrationand class distributions is better, it should also improve the segmentation.
 \par
-To correct the bias field, we used the non-parametric approach presented by Sled \textit{et al} in \cite{19}. We choose a non-parametric approach because it doesn't require prior information like the number of tissues to correct or the mean value of each tissue to be corrected. We implement an ITK\footnote{open-source C++ toolkit for segmentation and registration. See \cite{13}.} filter (\cite{14}) in Slicer 3. 
+To correct the bias field, we used the non-parametric approach presented by Sled \textit{et al} in \cite{19}. We choose a non-parametric approach because it does not require prior information like the number of tissues to correct or the mean value of each tissue to be corrected. We implement an ITK filter \cite{13} and \cite{14} in Slicer 3. 
 \par
-We can describe the new segmentation workflow in Slicer 3 as we do in figure (\ref{fig:wfwbc}).
+We can describe the new segmentation workflow in Slicer 3 as we do in Figure \ref{fig:wfwbc}.
 
 \begin{figure}[ht]\centering
   \includegraphics[width=1\textwidth]{Images/Graphics/newalgo.png}
-  \caption{New algorithm pipeline}\label{fig:wfwbc}
+  \caption{New algorithm segmentation pipeline in Slicer 3}{First the intensity inhomogeneity are corrected. Second the intensity is normalized. Third an estimation of the transformation to apply for the registration is done. Fouth the atlases are aligned using the transformation. Finally, the EM segmentation algorithm is performed.}\label{fig:wfwbc}
   \end{figure}
 
 \par
-We choose not to implement it in Slicer 3 as part as the EM Segment module. Indeed, users may want to correct the bias field in MR images for other purposes. Moreover, because it would be the first pre-processing step, it is possible to do so. The user will first have to correct the intensities inhomogeinities via the module then use the corrected images in the EM segmentation module.
+We choose not to implement it in Slicer 3 as part as the EM Segment module. Indeed, users may want to correct the bias field in MR images for other purposes. Moreover, it is possible because it would be the first pre-processing step. The user will first have to correct the intensity inhomogineity via the module developped for this particular purpose then use the corrected images in the EM segmentation module.
 
   
   
 \par
-After the bias correction, we obtain interesting results (\ref{fig:goodRegistration}). (A) represents the atlas to be registered. (B) represents the target volume for the registration. (C) repre sents the atlas after the registration. The result of the registration visually appears to be better but we can't be satisfied of this visual verification. We need a formal evaluation method.
+After the bias correction, we obtain interesting results presented in Figure\ref{fig:goodRegistration}. (A) represents the atlas to be registered. (B) represents the target volume for the registration. (C) represents the atlas after the registration. The result of the registration visually appears to be better but we can not be satisfied of this visual assessment. We need a qualitative evaluation method.
 
 \begin{figure}\centering
   \includegraphics[width=.5\textwidth]{Images/Screenshots/goodRegistration.png}
-  \caption{Registration after bias correction.}\label{fig:goodRegistration}
+  \caption{Registration of a MR image without intensity inhomogeneity}{Image (A) is the atlas to be registered. Image (B) is the target of the registration. Image (C) is the image (A) after registration to image (B)}\label{fig:goodRegistration}
 \end{figure}
 
 \subsection{Evaluation}
 
 We evaluated accuracy of the registration using the joint histograms method.
-The joint histogram evaluation method is basic comparaison between two images. Let $A$ be a matrix of size $W*L$. $W$ will be the intensity range of the first image used for the comparaison. $L$ will be the intensity range of the second image to be compared. The matrix is initialized to $0$. Each time that in the same position, there is the same intensities in the two images, we add $1$ in the corresponding cell in the matrix. Thus, a perfect registration, would lead to an array of zeros, expect on the diagonal.
-After the joint histogram creation, the value at the coordinate ${i,j}$ in the matrix is the number of pixel pairs having gray level $i$ at position ${x,y}$.
+The joint histogram evaluation method is basic comparison between two images. Let $A$ be a matrix of size $WxL$. $W$ will be the intensity range of the first image used for the comparison. $L$ will be the intensity range of the second image to be compared. The matrix is initialized to zero. Each time that in the same position, there is the same intensities in the two images, we add one in the corresponding cell in the matrix. Thus, a perfect registration, would lead to an array of zeros, expect on the diagonal.
+After the joint histogram creation, the value at the coordinate ${i,j}$ in the matrix is the number of pixel pairs having intensity $i$ in image onee and intensity $j$ in image two, at the same position in the volume.
 \par
-In figure (\ref{fig:joint1}), (A) and (B) compares the joint-histogram of the biased image and its atlas, respectively before and after registration.  The color scale used is the following one: if there are a lot of pixels in a cell of the array, the cell will be displayed in red. We the number of points decreases continously. Red becomes orange, yellow, green then blue.
+In Figure \ref{fig:joint1}, the left image (A) and the right image (B) compares the joint-histogram of the biased image and its atlas, respectively before and after registration.  The color scale used is the following one: if there are a lot of pixels in a cell of the array, the cell will be displayed in red. We the number of points decreases continously. The color scale goes from red to blue. The color fo medium intensities is yellow.
 
 \begin{figure}\centering
   \includegraphics[width=.9\textwidth]{Images/Screenshots/jointhistograms1.png}
-  \caption{Joint histograms to evaluate the registration.}\label{fig:joint1}
+  \caption{Joint histograms to evaluate the registration of the inhomogeneous MR image}{Figure (A) represents the joint histogram of the inhomogeneous MR image and its atlas before registration. Figure (B) represents the joint histogram of the inhomogeneous MR image and its atlas after registration.}\label{fig:joint1}
 \end{figure}
 
 
-In figure (\ref{fig:joint2}), (A) and (B) compares the joint-histograms of the corrected image and its atlas, before (A) and after (B) registration.
+In Figure \ref{fig:joint2}, left image (A) and right image (B) compare the joint-histograms of the image after a bias field correction and its atlas, before and after registration.
 
 \begin{figure}\centering
   \includegraphics[width=.9\textwidth]{Images/Screenshots/jointhistograms2.png}
-  \caption{Joint histograms to evaluate the registration.}\label{fig:joint2}
+  \caption{Joint histograms to evaluate the registration of the homogeneous MR image}{Figure (A) represents the joint histogram of the homogeneous MR image and its atlas before registration. Figure (B) represents the joint histogram of the homogeneous MR image and its atlas after registration.}\label{fig:joint2}
 \end{figure}
 
-It clearly appears the the difference between before and after registration is more significant if the bias field is corrected. Indeed, we compare the biased joint histogram, there is no significative difference between before and after registration. That means that the registration didn't improve the similarity between the images. On the contrary, if we correct the bias field, it the number of point around the matix's diagonal clearly increases. It means that now, the images are more similiars than before. It shows the utility of the contribution. The influence of these results after the whole segmentation process will be presented in the next chapter.
+It appears that the difference between before and after registration is more significant if the bias field is corrected. Indeed, we compare the joint histograms for volumes which exhibits intensity inhomogeneity: there is no significative difference between before and after registration. That means that the registration did not improve the similarity between the images. On the contrary, if we compare joint histogram for an intensity inhomogeneity free vollume, the number of points around the matrix diagonal increases. It means the images are more similiar after than before registration. It shows the utility of the contribution. The influence of these results after the whole segmentation process will be presented in the next chapter.
 \par
-Regarding the tissue intensity distribution effect, we will present some results using the tool we developped in the previous section, to evaluate the classes' distribution.
-Using the same labelmap for sampling, we obtain two totaly different distributions. Figure (\ref{fig:biasedunbiased}) clearly show the two different distributions. The relation tissue/color is the same as the one in figure (\ref{fig:intensitynormalization}). (A) presents the distribution before bias correction. (B) presents the distribution through the corrected volume.
+Regarding the effect of the intensity inhomogeneity on tissue intensity distribution, we will present results using the tool we developped in the previous section, to evaluate the classe distribution.
+Using the same labelmap for sampling, we obtain two significantly different distributions for a image corrupted with a bias field and the same image corrected. Figure \ref{fig:biasedunbiased} shows the two different distributions. The relation tissue/color is the same as the one in Figure \ref{fig:intensitynormalization}. The left image (A) presents the distribution before bias field correction. The right (B) presents the distribution in the corrected volume.
 
 \begin{figure}\centering
   \includegraphics[width=.9\textwidth]{Images/Screenshots/biasedunbiased.png}
-  \caption{Tissue distributions.}\label{fig:biasedunbiased}
+  \caption{Distribution of the class to be segmented in an inhomogeneous volume}{Left image (A) represents the class distribution in an homogeneous volume. Right image (B)represents the distribution of the class in a volume which exhibits intensity inhomogeneity. Air is plotted in dark blue, skull in blue, WM in yellow, GM in green and CSF in red. X axis represents a T1 volume and Y axis represents a T2 volume.}\label{fig:biasedunbiased}
 \end{figure}
-The tissues variances are huge, especially for the CSF (red) through T2. Its distribution through the T2 volume is huge. According to an expert, it should clearly not. It should only be in the high intensities of the T2 volume. Our result means that the CSF class contents high and low intensities. It is due to the bias and is not acceptable.
+In the left image (A), the tissues variances are huge, especially for the CSF (red) in the T2 volume. According to an expert, it is not a good assumption. CSF should on appear in the high intensities of the T2 volume, as presented in image (B). Image (A) means that the CSF class contents pixels of high and low intensities in the T2 volume. It is a bad assumption and we can explain it because of the intensity inhomogeneity.
 \par
-Intuitively, we understand that the segmentation process should be a lot deteriored because of the two issues we presented (registration and distribution).
+Intuitively, we understand that the segmentation process should be a lot affected because of the two issues we presented (registration and distribution). Concrete results on the whole segmentation process will be presented in the next chapter.
 %\subsection{Results}
 %corrected not corrected
 %parameters explanation
 \subsection{Registration parameters}
-Even if we are doing a non-parametric registration, some parameters has to be defined. "Non-parametric" means no information about the volume and classes to correct. We will first present and explain you the parameters. In a second step, we will propose you some parameters adaptated to different problems.
+Even if we are performing a non-parametric registration, some parameters have to be defined. "Non-parametric" means no information about the volume and classes to correct. We will first present and explain the parameters. In a second step, we will propose some parameters adjusted to different problems.
 
 \begin{itemize}
 \item \textbf{Shrink factor}\\
 \hspace*{4 mm} It is a factor which is used to reduce the size of the image to be processed. A down-sampling is done by the bias correction filter.
 
-\item \textbf{Maximum Number Of Iterations}\\
-\hspace*{4 mm} Optimization of the bias field occurs iterativly until the number of iterations exceeds the maximum specified by this variable.
+\item \textbf{Maximum number of iterations}\\
+\hspace*{4 mm} Optimization of the bias field occurs iteratively until the number of iterations exceeds the maximum specified by this variable.
 
-\item \textbf{Bias Field Full Width At Maximum Iteration}\\
+\item \textbf{Bias field full width at maximum iteration}\\
 \hspace*{4 mm} The bias field is modelled with a Gaussian. This variable characterizes this Gaussian (see \cite{20}) and can be presented as a parameter which defines the strength of the bias.
 \end{itemize}
 
 \par
-From the understanding of the parameters, it is now obvious that if you want to increase the time of processing, you should increase the shrink factor or reduce the maximum number of iteration. The limitation is that is can deteriore the bias field correction. You can also increase or reduce the Bias field full width at maximum iteration, depending on the importance of the bias.
+From the understanding of the parameters, it makes sense that if the time of processing has tp be reduced, the shrink factor must be increased and the maximum number of iteration must be reduced. The limitation is that it can deteriore the bias field correction.
+\par
+The bias field full width at maximum iteration (BFFWMI) can also be reduced or increased, depending on the importance of the bias. If the bias field deteriorates significantly the image, an important BFFWMI must be used. On the contrary, if the intensity inhomogeneities are not significant, BFFWMI can be small.
 %
 
 
 \section{Intensity Normalization}\label{intensitynormalizationddd}
-Another very usefull contribution is a tool which helps the user to determine the good normalization value.
-\subsection{Interest}
-As discussed in section (\ref{GUI}), at the step 4, an intensity normalization is done. Will already presented the utility of an intensity normalization in the same section. The problem is that the user has no tools to find the good values for the segmentation. He has to guess the mean intensity of the voxels in the MR image, background exluded. This is of course not doingable in practise.
-\subsection{Our approach}
-We implemented a simple tool, to allow the user to find easily and accurately this normalization value.
+Another useful contribution is a tool which helps the user to determine the good normalization value.
+\subsection{Motivation}
+As discussed in section (\ref{GUI}), at the step 4, an intensity normalization is done. We have already presented the utility of an intensity normalization in the same section. The problem is that the user has no tool to find the optimum values for the segmentation. The user has to find the mean intensity of the voxels in the MR image, excluding the background. In practise it is challenging to estimate the good value since no tool exist for this particular purpose.
+%
+\subsection{Solution}
+We implemented a tool, to allow the user to find easily and accurately this normalization value.
 \par
-The first step of the work consited in creating the histogram associated to the image. The $Y$ axe which presents the number of pixels for each intensity in the volume uses a log-scale because the range is huge. The log scale reduces considerably the range. We then added a cursor in this histogram. Using it, the user can choose the intensity which will be the "limit" between the background and part of interest. Finally, while the cursor is moving, our algorithm computes automatically the mean value of the voxels in the volume, from this intensity range to the highest intensity range. This is the normalization value.
+The first step of the work consited in creating the histogram corresponding to the image. The $Y$ axis which presents the number of pixels for each intensity in the volume uses a log-scale because the range is large. The log scale significantly reduces the range. We then added a cursor in this histogram. With this feature, the user can choose the intensity which will be the threshold between the background and structure of interest. Finally, while the cursor is moving, our algorithm computes automatically the mean value of the voxels in the volume, from this intensity range to the highest intensity range. This is the normalization value.
 \par
-We present in figure (\ref{fig:intensitynormalization2}) the tool we developped. A T1 volume has been loaded. The user can move the cursor in the histogram. While moving, it returns in real-time the normalization value for the given position of the cursor in the lower frame.
+We present in Figure \ref{fig:intensitynormalization2} the tool we developped. A T1 volume has been loaded. The user can move the cursor in the histogram. While moving, it returns in real-time the normalization value for the given position of the cursor in the lower frame.
 
 \begin{figure}\centering
   \includegraphics[width=0.5\textwidth]{Images/Screenshots/intensityNormalization.png}
-  \caption{Tool developped for the intensity normalization parameter estimation}\label{fig:intensitynormalization2}
+  \caption{Tool developped for the intensity normalization parameter estimation}{The user moves the cursor and get an immediate feedback about the normalization value to use in the "recommended normal" box}\label{fig:intensitynormalization2}
 \end{figure}
 %
 
 
 \section{Global Prior Weights Estimation}\label{GPSPDGSPGS}
 
-The last contribution to the EMS is a tool which provides the user an easy and fast way to estimate the approximate size (also called Global Prior Weights (GPW)) of each class to be segmented.
+The last contribution to the EM segmentation is a tool which provides the user an easy and fast way to estimate the approximate size (also called Global Prior Weights) of each class to be segmented.
 
-\subsection{Presentation of the problem}
-During the segmentation process,at the $6^{th}$ step of the intialization (section \ref{GUI}), you have to provide to the algorithm an estimation of the size of each tissue to be segmented. 
-First of all if there are a lot of structures to segment, they user can spend a lot of time during this step. Moreover, the user may not know at all which size to choose. A tool to estimate of the good sizes to choose is needed. 
+\subsection{Motivation}
+During the segmentation process,at the $6^{th}$ step of the intialization (section \ref{GUI}), the user has to provide to the algorithm an estimation of the size of each tissue to be segmented. 
+First of all if there are a lot of structures to segment, this step is time consuming. Moreover, the user may not know at all which size to choose. A tool to estimate of the good sizes to choose is needed. 
 %We must also keep in mind that the end users are physicists. They might don't understand what the parameters meanings and providing them a visual feedback could help them a lot.
-\subsection{Our approach}
-We divided the problem in two parts. The first part will be about providing the user a real-time feedback regarding the global prior weights estimation.
-The second part will consist in developping an algorithm which fills automatically the tree.
+\subsection{Solution}
+Our solution is to divide the problem in two parts. We provide the user with a real-time feedback regarding the global prior weights estimation.
+The second part consists of developping an algorithm which fills automatically the tree.
 %\subsubsection{Fast user feedback}
 %We can divide the feedback part in 3 steps: the histogram computation and utilisation, the multicolumn list and the labelmap generated.
 %The histogram allows the user to manual segment classes based on intensity.
@@ -288,12 +294,12 @@ The second part will consist in developping an algorithm which fills automatical
 
   \begin{figure}\centering
   \includegraphics[width=0.7\textwidth]{Images/Screenshots/GlobalPrior.png}
-  \caption{Tool developped for the global prior weights estimation}\label{fig:globalpriors}
+  \caption{Tool developped for the global prior weights estimation}{Left image (A) presents the tool we developped for the global prior weights estimation. Right image (B) shows the visual feedback provided to the user given the tool presented in (A)}\label{fig:globalpriors}
   \end{figure}
 
-The new tool is presented in figure (\ref{fig:globalpriors}) (A). When the user moves a cursor, it changes the intensity range for each class. The tool provides a real time feedback to the user, about about what he is doing. The user sees figure \ref{fig:globalpriors}) (B) which is updated in real time, regarding the position of all the cursors consequence. Clicking on "update tree" (in figure \ref{fig:globalpriors}) (A)), the estimated size of a class is computed and the information is stored into the tree structure (parameter $H$).\\
+The new tool is presented in Figure \ref{fig:globalpriors}, in the left image (A). When the user moves a cursor, it changes the intensity range for each class. The tool provides a real time feedback to the user. The user sees Figure \ref{fig:globalpriors}) (B) which is updated in real time, regarding the position of all the cursors consequence. Clicking on "update tree" (in Figure \ref{fig:globalpriors}) (A)), the estimated size of a class is computed and the information is stored into the tree structure (parameter $H$).\\ \\ \\ \\
 \par
-We presented the contribution we did to the EM semgentation module in Slicer 3. It lookds usefull, nevertheless we still don't know if it will have a real impact on the whole segmentation process. In the next chapter, we present the influence of the contributions on the whole segmentation proocess.
+In this chapter we have presented our contribution to the EM segmentation algorithm. The illustrations shows that the selection of the parameter has been improved: in the next chapter we present the impact on the segmentation.
 
 %As we can see, the results obtained are good and accurate.The time of processing is fast and most of the people are now able to understand these parameters, even they are not familiar with EMS. This is an intuitive way to get an estimation of the GPW parameters.\\
 %Of course some sfsdfs must be done.
