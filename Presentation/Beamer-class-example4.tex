@@ -12,29 +12,51 @@
 %  \beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
 %  with this the elements which were coming soon were only hinted
 \documentclass{beamer}
-\usepackage{beamerthemeshadow}
+\usepackage{beamerthemeshadow, pgf}
 \begin{document}
-\title{Beamer Class well nice}  
-\author{Sascha Frank}
-\date{\today} 
+
+\title{New segmentation pipeline in Slicer 3}  
+\author{Nicolas Rannou}
+%\mylogo{Images/Logos/logo_ISEN.jpg}
+%\date{\today} 
+
+%\begin{titlepage}
+
+%\pgfputat{\pgfxy(0,-6.5)}{\pgfbox[right,base]{\pgfimage[width=1cm]{Images/Logos/logo_spl.jpg}}}
+%\begin{center}
+%\includegraphics[width=.2\textwidth]{Images/Logos/logo_spl.jpg}
+%\end{center}
+
+%\end{titlepage}
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+%\setbeamertemplate{footline}[page number]
+
+%\setbeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber} 
 
 \frame{\titlepage} 
 
 \frame{\frametitle{Table of contents}\tableofcontents} 
 
 
-\section{Section no.1} 
+\section{EM segmentation} 
 \frame{\frametitle{Title} 
 Each frame should have a title.
+
+
 }
-\subsection{Subsection no.1.1  }
+\subsection{Principle}
+\frame{ 
+Without title somethink is missing. 
+}
+\subsection{Segmentation pipeline in Slicer 3}
 \frame{ 
 Without title somethink is missing. 
 }
 
-
-\section{Section no. 2} 
-\subsection{Lists I}
+\section{Contributions} 
+\subsection{Class selection}
 \frame{\frametitle{unnumbered lists}
 \begin{itemize}
 \item Introduction to  \LaTeX  
@@ -43,6 +65,8 @@ Without title somethink is missing.
 \item Beamer class
 \end{itemize} 
 }
+\subsection{Class Visualization}
+\frame{\frametitle{unnumbered lists}}
 
 \frame{\frametitle{lists with pause}
 \begin{itemize}
@@ -53,7 +77,7 @@ Without title somethink is missing.
 \end{itemize} 
 }
 
-\subsection{Lists II}
+\subsection{Bias field correction}
 \frame{\frametitle{numbered lists}
 \begin{enumerate}
 \item Introduction to  \LaTeX  
@@ -62,6 +86,7 @@ Without title somethink is missing.
 \item Beamer class
 \end{enumerate}
 }
+\subsection{Intensity Normalization}
 \frame{\frametitle{numbered lists with pause}
 \begin{enumerate}
 \item Introduction to  \LaTeX \pause 
@@ -70,9 +95,11 @@ Without title somethink is missing.
 \item Beamer class
 \end{enumerate}
 }
+\subsection{Hierarchical parameters estimation}
+\frame{\frametitle{numbered lists with pause}}
 
-\section{Section no.3} 
-\subsection{Tables}
+\section{Results} 
+\subsection{Basic segmentation}
 \frame{\frametitle{Tables}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -84,7 +111,7 @@ SS 05 & Sascha Frank & \LaTeX \ Course serial \\
 \hline
 \end{tabular}}
 
-
+\subsection{Bias field correction segmentation}
 \frame{\frametitle{Tables with pause}
 \begin{tabular}{c c c}
 A & B & C \\ 
@@ -95,8 +122,7 @@ A & B & C \\
 \end{tabular} }
 
 
-\section{Section no. 4}
-\subsection{blocs}
+\subsection{Labelmap sampling segmentation}
 \frame{\frametitle{blocs}
 
 \begin{block}{title of the bloc}
@@ -111,6 +137,11 @@ bloc text
 \begin{alertblock}{title of the bloc}
 bloc text
 \end{alertblock}
+}
+
+\section{Perspectives}
+\frame{\frametitle{blocs}
+
 }
 \end{document}
 
