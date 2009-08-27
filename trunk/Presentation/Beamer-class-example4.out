@@ -1,9 +1,14 @@
-\BOOKMARK [2][]{Outline0.1}{Section no.1}{}
-\BOOKMARK [3][]{Outline0.1.1.4}{Subsection no.1.1 }{Outline0.1}
-\BOOKMARK [2][]{Outline0.2}{Section no. 2}{}
-\BOOKMARK [3][]{Outline0.2.1.5}{Lists I}{Outline0.2}
-\BOOKMARK [3][]{Outline0.2.2.10}{Lists II}{Outline0.2}
-\BOOKMARK [2][]{Outline0.3}{Section no.3}{}
-\BOOKMARK [3][]{Outline0.3.1.15}{Tables}{Outline0.3}
-\BOOKMARK [2][]{Outline0.4}{Section no. 4}{}
-\BOOKMARK [3][]{Outline0.4.1.19}{blocs}{Outline0.4}
+\BOOKMARK [2][]{Outline0.1}{EM segmentation}{}
+\BOOKMARK [3][]{Outline0.1.1.4}{Principle}{Outline0.1}
+\BOOKMARK [3][]{Outline0.1.2.5}{Segmentation pipeline in Slicer 3}{Outline0.1}
+\BOOKMARK [2][]{Outline0.2}{Contributions}{}
+\BOOKMARK [3][]{Outline0.2.1.6}{Class selection}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.2.7}{Class Visualization}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.3.12}{Bias field correction}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.4.13}{Intensity Normalization}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.5.17}{Hierarchical parameters estimation}{Outline0.2}
+\BOOKMARK [2][]{Outline0.3}{Results}{}
+\BOOKMARK [3][]{Outline0.3.1.18}{Basic segmentation}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.2.19}{Bias field correction segmentation}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.3.22}{Labelmap sampling segmentation}{Outline0.3}
+\BOOKMARK [2][]{Outline0.4}{Perspectives}{}
