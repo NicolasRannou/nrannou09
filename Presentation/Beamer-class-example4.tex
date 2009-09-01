@@ -13,13 +13,17 @@
 %  with this the elements which were coming soon were only hinted
 \documentclass{beamer}
 \usepackage{beamerthemeshadow, pgf}
+\usepackage{graphicx}
 \begin{document}
 
 \title{New segmentation pipeline in Slicer 3}  
 \author{Nicolas Rannou}
 %\mylogo{Images/Logos/logo_ISEN.jpg}
 %\date{\today} 
-
+\date[] % (optional, should be abbreviation of conference name)
+{}
+\institute[ISEN] % (optional, but mostly needed)
+{Institut Sup\'erieur de l'\'Electronique et du Num\'erique}
 %\begin{titlepage}
 
 %\pgfputat{\pgfxy(0,-6.5)}{\pgfbox[right,base]{\pgfimage[width=1cm]{Images/Logos/logo_spl.jpg}}}
@@ -28,6 +32,25 @@
 %\end{center}
 
 %\end{titlepage}
+
+%\logo{\includegraphics[width=2cm]{Images/Logos/logo_spl.jpg}}
+
+%\pgfdeclareimage[height=0.85cm]{logo-gauche}{Images/Logos/logo_spl.jpg}
+%\pgfdeclareimage[height=0.85cm]{logo-droite}{Images/Logos/logo_spl.jpg}
+%\logo{\pgfuseimage{logo-droite}}
+
+\pgfdeclareimage[height=0.75cm]{Images/Logos/logo_spl.jpg}{Images/Logos/logo_spl.jpg}
+\logo{\pgfuseimage{Images/Logos/logo_spl.jpg}}
+
+
+%\setbeamertemplate{header left}
+%{
+%\logo{\pgfuseimage{logo-gauche}}
+%\vfill%
+%\rlap{\hskip0.1cm\insertlogo}%
+%\vskip15pt%
+%}
+
 \expandafter\def\expandafter\insertshorttitle\expandafter{%
   \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
 
@@ -37,20 +60,48 @@
 
 \frame{\titlepage} 
 
-\frame{\frametitle{Table of contents}\tableofcontents} 
 
+\section{Introduction} 
+\frame{\frametitle{Introduction} 
 
-\section{EM segmentation} 
-\frame{\frametitle{Title} 
-Each frame should have a title.
+  
+  
+  
+  \begin{columns}
+  \begin{column}{0.3\textwidth}
+    \includegraphics<1>[width=4cm]{Images/intro.png}
+    \includegraphics<2>[width=4cm]{Images/intro.png}
+    \includegraphics<3>[width=4cm]{Images/intro.png}
+    \includegraphics<4>[width=4cm]{Images/intro.png}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \begin{itemize}[<+->]
+      \item La quantit\'e de donn\'ees \`a traiter en imagerie m\'edicale augmente \'enorm\'ement
+      \item Les m\'edecins ont besoin d'outils pour traiter automatiquement et pr\'ecis\'ement leurs donn\'ees
+      \item Apparition de la segmentation par expectation maximisation
+      \item Beaucoup de publications mais utilisation peu r\'epandue car complexe \`a utiliser
+  \end{itemize}
+     
+  
+  \end{column}
+  \end{columns}
 
-
+  
+%\begin{itemize}
+%\item{\textbf{Logo:} [mylogo] use one of the norwegian versions of the logo on the titlepage, your logo, or no logo at all}
+%\end{itemize}
 }
-\subsection{Principle}
-\frame{ 
+
+\frame{\frametitle{Plan}\tableofcontents} 
+
+
+\section{Segmentation par expectation maximisation} 
+
+\subsection{Principe}
+\frame{ \frametitle{unnumbered lists}
 Without title somethink is missing. 
 }
-\subsection{Segmentation pipeline in Slicer 3}
+\subsection{EM segmentation dans Slicer 3}
 \frame{ 
 Without title somethink is missing. 
 }
