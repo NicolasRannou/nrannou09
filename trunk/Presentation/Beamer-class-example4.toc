@@ -1,15 +1,16 @@
 \beamer@endinputifotherversion {3.07pt}
-\beamer@sectionintoc {1}{EM segmentation}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Principle}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Segmentation pipeline in Slicer 3}{5}{0}{1}
-\beamer@sectionintoc {2}{Contributions}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{Class selection}{6}{0}{2}
-\beamer@subsectionintoc {2}{2}{Class Visualization}{7}{0}{2}
-\beamer@subsectionintoc {2}{3}{Bias field correction}{12}{0}{2}
-\beamer@subsectionintoc {2}{4}{Intensity Normalization}{13}{0}{2}
-\beamer@subsectionintoc {2}{5}{Hierarchical parameters estimation}{17}{0}{2}
-\beamer@sectionintoc {3}{Results}{18}{0}{3}
-\beamer@subsectionintoc {3}{1}{Basic segmentation}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{Bias field correction segmentation}{19}{0}{3}
-\beamer@subsectionintoc {3}{3}{Labelmap sampling segmentation}{22}{0}{3}
-\beamer@sectionintoc {4}{Perspectives}{23}{0}{4}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Segmentation par expectation maximisation}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Principe}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{8}{0}{2}
+\beamer@sectionintoc {3}{Contributions}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Class selection}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Class Visualization}{10}{0}{3}
+\beamer@subsectionintoc {3}{3}{Bias field correction}{15}{0}{3}
+\beamer@subsectionintoc {3}{4}{Intensity Normalization}{16}{0}{3}
+\beamer@subsectionintoc {3}{5}{Hierarchical parameters estimation}{20}{0}{3}
+\beamer@sectionintoc {4}{Results}{21}{0}{4}
+\beamer@subsectionintoc {4}{1}{Basic segmentation}{21}{0}{4}
+\beamer@subsectionintoc {4}{2}{Bias field correction segmentation}{22}{0}{4}
+\beamer@subsectionintoc {4}{3}{Labelmap sampling segmentation}{25}{0}{4}
+\beamer@sectionintoc {5}{Perspectives}{26}{0}{5}
