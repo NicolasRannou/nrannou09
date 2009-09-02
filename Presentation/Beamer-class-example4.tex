@@ -132,8 +132,8 @@
 
 
 \section{Segmentation par expectation maximisation} 
-
 \subsection{Principe}
+\frame{\frametitle{Segmentation par expectation maximisation}Principe} 
 \frame{ \frametitle{La segmentation}
   \begin{columns}
   \begin{column}{0.3\textwidth}
@@ -187,6 +187,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 }
 
 \subsection{EM segmentation dans Slicer 3}
+\frame{\frametitle{Segmentation par expectation maximisation}EM segmentation dans Slicer 3} 
 \frame{ \frametitle{EM segmentation dans Slicer 3}
   \begin{block}{Informations suppl\'ementaires} 
     \begin{itemize}[<+->]      
@@ -223,6 +224,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
 \section{Contributions} 
 \subsection{Initialisation des tissus \`a segmenter}
+\frame{\frametitle{Contributions}Initialisation des tissus \`a segmenter} 
 \frame{\frametitle{Initialisation des tissus \`a segmenter}
   \begin{alertblock}{Pr\'esentation du probl\`eme} 
   M\'ethodes actuelles d'initialisation
@@ -261,6 +263,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 }
 
 \subsection{\'Evaluation de la s\'election des tissus}
+\frame{\frametitle{Contributions}\'Evaluation de la s\'election des tissus} 
 \frame{\frametitle{\'Evaluation de la s\'election des tissus}
   \begin{alertblock}{Pr\'esentation du probl\`eme} 
    Aucun moyen de savoir si l'initialisation est la meilleure possible
@@ -277,7 +280,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \end{block}
   
          \begin{center}
- \includegraphics[width=4cm]{Images/Screenshots/gauss_label_2.png}
+ \includegraphics[width=3.5cm]{Images/Screenshots/gauss_label_2.png}
  \end{center} 
 }
 
@@ -296,6 +299,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 }
 
 \subsection{Correction des inhomog\'einit\'es d'intensit\'e}
+\frame{\frametitle{Contributions}Correction des inhomog\'einit\'es d'intensit\'e} 
 \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
   \begin{alertblock}{Pr\'esentation du probl\`eme} 
    \begin{itemize}[<+->]  
@@ -332,76 +336,215 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
  \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
     \begin{exampleblock}{\'Evaluation des r\'esultats} 
-    \begin{itemize}[<+->]  
-      \item Os repr\'esent\'e en bleu  
-      \item Gauche : Semi-automatique $\|$ Droite : Labelmap
-    \end{itemize}
-  \end{exampleblock}
+    Recalage\\
+    Histogrammes joints sans correction du bias
+    \end{exampleblock}
   
            \begin{center}
- \includegraphics[width=10cm]{Images/Screenshots/classdistribution.png}
+ \includegraphics[width=10cm]{Images/Screenshots/jointhistograms1.png}
  \end{center} 
   
 }
 
-\subsection{\'Evaluation du param\`etre de normalisation}
-\frame{\frametitle{numbered lists with pause}
-\begin{enumerate}
-\item Introduction to  \LaTeX \pause 
-\item Course 2 \pause 
-\item Termpapers and presentations with \LaTeX \pause 
-\item Beamer class
-\end{enumerate}
+ \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+    \begin{exampleblock}{\'Evaluation des r\'esultats} 
+    Recalage\\
+    Histogrammes joints apr\`es correction du bias
+    \end{exampleblock}
+  
+           \begin{center}
+ \includegraphics[width=10cm]{Images/Screenshots/jointhistograms2.png}
+ \end{center} 
+  
 }
-\subsection{\'Evaluation des param\`etres hi\'erarchiques}
-\frame{\frametitle{numbered lists with pause}}
+
+ \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+    \begin{exampleblock}{\'Evaluation des r\'esultats} 
+    Distribution des tissus
+    \end{exampleblock}
+  
+    \begin{center}
+    \includegraphics[width=10cm]{Images/Screenshots/biasedunbiased.png}
+    \end{center} 
+  
+}
+
+\subsection{\'Evaluation du param\`etre de normalisation}
+\frame{\frametitle{Contributions}\'Evaluation du param\`etre de normalisation} 
+\frame{\frametitle{\'Evaluation du param\`etre de normalisation}
+  \begin{alertblock}{Pr\'esentation du probl\`eme} 
+   Difficile \`a \'evaluer pr\'ecis\'ement
+  \end{alertblock} 
+  
+  \begin{block}{Solution propos\'ee} 
+
+   D\'eveloppement d'un outil d'\'evaluation
+  \end{block}
+  
+         \begin{center}
+ \includegraphics[width=4.5cm]{Images/Screenshots/intensityNormalization.png}
+ \end{center} 
+}
+
+% \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+%    \begin{exampleblock}{\'Evaluation des r\'esultats} 
+%    Recalage\\
+%    Histogrammes joints sans correction du bias
+%    \end{exampleblock}
+%  
+%           \begin{center}
+% \includegraphics[width=10cm]{Images/Screenshots/jointhistograms1.png}
+% \end{center} 
+%  
+%}
+%\subsection{\'Evaluation des param\`etres hi\'erarchiques}
+%\frame{\frametitle{numbered lists with pause}}
 
 \frame{\frametitle{Plan}\tableofcontents} 
 
-\section{Resultats} 
+\section{R\'esultats} 
 \subsection{Segmentation sans contribution}
-\frame{\frametitle{Tables}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Date} & \textbf{Instructor} & \textbf{Title} \\
-\hline
-WS 04/05 & Sascha Frank & First steps with  \LaTeX  \\
-\hline
-SS 05 & Sascha Frank & \LaTeX \ Course serial \\
-\hline
-\end{tabular}}
+\frame{\frametitle{R\'esultats}Segmentation sans contributions} 
+\frame{\frametitle{Segmentation sans contributions}
+
+\begin{block}{M\'ethode de tests} 
+
+  \end{block}
+
+}
+
+\frame{\frametitle{Segmentation sans contributions}
+
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+    \includegraphics[width=5cm]{Images/Screenshots/EMS_MANUAL_SAGITTAL.png}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+  
+  
+  \begin{block}{Point de vue de l'expert} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \begin{block}{Discussion} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \end{column}
+  \end{columns}
+
+}
 
 \subsection{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}
-\frame{\frametitle{Tables with pause}
-\begin{tabular}{c c c}
-A & B & C \\ 
-\pause 
-1 & 2 & 3 \\  
-\pause 
-A & B & C \\ 
-\end{tabular} }
+\frame{\frametitle{R\'esultats}Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e} 
+\frame{\frametitle{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}
 
+\begin{block}{M\'ethode de tests} 
+
+  \end{block}
+
+}
+
+\frame{\frametitle{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}
+
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+    \includegraphics[width=5cm]{Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+  
+  
+  \begin{block}{Point de vue de l'expert} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \begin{block}{Discussion} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \end{column}
+  \end{columns}
+
+}
 
 \subsection{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}
-\frame{\frametitle{blocs}
 
-\begin{block}{title of the bloc}
-bloc text
-\end{block}
+\frame{\frametitle{R\'esultats}Segmentation avec la nouvelle m\'ethode d'initialisation des tissus} 
+\frame{\frametitle{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}
 
-\begin{exampleblock}{title of the bloc}
-bloc text
-\end{exampleblock}
+\begin{block}{M\'ethode de tests} 
 
+  \end{block}
 
-\begin{alertblock}{title of the bloc}
-bloc text
-\end{alertblock}
+}
+
+\frame{\frametitle{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}
+
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+    \includegraphics[width=5cm]{Images/Screenshots/EMS_C_LABEL_SAGITTAL.png}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+  
+  
+  \begin{block}{Point de vue de l'expert} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \begin{block}{Discussion} 
+  
+    \begin{itemize}[<+->]
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+    \end{itemize}
+
+  \end{block}    
+  
+  \end{column}
+  \end{columns}
+
 }
 
 \section{Perspectives}
-\frame{\frametitle{blocs}
+\frame{\frametitle{Perspectives}
 
 }
+
+\section{Conclusion}
+\frame{\frametitle{Conclusion}
+
+}
+
+\frame{\frametitle{Conclusion}
+Merci de votre attention ! \\
+\bigskip
+Des questions ? 
+}
+
 \end{document}
 

@@ -1,15 +1,15 @@
 \BOOKMARK [2][]{Outline0.1}{Introduction}{}
 \BOOKMARK [2][]{Outline0.2}{Segmentation par expectation maximisation}{}
 \BOOKMARK [3][]{Outline0.2.1.12}{Principe}{Outline0.2}
-\BOOKMARK [3][]{Outline0.2.2.18}{EM segmentation dans Slicer 3}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.2.19}{EM segmentation dans Slicer 3}{Outline0.2}
 \BOOKMARK [2][]{Outline0.3}{Contributions}{}
-\BOOKMARK [3][]{Outline0.3.1.24}{Initialisation des tissus \340 segmenter}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.2.31}{\311valuation de la s\351lection des tissus}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.3.36}{Correction des inhomog\351init\351s d'intensit\351}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.4.45}{\311valuation du param\350tre de normalisation}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.5.49}{\311valuation des param\350tres hi\351rarchiques}{Outline0.3}
-\BOOKMARK [2][]{Outline0.4}{Resultats}{}
-\BOOKMARK [3][]{Outline0.4.1.51}{Segmentation sans contribution}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.2.52}{Segmentation apr\350s correction des inhomog\351init\351s d'intensit\351}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.3.55}{Segmentation avec la nouvelle m\351thode d'initialisation des tissus}{Outline0.4}
+\BOOKMARK [3][]{Outline0.3.1.26}{Initialisation des tissus \340 segmenter}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.2.34}{\311valuation de la s\351lection des tissus}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.3.40}{Correction des inhomog\351init\351s d'intensit\351}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.4.51}{\311valuation du param\350tre de normalisation}{Outline0.3}
+\BOOKMARK [2][]{Outline0.4}{R\351sultats}{}
+\BOOKMARK [3][]{Outline0.4.1.54}{Segmentation sans contribution}{Outline0.4}
+\BOOKMARK [3][]{Outline0.4.2.60}{Segmentation apr\350s correction des inhomog\351init\351s d'intensit\351}{Outline0.4}
+\BOOKMARK [3][]{Outline0.4.3.66}{Segmentation avec la nouvelle m\351thode d'initialisation des tissus}{Outline0.4}
 \BOOKMARK [2][]{Outline0.5}{Perspectives}{}
+\BOOKMARK [2][]{Outline0.6}{Conclusion}{}
