@@ -2,15 +2,15 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{Segmentation par expectation maximisation}{12}{0}{2}
 \beamer@subsectionintoc {2}{1}{Principe}{12}{0}{2}
-\beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{18}{0}{2}
-\beamer@sectionintoc {3}{Contributions}{24}{0}{3}
-\beamer@subsectionintoc {3}{1}{Initialisation des tissus \`a segmenter}{24}{0}{3}
-\beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{31}{0}{3}
-\beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{36}{0}{3}
-\beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{45}{0}{3}
-\beamer@subsectionintoc {3}{5}{\'Evaluation des param\`etres hi\'erarchiques}{49}{0}{3}
-\beamer@sectionintoc {4}{Resultats}{51}{0}{4}
-\beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{51}{0}{4}
-\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{52}{0}{4}
-\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{55}{0}{4}
-\beamer@sectionintoc {5}{Perspectives}{56}{0}{5}
+\beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{19}{0}{2}
+\beamer@sectionintoc {3}{Contributions}{26}{0}{3}
+\beamer@subsectionintoc {3}{1}{Initialisation des tissus \`a segmenter}{26}{0}{3}
+\beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{34}{0}{3}
+\beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{40}{0}{3}
+\beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{51}{0}{3}
+\beamer@sectionintoc {4}{R\'esultats}{54}{0}{4}
+\beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{54}{0}{4}
+\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{60}{0}{4}
+\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{66}{0}{4}
+\beamer@sectionintoc {5}{Perspectives}{72}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{73}{0}{6}
