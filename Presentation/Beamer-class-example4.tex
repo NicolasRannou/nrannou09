@@ -251,10 +251,10 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
  \frame{\frametitle{Initialisation des tissus \`a segmenter}
     \begin{exampleblock}{\'Evaluation des r\'esultats} 
-    Comparaison Semi-automatique/labelmap
+    Comparaison Semi-automatique/Labelmap (mati\`ere blanche, IRM T1)
     \begin{itemize}[<+->]  
-      \item Initialisation \`a l'aide d'une "labelmap"    
-      \item Repr\'esentatif du tissu \`a segmenter
+      \item Semi-automatique (10 \'echantillons) : $\mu = 543$, $\sigma = 1105$ 
+      \item Labelmap ($\simeq$ 200 \'echantillons) : $\mu = 489$, $\sigma = 592$ 
     \end{itemize}
   \end{exampleblock}
   
@@ -263,12 +263,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 \subsection{\'Evaluation de la s\'election des tissus}
 \frame{\frametitle{\'Evaluation de la s\'election des tissus}
   \begin{alertblock}{Pr\'esentation du probl\`eme} 
-  M\'ethodes actuelles d'initialisation
-    \begin{itemize}[<+->]      
-      \item Manuelle : dur \`a estimer
-      \item Semi-automatique : peu repr\'esentatif du tissu et non reproductible
-    \end{itemize}
-
+   Aucun moyen de savoir si l'initialisation est la meilleure possible
   \end{alertblock} 
   }
   
@@ -276,37 +271,79 @@ $\Phi$ est initialis\'e par l'utilisateur.
     \begin{block}{Solution propos\'ee} 
 
     \begin{itemize}[<+->]  
-      \item Initialisation \`a l'aide d'une "labelmap"    
-      \item Repr\'esentatif du tissu \`a segmenter
-      \item Reproductible
+      \item Repr\'esentation de la distribution des tissus sous forme de Gaussiennes    
+      \item Connaissant les tissus \`a segmenter, on peut en d\'eduire si l'initialisation est bonne
     \end{itemize}
   \end{block}
   
          \begin{center}
- \includegraphics[width=10cm]{Images/Screenshots/labelmaps.png}
+ \includegraphics[width=4cm]{Images/Screenshots/gauss_label_2.png}
  \end{center} 
 }
 
- \frame{\frametitle{Initialisation des tissus \`a segmenter}
+ \frame{\frametitle{\'Evaluation de la s\'election des tissus}
     \begin{exampleblock}{\'Evaluation des r\'esultats} 
-    Comparaison Semi-automatique/labelmap
     \begin{itemize}[<+->]  
-      \item Initialisation \`a l'aide d'une "labelmap"    
-      \item Repr\'esentatif du tissu \`a segmenter
+      \item Os repr\'esent\'e en bleu  
+      \item Gauche : Semi-automatique $\|$ Droite : Labelmap
     \end{itemize}
   \end{exampleblock}
+  
+           \begin{center}
+ \includegraphics[width=10cm]{Images/Screenshots/classdistribution.png}
+ \end{center} 
   
 }
 
 \subsection{Correction des inhomog\'einit\'es d'intensit\'e}
-\frame{\frametitle{numbered lists}
-\begin{enumerate}
-\item Introduction to  \LaTeX  
-\item Course 2 
-\item Termpapers and presentations with \LaTeX 
-\item Beamer class
-\end{enumerate}
+\frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+  \begin{alertblock}{Pr\'esentation du probl\`eme} 
+   \begin{itemize}[<+->]  
+      \item Processus de segmentation fait pour traiter les IRM 
+      \item Inhomog\'einit\'es d'intensit\'e probl\`eme r\'ecurrent
+      \item Probl\`eme trait\'e tardivement
+      \item Apparition de probl\`emes de recalage et de distribution
+    \end{itemize}
+  \end{alertblock} 
+  
+\begin{center}
+ \includegraphics<1>[width=5cm]{Images/Screenshots/T1SagittalNotCorrected.png}
+ \includegraphics<2>[width=5cm]{Images/Screenshots/T1SagittalNotCorrected.png}
+ \includegraphics<3>[width=10cm]{Images/Graphics/previousalgo.png}
+ \includegraphics<4>[width=10cm]{Images/Graphics/previousalgo.png}
+ \end{center}   
+  
+  }
+  
+ \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+    \begin{block}{Solution propos\'ee} 
+
+    \begin{itemize}[<+->]  
+      \item Nouveau processus de segmentation
+      \item Pour am\'eliorer recalage
+      \item Pour am\'eliorer la distribution des tissus
+    \end{itemize}
+  \end{block}
+  
+         \begin{center}
+ \includegraphics[width=10cm]{Images/Graphics/newalgo.png}
+ \end{center} 
 }
+
+ \frame{\frametitle{Correction des inhomog\'einit\'es d'intensit\'e}
+    \begin{exampleblock}{\'Evaluation des r\'esultats} 
+    \begin{itemize}[<+->]  
+      \item Os repr\'esent\'e en bleu  
+      \item Gauche : Semi-automatique $\|$ Droite : Labelmap
+    \end{itemize}
+  \end{exampleblock}
+  
+           \begin{center}
+ \includegraphics[width=10cm]{Images/Screenshots/classdistribution.png}
+ \end{center} 
+  
+}
+
 \subsection{\'Evaluation du param\`etre de normalisation}
 \frame{\frametitle{numbered lists with pause}
 \begin{enumerate}
