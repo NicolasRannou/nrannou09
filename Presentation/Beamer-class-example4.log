@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  2 SEP 2009 17:48
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  2 SEP 2009 22:28
 entering extended mode
  %&-line parsing enabled.
 **Beamer-class-example4.tex
@@ -895,11 +895,31 @@ Overfull \vbox (16.62302pt too high) detected at line 223
 
 ] [25
 
-] [26
+] <Images/Screenshots/labelmaps.png, id=975, 642.4pt x 281.05pt>
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
 
-] [27
+<use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 251
+ []
 
-] [28
+[26
+
+ <./Images/Screenshots/labelmaps.png>]
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
+
+<use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 251
+ []
+
+[27
+
+]
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
+ <use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 251
+ []
+
+[28
 
 ] [29
 
@@ -909,18 +929,51 @@ Overfull \vbox (16.62302pt too high) detected at line 223
 
 ] [32
 
-] [33
-
-] [34
-
-] [35
-
 ]
-(./Beamer-class-example4.toc)
-Overfull \vbox (16.62302pt too high) detected at line 268
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
+ <use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 289
  []
 
-[36
+[33
+
+]
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
+ <use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 289
+ []
+
+[34
+
+]
+File: Images/Screenshots/labelmaps.png Graphic file (type png)
+ <use Images/Screenshots/labelmaps.png>
+Overfull \vbox (12.54689pt too high) detected at line 289
+ []
+
+[35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
+
+] [43
+
+] (./Beamer-class-example4.toc)
+Overfull \vbox (16.62302pt too high) detected at line 323
+ []
+
+[44
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -928,7 +981,7 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
 es tissus[]  
  []
 
-[37
+[45
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -936,7 +989,7 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
 es tissus[]  
  []
 
-[38
+[46
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -944,7 +997,7 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
 es tissus[]  
  []
 
-[39
+[47
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -952,7 +1005,7 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
 es tissus[]  
  []
 
-[40
+[48
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -960,9 +1013,9 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  tissus  
  []
 
-[41
+[49
 
-] [42
+] [50
 
 ]
 \tf@nav=\write6
@@ -981,10 +1034,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 11699 strings out of 95086
- 213052 string characters out of 1183255
+ 11727 strings out of 95086
+ 213456 string characters out of 1183255
  289883 words of memory out of 1500000
- 14444 multiletter control sequences out of 10000+50000
+ 14455 multiletter control sequences out of 10000+50000
  11443 words of font info for 42 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
  41i,20n,63p,364b,1003s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -992,9 +1045,9 @@ Here is how much of TeX's memory you used:
 -texlive/fonts/type1/bluesky/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type
 1/bluesky/cm/cmss8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmssbx1
 0.pfb>
-Output written on Beamer-class-example4.pdf (42 pages, 2078493 bytes).
+Output written on Beamer-class-example4.pdf (50 pages, 2250098 bytes).
 PDF statistics:
- 1620 PDF objects out of 1728 (max. 8388607)
- 100 named destinations out of 1000 (max. 131072)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1918 PDF objects out of 2073 (max. 8388607)
+ 116 named destinations out of 1000 (max. 131072)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

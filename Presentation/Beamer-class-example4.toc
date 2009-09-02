@@ -5,12 +5,12 @@
 \beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{18}{0}{2}
 \beamer@sectionintoc {3}{Contributions}{24}{0}{3}
 \beamer@subsectionintoc {3}{1}{Initialisation des tissus \`a segmenter}{24}{0}{3}
-\beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{25}{0}{3}
-\beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{30}{0}{3}
-\beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{31}{0}{3}
-\beamer@subsectionintoc {3}{5}{\'Evaluation des param\`etres hi\'erarchiques}{35}{0}{3}
-\beamer@sectionintoc {4}{Resultats}{37}{0}{4}
-\beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{37}{0}{4}
-\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{38}{0}{4}
-\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{41}{0}{4}
-\beamer@sectionintoc {5}{Perspectives}{42}{0}{5}
+\beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{31}{0}{3}
+\beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{38}{0}{3}
+\beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{39}{0}{3}
+\beamer@subsectionintoc {3}{5}{\'Evaluation des param\`etres hi\'erarchiques}{43}{0}{3}
+\beamer@sectionintoc {4}{Resultats}{45}{0}{4}
+\beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{45}{0}{4}
+\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{46}{0}{4}
+\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{49}{0}{4}
+\beamer@sectionintoc {5}{Perspectives}{50}{0}{5}
