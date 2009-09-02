@@ -1,16 +1,16 @@
 \beamer@endinputifotherversion {3.07pt}
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Segmentation par expectation maximisation}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Principe}{7}{0}{2}
-\beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{8}{0}{2}
-\beamer@sectionintoc {3}{Contributions}{9}{0}{3}
-\beamer@subsectionintoc {3}{1}{Class selection}{9}{0}{3}
-\beamer@subsectionintoc {3}{2}{Class Visualization}{10}{0}{3}
-\beamer@subsectionintoc {3}{3}{Bias field correction}{15}{0}{3}
-\beamer@subsectionintoc {3}{4}{Intensity Normalization}{16}{0}{3}
-\beamer@subsectionintoc {3}{5}{Hierarchical parameters estimation}{20}{0}{3}
-\beamer@sectionintoc {4}{Results}{21}{0}{4}
-\beamer@subsectionintoc {4}{1}{Basic segmentation}{21}{0}{4}
-\beamer@subsectionintoc {4}{2}{Bias field correction segmentation}{22}{0}{4}
-\beamer@subsectionintoc {4}{3}{Labelmap sampling segmentation}{25}{0}{4}
-\beamer@sectionintoc {5}{Perspectives}{26}{0}{5}
+\beamer@sectionintoc {2}{Segmentation par expectation maximisation}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Principe}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{18}{0}{2}
+\beamer@sectionintoc {3}{Contributions}{24}{0}{3}
+\beamer@subsectionintoc {3}{1}{Initialisation des tissus \`a segmenter}{24}{0}{3}
+\beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{25}{0}{3}
+\beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{30}{0}{3}
+\beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{31}{0}{3}
+\beamer@subsectionintoc {3}{5}{\'Evaluation des param\`etres hi\'erarchiques}{35}{0}{3}
+\beamer@sectionintoc {4}{Resultats}{37}{0}{4}
+\beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{37}{0}{4}
+\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{38}{0}{4}
+\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{41}{0}{4}
+\beamer@sectionintoc {5}{Perspectives}{42}{0}{5}

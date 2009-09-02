@@ -14,9 +14,12 @@
 \documentclass{beamer}
 \usepackage{beamerthemeshadow, pgf}
 \usepackage{graphicx}
+\usepackage{multimedia}
+
+
 \begin{document}
 
-\title{New segmentation pipeline in Slicer 3}  
+\title{Nouveau processus de segmentation dans Slicer 3}  
 \author{Nicolas Rannou}
 %\mylogo{Images/Logos/logo_ISEN.jpg}
 %\date{\today} 
@@ -64,24 +67,24 @@
 \section{Introduction} 
 \frame{\frametitle{Introduction} 
 
-  
-  
-  
   \begin{columns}
   \begin{column}{0.3\textwidth}
-    \includegraphics<1>[width=4cm]{Images/intro.png}
-    \includegraphics<2>[width=4cm]{Images/intro.png}
-    \includegraphics<3>[width=4cm]{Images/intro.png}
-    \includegraphics<4>[width=4cm]{Images/intro.png}
+    \includegraphics[width=4cm]{Images/intro.png}
   \end{column}
   \begin{column}{0.7\textwidth}
+  
+  \begin{block}{Contexte} 
+  
     \begin{itemize}[<+->]
-      \item La quantit\'e de donn\'ees \`a traiter en imagerie m\'edicale augmente \'enorm\'ement
-      \item Les m\'edecins ont besoin d'outils pour traiter automatiquement et pr\'ecis\'ement leurs donn\'ees
-      \item Apparition de la segmentation par expectation maximisation
-      \item Beaucoup de publications mais utilisation peu r\'epandue car complexe \`a utiliser
-  \end{itemize}
-     
+      \item IRM c\'er\'ebrale
+      \item Nombre important de donn\'ees
+      \item Segmentation manuelle co\^uteuse en temps
+      \item Variabilit\'e intra- et inter-expert
+      \item D\'eveloppement de m\'ethodes de segmentation automatiques des tissus
+      \item Apparition de la segmentation par exceptation-maximisation
+    \end{itemize}
+
+  \end{block}    
   
   \end{column}
   \end{columns}
@@ -92,22 +95,135 @@
 %\end{itemize}
 }
 
+
+\frame{\frametitle{Introduction} 
+
+  \begin{columns}
+  \begin{column}{0.3\textwidth}
+    \includegraphics[width=4cm]{Images/intro.png}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+  
+   \begin{alertblock}{Probl\`eme} 
+   Peu utilis\'e car
+    \begin{itemize}[<+->]      
+      \item processus de segmentation doit \^etre am\'elior\'e
+      \item param\`etres optimums durs \`a choisirs
+      \item param\`etres peu explicites
+    \end{itemize}
+
+  \end{alertblock}    
+  
+   %\begin{block}{Objectif} 
+
+%    \begin{itemize}[<+->]      
+%      \item Am\'eliorer le processus de segmentation (correction du biais)
+%      \item Faciliter le processus de segmentation (Fournir des outils \`a l'utili)
+%    \end{itemize}
+
+%  \end{block}    
+  
+  \end{column}
+  \end{columns}
+
+}
+
 \frame{\frametitle{Plan}\tableofcontents} 
 
 
 \section{Segmentation par expectation maximisation} 
 
 \subsection{Principe}
-\frame{ \frametitle{unnumbered lists}
-Without title somethink is missing. 
+\frame{ \frametitle{La segmentation}
+  \begin{columns}
+  \begin{column}{0.3\textwidth}
+    \includegraphics[width=4cm]{Images/Atlas.jpg}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+  
+   \begin{block}{D\'efinition} 
+   Diviser un ensemble en parties d\'elimit\'ees
+
+   \end{block}    
+  
+  
+  \end{column}
+  \end{columns}
 }
-\subsection{EM segmentation dans Slicer 3}
-\frame{ 
-Without title somethink is missing. 
+\frame{ \frametitle{Origine de la segmentation par expectation-maximisation}
+\begin{block}{} 
+    \begin{itemize}[<+->]      
+      \item En 1977, Dempster, Laird et Rubin ont g\'en\'eralis\'e un principe utilis\'e depuis longtemps par les auteurs
+      \item Utilis\'e pour r\'esoudre des probl\`emes de classifications o\`u des donn\'ees sont manquantes
+    \end{itemize}
+
+  \end{block}  
+}
+\frame{ \frametitle{Principe de la segmentation par expectation-maximisation}
+Deux \'etapes, l'expectation et la maximisation. \\
+Soit $\Phi$, un ensemble contenant les param\`etres \`a estimer.\\
+$\Phi$ est initialis\'e par l'utilisateur.
+
+\begin{block}{\'Etape d'expectation} 
+    \begin{itemize}[<+->]      
+      \item Estime la probabilit\'e que le set de param\`etres soit bon
+    \end{itemize}
+
+  \end{block}  
+  
+  \begin{block}{\'Etape de maximisation} 
+    \begin{itemize}[<+->]      
+      \item Estime un nouveau set de param\`etres
+    \end{itemize}
+
+  \end{block}  
+
 }
 
+\frame{ \frametitle{R\'esum\'e de la segmentation par expectation-maximisation}
+\begin{center}
+ \includegraphics[width=4cm]{Images/Graphics/EMSimple.png}
+ \end{center}
+}
+
+\subsection{EM segmentation dans Slicer 3}
+\frame{ \frametitle{EM segmentation dans Slicer 3}
+  \begin{block}{Informations suppl\'ementaires} 
+    \begin{itemize}[<+->]      
+      \item Atlas probabilistes
+      \item Segmentation multi-canaux
+      \item Correction des inhomog\'einit\'es de l'intensit\'e
+      \item Information hi\'erarchique
+    \end{itemize}
+
+  \end{block} 
+    
+
+  \begin{center}
+ \includegraphics<1>[width=4cm]{Images/Screenshots/atlasT1.png}
+ \end{center} 
+ 
+   \begin{center}
+ \includegraphics<2>[width=4cm]{Images/Screenshots/T1ForLabel.png}
+ \includegraphics<2>[width=4cm]{Images/Screenshots/T2ForLabel.png}
+ \end{center} 
+  
+  \begin{center}
+ \includegraphics<4>[width=4cm]{Images/Graphics/treeStructure.png}
+ \end{center} 
+  
+  
+}
+\frame{ \frametitle{Processus de segmentation dans Slicer 3}  
+  \begin{center}
+ \includegraphics<1>[width=10cm]{Images/Graphics/previousalgo.png}
+ \end{center} 
+}
+
+\frame{\frametitle{Plan}\tableofcontents} 
+
 \section{Contributions} 
-\subsection{Class selection}
+\subsection{Initialisation des tissus \`a segmenter}
 \frame{\frametitle{unnumbered lists}
 \begin{itemize}
 \item Introduction to  \LaTeX  
@@ -116,7 +232,7 @@ Without title somethink is missing.
 \item Beamer class
 \end{itemize} 
 }
-\subsection{Class Visualization}
+\subsection{\'Evaluation de la s\'election des tissus}
 \frame{\frametitle{unnumbered lists}}
 
 \frame{\frametitle{lists with pause}
@@ -128,7 +244,7 @@ Without title somethink is missing.
 \end{itemize} 
 }
 
-\subsection{Bias field correction}
+\subsection{Correction des inhomog\'einit\'es d'intensit\'e}
 \frame{\frametitle{numbered lists}
 \begin{enumerate}
 \item Introduction to  \LaTeX  
@@ -137,7 +253,7 @@ Without title somethink is missing.
 \item Beamer class
 \end{enumerate}
 }
-\subsection{Intensity Normalization}
+\subsection{\'Evaluation du param\`etre de normalisation}
 \frame{\frametitle{numbered lists with pause}
 \begin{enumerate}
 \item Introduction to  \LaTeX \pause 
@@ -146,11 +262,13 @@ Without title somethink is missing.
 \item Beamer class
 \end{enumerate}
 }
-\subsection{Hierarchical parameters estimation}
+\subsection{\'Evaluation des param\`etres hi\'erarchiques}
 \frame{\frametitle{numbered lists with pause}}
 
-\section{Results} 
-\subsection{Basic segmentation}
+\frame{\frametitle{Plan}\tableofcontents} 
+
+\section{Resultats} 
+\subsection{Segmentation sans contribution}
 \frame{\frametitle{Tables}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -162,7 +280,7 @@ SS 05 & Sascha Frank & \LaTeX \ Course serial \\
 \hline
 \end{tabular}}
 
-\subsection{Bias field correction segmentation}
+\subsection{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}
 \frame{\frametitle{Tables with pause}
 \begin{tabular}{c c c}
 A & B & C \\ 
@@ -173,7 +291,7 @@ A & B & C \\
 \end{tabular} }
 
 
-\subsection{Labelmap sampling segmentation}
+\subsection{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}
 \frame{\frametitle{blocs}
 
 \begin{block}{title of the bloc}

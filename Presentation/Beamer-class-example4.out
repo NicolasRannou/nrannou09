@@ -1,15 +1,15 @@
 \BOOKMARK [2][]{Outline0.1}{Introduction}{}
 \BOOKMARK [2][]{Outline0.2}{Segmentation par expectation maximisation}{}
-\BOOKMARK [3][]{Outline0.2.1.7}{Principe}{Outline0.2}
-\BOOKMARK [3][]{Outline0.2.2.8}{EM segmentation dans Slicer 3}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.1.12}{Principe}{Outline0.2}
+\BOOKMARK [3][]{Outline0.2.2.18}{EM segmentation dans Slicer 3}{Outline0.2}
 \BOOKMARK [2][]{Outline0.3}{Contributions}{}
-\BOOKMARK [3][]{Outline0.3.1.9}{Class selection}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.2.10}{Class Visualization}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.3.15}{Bias field correction}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.4.16}{Intensity Normalization}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.5.20}{Hierarchical parameters estimation}{Outline0.3}
-\BOOKMARK [2][]{Outline0.4}{Results}{}
-\BOOKMARK [3][]{Outline0.4.1.21}{Basic segmentation}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.2.22}{Bias field correction segmentation}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.3.25}{Labelmap sampling segmentation}{Outline0.4}
+\BOOKMARK [3][]{Outline0.3.1.24}{Initialisation des tissus \340 segmenter}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.2.25}{\311valuation de la s\351lection des tissus}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.3.30}{Correction des inhomog\351init\351s d'intensit\351}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.4.31}{\311valuation du param\350tre de normalisation}{Outline0.3}
+\BOOKMARK [3][]{Outline0.3.5.35}{\311valuation des param\350tres hi\351rarchiques}{Outline0.3}
+\BOOKMARK [2][]{Outline0.4}{Resultats}{}
+\BOOKMARK [3][]{Outline0.4.1.37}{Segmentation sans contribution}{Outline0.4}
+\BOOKMARK [3][]{Outline0.4.2.38}{Segmentation apr\350s correction des inhomog\351init\351s d'intensit\351}{Outline0.4}
+\BOOKMARK [3][]{Outline0.4.3.41}{Segmentation avec la nouvelle m\351thode d'initialisation des tissus}{Outline0.4}
 \BOOKMARK [2][]{Outline0.5}{Perspectives}{}
