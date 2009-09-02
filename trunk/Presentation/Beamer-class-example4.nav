@@ -40,42 +40,46 @@
 \headcommand {\slideentry {3}{1}{3}{29/30}{Initialisation des tissus \`a segmenter}{0}}
 \headcommand {\beamer@framepages {29}{30}}
 \headcommand {\beamer@subsectionentry {0}{3}{2}{31}{\'Evaluation de la s\'election des tissus}}\headcommand {\beamer@subsectionpages {24}{30}}
-\headcommand {\slideentry {3}{2}{1}{31/32}{\'Evaluation de la s\'election des tissus}{0}}
-\headcommand {\beamer@framepages {31}{32}}
-\headcommand {\slideentry {3}{2}{2}{33/35}{\'Evaluation de la s\'election des tissus}{0}}
-\headcommand {\beamer@framepages {33}{35}}
-\headcommand {\slideentry {3}{2}{3}{36/37}{\'Evaluation de la s\'election des tissus}{0}}
-\headcommand {\beamer@framepages {36}{37}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{38}{Correction des inhomog\'einit\'es d'intensit\'e}}\headcommand {\beamer@subsectionpages {31}{37}}
-\headcommand {\slideentry {3}{3}{1}{38/38}{Correction des inhomog\'einit\'es d'intensit\'e}{0}}
-\headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{39}{\'Evaluation du param\`etre de normalisation}}\headcommand {\beamer@subsectionpages {38}{38}}
-\headcommand {\slideentry {3}{4}{1}{39/42}{\'Evaluation du param\`etre de normalisation}{0}}
-\headcommand {\beamer@framepages {39}{42}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{43}{\'Evaluation des param\`etres hi\'erarchiques}}\headcommand {\beamer@subsectionpages {39}{42}}
-\headcommand {\slideentry {3}{5}{1}{43/43}{\'Evaluation des param\`etres hi\'erarchiques}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {3}{5}{2}{44/44}{\'Evaluation des param\`etres hi\'erarchiques}{0}}
-\headcommand {\beamer@framepages {44}{44}}
-\headcommand {\sectionentry {4}{Resultats}{45}{Resultats}{0}}
-\headcommand {\beamer@sectionpages {24}{44}}
-\headcommand {\beamer@subsectionpages {43}{44}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{45}{Segmentation sans contribution}}\headcommand {\beamer@subsectionpages {45}{44}}
-\headcommand {\slideentry {4}{1}{1}{45/45}{Segmentation sans contribution}{0}}
-\headcommand {\beamer@framepages {45}{45}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{46}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}}\headcommand {\beamer@subsectionpages {45}{45}}
-\headcommand {\slideentry {4}{2}{1}{46/48}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{0}}
-\headcommand {\beamer@framepages {46}{48}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{49}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}}\headcommand {\beamer@subsectionpages {46}{48}}
-\headcommand {\slideentry {4}{3}{1}{49/49}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{0}}
+\headcommand {\slideentry {3}{2}{1}{31/31}{\'Evaluation de la s\'election des tissus}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {3}{2}{2}{32/33}{\'Evaluation de la s\'election des tissus}{0}}
+\headcommand {\beamer@framepages {32}{33}}
+\headcommand {\slideentry {3}{2}{3}{34/35}{\'Evaluation de la s\'election des tissus}{0}}
+\headcommand {\beamer@framepages {34}{35}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{36}{Correction des inhomog\'einit\'es d'intensit\'e}}\headcommand {\beamer@subsectionpages {31}{35}}
+\headcommand {\slideentry {3}{3}{1}{36/39}{Correction des inhomog\'einit\'es d'intensit\'e}{0}}
+\headcommand {\beamer@framepages {36}{39}}
+\headcommand {\slideentry {3}{3}{2}{40/42}{Correction des inhomog\'einit\'es d'intensit\'e}{0}}
+\headcommand {\beamer@framepages {40}{42}}
+\headcommand {\slideentry {3}{3}{3}{43/44}{Correction des inhomog\'einit\'es d'intensit\'e}{0}}
+\headcommand {\beamer@framepages {43}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{45}{\'Evaluation du param\`etre de normalisation}}\headcommand {\beamer@subsectionpages {36}{44}}
+\headcommand {\slideentry {3}{4}{1}{45/48}{\'Evaluation du param\`etre de normalisation}{0}}
+\headcommand {\beamer@framepages {45}{48}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{49}{\'Evaluation des param\`etres hi\'erarchiques}}\headcommand {\beamer@subsectionpages {45}{48}}
+\headcommand {\slideentry {3}{5}{1}{49/49}{\'Evaluation des param\`etres hi\'erarchiques}{0}}
 \headcommand {\beamer@framepages {49}{49}}
-\headcommand {\sectionentry {5}{Perspectives}{50}{Perspectives}{0}}
-\headcommand {\beamer@sectionpages {45}{49}}
-\headcommand {\beamer@subsectionpages {49}{49}}
-\headcommand {\slideentry {5}{0}{2}{50/50}{}{0}}
+\headcommand {\slideentry {3}{5}{2}{50/50}{\'Evaluation des param\`etres hi\'erarchiques}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {50}{50}}
-\headcommand {\beamer@sectionpages {50}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\def \inserttotalframenumber {25}}
+\headcommand {\sectionentry {4}{Resultats}{51}{Resultats}{0}}
+\headcommand {\beamer@sectionpages {24}{50}}
+\headcommand {\beamer@subsectionpages {49}{50}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{51}{Segmentation sans contribution}}\headcommand {\beamer@subsectionpages {51}{50}}
+\headcommand {\slideentry {4}{1}{1}{51/51}{Segmentation sans contribution}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{52}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}}\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\slideentry {4}{2}{1}{52/54}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{0}}
+\headcommand {\beamer@framepages {52}{54}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{55}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}}\headcommand {\beamer@subsectionpages {52}{54}}
+\headcommand {\slideentry {4}{3}{1}{55/55}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\sectionentry {5}{Perspectives}{56}{Perspectives}{0}}
+\headcommand {\beamer@sectionpages {51}{55}}
+\headcommand {\beamer@subsectionpages {55}{55}}
+\headcommand {\slideentry {5}{0}{2}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\beamer@sectionpages {56}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\def \inserttotalframenumber {27}}

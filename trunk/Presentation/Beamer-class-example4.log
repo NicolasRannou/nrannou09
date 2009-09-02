@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  2 SEP 2009 22:34
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  2 SEP 2009 23:46
 entering extended mode
  %&-line parsing enabled.
 **Beamer-class-example4.tex
@@ -927,77 +927,121 @@ Overfull \vbox (12.54689pt too high) detected at line 250
 
 ] [31
 
-] [32
-
 ]
-File: Images/Screenshots/labelmaps.png Graphic file (type png)
- <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (12.54689pt too high) detected at line 288
+<Images/Screenshots/gauss_label_2.png, id=1201, 192.2382pt x 196.37pt>
+File: Images/Screenshots/gauss_label_2.png Graphic file (type png)
+
+<use Images/Screenshots/gauss_label_2.png>
+Overfull \vbox (12.79504pt too high) detected at line 282
+ []
+
+[32
+
+ <./Images/Screenshots/gauss_label_2.png (PNG copy)>]
+File: Images/Screenshots/gauss_label_2.png Graphic file (type png)
+
+<use Images/Screenshots/gauss_label_2.png>
+Overfull \vbox (12.79504pt too high) detected at line 282
  []
 
 [33
 
-]
-File: Images/Screenshots/labelmaps.png Graphic file (type png)
- <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (12.54689pt too high) detected at line 288
+] <Images/Screenshots/classdistribution.png, id=1274, 433.62pt x 226.3pt>
+File: Images/Screenshots/classdistribution.png Graphic file (type png)
+
+<use Images/Screenshots/classdistribution.png>
+Overfull \vbox (22.68071pt too high) detected at line 296
  []
 
 [34
 
-]
-File: Images/Screenshots/labelmaps.png Graphic file (type png)
- <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (12.54689pt too high) detected at line 288
+ <./Images/Screenshots/classdistribution.png>]
+File: Images/Screenshots/classdistribution.png Graphic file (type png)
+
+<use Images/Screenshots/classdistribution.png>
+Overfull \vbox (22.68071pt too high) detected at line 296
  []
 
 [35
 
-] [36
+]
+File: Images/Screenshots/T1SagittalNotCorrected.png Graphic file (type png)
+ <use Images/Screenshots/T1SagittalNotCorrected.png>
+Overfull \vbox (9.69878pt too high) detected at line 316
+ []
 
-] [37
+[36
 
-] [38
+]
+File: Images/Screenshots/T1SagittalNotCorrected.png Graphic file (type png)
+ <use Images/Screenshots/T1SagittalNotCorrected.png>
+Overfull \vbox (9.69878pt too high) detected at line 316
+ []
 
-] [39
+[37
 
-] [40
+]
+File: Images/Graphics/previousalgo.png Graphic file (type png)
+ <use Images/Graphics/previousalgo.png>
+Overfull \vbox (8.12787pt too high) detected at line 316
+ []
 
-] [41
+[38
 
-] [42
+]
+File: Images/Graphics/previousalgo.png Graphic file (type png)
+ <use Images/Graphics/previousalgo.png>
+Overfull \vbox (8.12787pt too high) detected at line 316
+ []
 
-] [43
+[39
 
-] (./Beamer-class-example4.toc)
-Overfull \vbox (16.62302pt too high) detected at line 322
+] <Images/Graphics/newalgo.png, id=1492, 1304.875pt x 401.5pt>
+File: Images/Graphics/newalgo.png Graphic file (type png)
+
+<use Images/Graphics/newalgo.png> [40
+
+ <./Images/Graphics/newalgo.png>]
+File: Images/Graphics/newalgo.png Graphic file (type png)
+
+<use Images/Graphics/newalgo.png> [41
+
+]
+File: Images/Graphics/newalgo.png Graphic file (type png)
+ <use Images/Graphics/newalgo.png>
+[42
+
+]
+File: Images/Screenshots/classdistribution.png Graphic file (type png)
+ <use Images/Screenshots/classdistribution.png>
+Overfull \vbox (22.68071pt too high) detected at line 345
+ []
+
+[43
+
+]
+File: Images/Screenshots/classdistribution.png Graphic file (type png)
+ <use Images/Screenshots/classdistribution.png>
+Overfull \vbox (22.68071pt too high) detected at line 345
  []
 
 [44
 
-]
-Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
-es tissus[]  
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+] [49
+
+] (./Beamer-class-example4.toc)
+Overfull \vbox (16.62302pt too high) detected at line 359
  []
 
-[45
-
-]
-Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
-es tissus[]  
- []
-
-[46
-
-]
-Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
-es tissus[]  
- []
-
-[47
+[50
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -1005,7 +1049,31 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
 es tissus[]  
  []
 
-[48
+[51
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
+ []
+
+[52
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
+ []
+
+[53
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
+ []
+
+[54
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
@@ -1013,9 +1081,9 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  tissus  
  []
 
-[49
+[55
 
-] [50
+] [56
 
 ]
 \tf@nav=\write6
@@ -1034,20 +1102,21 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 11737 strings out of 95086
- 213891 string characters out of 1183255
- 288883 words of memory out of 1500000
- 14463 multiletter control sequences out of 10000+50000
+ 11768 strings out of 95086
+ 214555 string characters out of 1183255
+ 289883 words of memory out of 1500000
+ 14479 multiletter control sequences out of 10000+50000
  11443 words of font info for 42 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
  41i,20n,63p,364b,1003s stack positions out of 5000i,500n,6000p,200000b,5000s
-</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmss10.pfb></usr/share/texmf
--texlive/fonts/type1/bluesky/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type
-1/bluesky/cm/cmss8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmssbx1
-0.pfb>
-Output written on Beamer-class-example4.pdf (50 pages, 2523395 bytes).
+</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf
+-texlive/fonts/type1/bluesky/cm/cmss10.pfb></usr/share/texmf-texlive/fonts/type
+1/bluesky/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmss8.
+pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmssbx10.pfb></usr/share/t
+exmf-texlive/fonts/type1/bluesky/cm/cmsy10.pfb>
+Output written on Beamer-class-example4.pdf (56 pages, 2792634 bytes).
 PDF statistics:
- 1920 PDF objects out of 2073 (max. 8388607)
- 116 named destinations out of 1000 (max. 131072)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2152 PDF objects out of 2487 (max. 8388607)
+ 128 named destinations out of 1000 (max. 131072)
+ 326 words of extra memory for PDF output out of 10000 (max. 10000000)
 
