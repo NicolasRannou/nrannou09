@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  3 SEP 2009 00:46
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.5.21)  3 SEP 2009 12:04
 entering extended mode
  %&-line parsing enabled.
 **Beamer-class-example4.tex
@@ -814,18 +814,18 @@ Overfull \hbox (21.62312pt too wide) in paragraph at lines 129--129
 [10
 
 ] (./Beamer-class-example4.toc)
-Overfull \vbox (21.19693pt too high) detected at line 131
+Overfull \vbox (21.19693pt too high) detected at line 135
  []
 
 [11
 
 ] [12
 
-] <Images/Atlas.jpg, id=529, 601.24625pt x 602.25pt>
+] <Images/Atlas.jpg, id=537, 601.24625pt x 602.25pt>
 File: Images/Atlas.jpg Graphic file (type jpg)
 
 <use Images/Atlas.jpg>
-Overfull \hbox (21.62312pt too wide) in paragraph at lines 152--152
+Overfull \hbox (21.62312pt too wide) in paragraph at lines 153--153
 [][]  
  []
 
@@ -840,62 +840,57 @@ Overfull \hbox (21.62312pt too wide) in paragraph at lines 152--152
 ] [17
 
 ]
-<Images/Graphics/EMSimple.png, id=700, 435.6275pt x 772.8875pt>
+<Images/Graphics/EMSimple.png, id=708, 435.6275pt x 772.8875pt>
 File: Images/Graphics/EMSimple.png Graphic file (type png)
 
-<use Images/Graphics/EMSimple.png>
-Overfull \vbox (23.9849pt too high) detected at line 187
- []
-
-[18
+<use Images/Graphics/EMSimple.png> [18
 
  <./Images/Graphics/EMSimple.png (PNG copy)>] [19
 
-]
-<Images/Screenshots/atlasT1.png, id=769, 378.14pt x 314.89072pt>
+] <Images/Screenshots/atlasT1.png, id=777, 378.14pt x 314.89072pt>
 File: Images/Screenshots/atlasT1.png Graphic file (type png)
 
 <use Images/Screenshots/atlasT1.png>
-Overfull \vbox (6.14395pt too high) detected at line 216
+Overfull \vbox (6.14395pt too high) detected at line 217
  []
 
 [20
 
  <./Images/Screenshots/atlasT1.png (PNG copy)>]
-<Images/Screenshots/T1ForLabel.png, id=806, 429.24pt x 316.36562pt>
+<Images/Screenshots/T1ForLabel.png, id=813, 429.24pt x 316.36562pt>
 File: Images/Screenshots/T1ForLabel.png Graphic file (type png)
 
 <use Images/Screenshots/T1ForLabel.png>
-<Images/Screenshots/T2ForLabel.png, id=807, 429.24pt x 316.36562pt>
+<Images/Screenshots/T2ForLabel.png, id=814, 429.24pt x 316.36562pt>
 File: Images/Screenshots/T2ForLabel.png Graphic file (type png)
 
 <use Images/Screenshots/T2ForLabel.png> [21
 
  <./Images/Screenshots/T1ForLabel.png (PNG copy)> <./Images/Screenshots/T2ForLa
 bel.png (PNG copy)>]
-<Images/Screenshots/T1SagittalNotCorrected.png, id=842, 428.51pt x 316.36562pt>
+<Images/Screenshots/T1SagittalNotCorrected.png, id=849, 428.51pt x 316.36562pt>
 File: Images/Screenshots/T1SagittalNotCorrected.png Graphic file (type png)
 <use Images/Screenshots/T1SagittalNotCorrected.png>
-<Images/Screenshots/T1SagittalCorrected.png, id=843, 429.24pt x 316.36562pt>
+<Images/Screenshots/T1SagittalCorrected.png, id=850, 429.24pt x 316.36562pt>
 File: Images/Screenshots/T1SagittalCorrected.png Graphic file (type png)
 
 <use Images/Screenshots/T1SagittalCorrected.png> [22
 
  <./Images/Screenshots/T1SagittalNotCorrected.png (PNG copy)> <./Images/Screens
 hots/T1SagittalCorrected.png (PNG copy)>]
-<Images/Graphics/treeStructure.png, id=877, 513.92pt x 245.91875pt>
+<Images/Graphics/treeStructure.png, id=884, 513.92pt x 245.91875pt>
 File: Images/Graphics/treeStructure.png Graphic file (type png)
 
 <use Images/Graphics/treeStructure.png> [23
 
  <./Images/Graphics/treeStructure.png (PNG copy)>]
-<Images/Graphics/previousalgo.png, id=911, 1104.125pt x 401.5pt>
+<Images/Graphics/previousalgo.png, id=918, 1104.125pt x 401.5pt>
 File: Images/Graphics/previousalgo.png Graphic file (type png)
 
 <use Images/Graphics/previousalgo.png> [24
 
  <./Images/Graphics/previousalgo.png>] (./Beamer-class-example4.toc)
-Overfull \vbox (21.19693pt too high) detected at line 223
+Overfull \vbox (21.19693pt too high) detected at line 227
  []
 
 [25
@@ -907,11 +902,11 @@ Overfull \vbox (21.19693pt too high) detected at line 223
 ] [28
 
 ]
-<Images/Screenshots/labelmaps.png, id=1106, 642.4pt x 281.05pt>
+<Images/Screenshots/labelmaps.png, id=1115, 642.4pt x 281.05pt>
 File: Images/Screenshots/labelmaps.png Graphic file (type png)
 
 <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (19.24997pt too high) detected at line 252
+Overfull \vbox (19.24997pt too high) detected at line 254
  []
 
 [29
@@ -920,7 +915,7 @@ Overfull \vbox (19.24997pt too high) detected at line 252
 File: Images/Screenshots/labelmaps.png Graphic file (type png)
 
 <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (19.24997pt too high) detected at line 252
+Overfull \vbox (19.24997pt too high) detected at line 254
  []
 
 [30
@@ -928,7 +923,7 @@ Overfull \vbox (19.24997pt too high) detected at line 252
 ]
 File: Images/Screenshots/labelmaps.png Graphic file (type png)
  <use Images/Screenshots/labelmaps.png>
-Overfull \vbox (19.24997pt too high) detected at line 252
+Overfull \vbox (19.24997pt too high) detected at line 254
  []
 
 [31
@@ -942,11 +937,11 @@ Overfull \vbox (19.24997pt too high) detected at line 252
 ] [35
 
 ]
-<Images/Screenshots/gauss_label_2.png, id=1366, 192.2382pt x 196.37pt>
+<Images/Screenshots/gauss_label_2.png, id=1375, 192.2382pt x 196.37pt>
 File: Images/Screenshots/gauss_label_2.png Graphic file (type png)
 
 <use Images/Screenshots/gauss_label_2.png>
-Overfull \vbox (4.96577pt too high) detected at line 285
+Overfull \vbox (4.96577pt too high) detected at line 287
  []
 
 [36
@@ -955,16 +950,16 @@ Overfull \vbox (4.96577pt too high) detected at line 285
 File: Images/Screenshots/gauss_label_2.png Graphic file (type png)
 
 <use Images/Screenshots/gauss_label_2.png>
-Overfull \vbox (4.96577pt too high) detected at line 285
+Overfull \vbox (4.96577pt too high) detected at line 287
  []
 
 [37
 
-] <Images/Screenshots/classdistribution.png, id=1440, 433.62pt x 226.3pt>
+] <Images/Screenshots/classdistribution.png, id=1449, 433.62pt x 226.3pt>
 File: Images/Screenshots/classdistribution.png Graphic file (type png)
 
 <use Images/Screenshots/classdistribution.png>
-Overfull \vbox (29.38379pt too high) detected at line 299
+Overfull \vbox (29.38379pt too high) detected at line 301
  []
 
 [38
@@ -973,7 +968,7 @@ Overfull \vbox (29.38379pt too high) detected at line 299
 File: Images/Screenshots/classdistribution.png Graphic file (type png)
 
 <use Images/Screenshots/classdistribution.png>
-Overfull \vbox (29.38379pt too high) detected at line 299
+Overfull \vbox (29.38379pt too high) detected at line 301
  []
 
 [39
@@ -983,7 +978,7 @@ Overfull \vbox (29.38379pt too high) detected at line 299
 ]
 File: Images/Screenshots/T1SagittalNotCorrected.png Graphic file (type png)
  <use Images/Screenshots/T1SagittalNotCorrected.png>
-Overfull \vbox (16.40186pt too high) detected at line 320
+Overfull \vbox (16.40186pt too high) detected at line 322
  []
 
 [41
@@ -991,7 +986,7 @@ Overfull \vbox (16.40186pt too high) detected at line 320
 ]
 File: Images/Screenshots/T1SagittalNotCorrected.png Graphic file (type png)
  <use Images/Screenshots/T1SagittalNotCorrected.png>
-Overfull \vbox (16.40186pt too high) detected at line 320
+Overfull \vbox (16.40186pt too high) detected at line 322
  []
 
 [42
@@ -999,7 +994,7 @@ Overfull \vbox (16.40186pt too high) detected at line 320
 ]
 File: Images/Graphics/previousalgo.png Graphic file (type png)
  <use Images/Graphics/previousalgo.png>
-Overfull \vbox (14.83095pt too high) detected at line 320
+Overfull \vbox (14.83095pt too high) detected at line 322
  []
 
 [43
@@ -1007,12 +1002,12 @@ Overfull \vbox (14.83095pt too high) detected at line 320
 ]
 File: Images/Graphics/previousalgo.png Graphic file (type png)
  <use Images/Graphics/previousalgo.png>
-Overfull \vbox (14.83095pt too high) detected at line 320
+Overfull \vbox (14.83095pt too high) detected at line 322
  []
 
 [44
 
-] <Images/Graphics/newalgo.png, id=1694, 1304.875pt x 401.5pt>
+] <Images/Graphics/newalgo.png, id=1703, 1304.875pt x 401.5pt>
 File: Images/Graphics/newalgo.png Graphic file (type png)
 
 <use Images/Graphics/newalgo.png> [45
@@ -1027,31 +1022,31 @@ File: Images/Graphics/newalgo.png Graphic file (type png)
  <use Images/Graphics/newalgo.png>
 [47
 
-] <Images/Screenshots/jointhistograms1.png, id=1804, 438.0pt x 221.2347pt>
+] <Images/Screenshots/jointhistograms1.png, id=1813, 438.0pt x 221.2347pt>
 File: Images/Screenshots/jointhistograms1.png Graphic file (type png)
 
 <use Images/Screenshots/jointhistograms1.png>
-Overfull \vbox (21.00002pt too high) detected at line 347
+Overfull \vbox (21.00002pt too high) detected at line 349
  []
 
 [48
 
  <./Images/Screenshots/jointhistograms1.png>]
-<Images/Screenshots/jointhistograms2.png, id=1842, 438.0pt x 221.2347pt>
+<Images/Screenshots/jointhistograms2.png, id=1851, 438.0pt x 221.2347pt>
 File: Images/Screenshots/jointhistograms2.png Graphic file (type png)
 
 <use Images/Screenshots/jointhistograms2.png>
-Overfull \vbox (21.00002pt too high) detected at line 359
+Overfull \vbox (21.00002pt too high) detected at line 361
  []
 
 [49
 
  <./Images/Screenshots/jointhistograms2.png (PNG copy)>]
-<Images/Screenshots/biasedunbiased.png, id=1879, 438.0pt x 221.2347pt>
+<Images/Screenshots/biasedunbiased.png, id=1888, 438.0pt x 221.2347pt>
 File: Images/Screenshots/biasedunbiased.png Graphic file (type png)
 
 <use Images/Screenshots/biasedunbiased.png>
-Overfull \vbox (5.27084pt too high) detected at line 370
+Overfull \vbox (5.27084pt too high) detected at line 372
  []
 
 [50
@@ -1059,18 +1054,24 @@ Overfull \vbox (5.27084pt too high) detected at line 370
  <./Images/Screenshots/biasedunbiased.png>] [51
 
 ]
-<Images/Screenshots/intensityNormalization.png, id=1952, 280.32pt x 244.09561pt
+<Images/Screenshots/intensityNormalization.png, id=1960, 280.32pt x 244.09561pt
 >
 File: Images/Screenshots/intensityNormalization.png Graphic file (type png)
  <use Images/Screenshots/intensityNormalization.png>
-Overfull \vbox (14.55711pt too high) detected at line 387
+Overfull \vbox (14.55711pt too high) detected at line 389
  []
 
 [52
 
  <./Images/Screenshots/intensityNormalization.png (PNG copy)>]
 (./Beamer-class-example4.toc)
-Overfull \vbox (21.19693pt too high) detected at line 403
+Overfull \vbox (21.19693pt too high) detected at line 408
+ []
+
+
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [53
@@ -1091,15 +1092,7 @@ es tissus[]
 
 [55
 
-] <Images/Screenshots/EMS_MANUAL_SAGITTAL.png, id=2112, 433.62pt x 511.0pt>
-File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
-
-<use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 446--446
-[][]  
- []
-
-
+]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1107,15 +1100,7 @@ es tissus[]
 
 [56
 
- <./Images/Screenshots/EMS_MANUAL_SAGITTAL.png>]
-File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
-
-<use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 446--446
-[][]  
- []
-
-
+]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1123,10 +1108,11 @@ es tissus[]
 
 [57
 
-]
+] <Images/Screenshots/EMS_MANUAL_SAGITTAL.png, id=2189, 433.62pt x 511.0pt>
 File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 446--446
+
+<use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 454--454
 [][]  
  []
 
@@ -1138,10 +1124,11 @@ es tissus[]
 
 [58
 
-]
+ <./Images/Screenshots/EMS_MANUAL_SAGITTAL.png>]
 File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 446--446
+
+<use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 454--454
 [][]  
  []
 
@@ -1154,6 +1141,13 @@ es tissus[]
 [59
 
 ]
+File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 454--454
+[][]  
+ []
+
+
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1162,6 +1156,13 @@ es tissus[]
 [60
 
 ]
+File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 454--454
+[][]  
+ []
+
+
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1170,11 +1171,9 @@ es tissus[]
 [61
 
 ]
-<Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png, id=2324, 433.62pt x 511.0pt>
-File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
-
-<use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 488--488
+File: Images/Screenshots/EMS_MANUAL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 454--454
 [][]  
  []
 
@@ -1186,15 +1185,7 @@ es tissus[]
 
 [62
 
- <./Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>]
-File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
-
-<use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 488--488
-[][]  
- []
-
-
+]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1203,13 +1194,6 @@ es tissus[]
 [63
 
 ]
-File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 488--488
-[][]  
- []
-
-
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1218,13 +1202,6 @@ es tissus[]
 [64
 
 ]
-File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 488--488
-[][]  
- []
-
-
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
 es tissus[]  
@@ -1234,72 +1211,143 @@ es tissus[]
 
 ]
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
- tissus  
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [66
 
 ]
+File: Images/Graphics/newalgo.png Graphic file (type png)
+ <use Images/Graphics/newalgo.png>
+Overfull \vbox (16.28542pt too high) detected at line 475
+ []
+
+
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
- tissus  
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [67
 
 ]
-<Images/Screenshots/EMS_C_LABEL_SAGITTAL.png, id=2535, 433.62pt x 511.0pt>
-File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
+<Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png, id=2542, 433.62pt x 511.0pt>
+File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
 
-<use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 531--531
+<use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 507--507
 [][]  
  []
 
 
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
- tissus  
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [68
 
- <./Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>]
-File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
+ <./Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>]
+File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
 
-<use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 531--531
+<use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 507--507
 [][]  
  []
 
 
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
- tissus  
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [69
 
 ]
-File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 531--531
+File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 507--507
 [][]  
  []
 
 
 Overfull \hbox (8.1416pt too wide) has occurred while \output is active
- \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
- tissus  
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
  []
 
 [70
 
 ]
+File: Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_C_MANUAL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 507--507
+[][]  
+ []
+
+
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ []\OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation d
+es tissus[]  
+ []
+
+[71
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[72
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[73
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[74
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[75
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[76
+
+]
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[77
+
+]
+<Images/Screenshots/EMS_C_LABEL_SAGITTAL.png, id=2893, 433.62pt x 511.0pt>
 File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
- <use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
-Overfull \hbox (19.34972pt too wide) in paragraph at lines 531--531
+
+<use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 557--557
 [][]  
  []
 
@@ -1309,13 +1357,75 @@ Overfull \hbox (8.1416pt too wide) has occurred while \output is active
  tissus  
  []
 
-[71
+[78
 
-] [72
+ <./Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>]
+File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
 
-] [73
+<use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 557--557
+[][]  
+ []
 
-] [74
+
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[79
+
+]
+File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 557--557
+[][]  
+ []
+
+
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[80
+
+]
+File: Images/Screenshots/EMS_C_LABEL_SAGITTAL.png Graphic file (type png)
+ <use Images/Screenshots/EMS_C_LABEL_SAGITTAL.png>
+Overfull \hbox (19.34972pt too wide) in paragraph at lines 557--557
+[][]  
+ []
+
+
+Overfull \hbox (8.1416pt too wide) has occurred while \output is active
+ \OT1/cmss/bx/n/6 Segmentation avec la nouvelle m^^Sethode d'initialisation des
+ tissus  
+ []
+
+[81
+
+] (./Beamer-class-example4.toc)
+Overfull \vbox (21.19693pt too high) detected at line 562
+ []
+
+[82
+
+] [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+] [88
+
+] [89
+
+] [90
 
 ]
 \tf@nav=\write6
@@ -1334,10 +1444,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 11857 strings out of 95086
- 216237 string characters out of 1183255
- 288881 words of memory out of 1500000
- 14525 multiletter control sequences out of 10000+50000
+ 11923 strings out of 95086
+ 217616 string characters out of 1183255
+ 288883 words of memory out of 1500000
+ 14557 multiletter control sequences out of 10000+50000
  11149 words of font info for 41 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
  41i,20n,63p,364b,1003s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -1346,9 +1456,9 @@ Here is how much of TeX's memory you used:
 1/bluesky/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmss8.
 pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmssbx10.pfb></usr/share/t
 exmf-texlive/fonts/type1/bluesky/cm/cmsy10.pfb>
-Output written on Beamer-class-example4.pdf (74 pages, 3227660 bytes).
+Output written on Beamer-class-example4.pdf (90 pages, 3404653 bytes).
 PDF statistics:
- 2828 PDF objects out of 2984 (max. 8388607)
- 164 named destinations out of 1000 (max. 131072)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3401 PDF objects out of 3580 (max. 8388607)
+ 196 named destinations out of 1000 (max. 131072)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 
