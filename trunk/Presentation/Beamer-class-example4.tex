@@ -128,10 +128,11 @@
 
 }
 
-\frame{\frametitle{Plan}\tableofcontents} 
 
 
-\section{Segmentation par expectation maximisation} 
+
+\section{Segmentation par expectation maximisation}
+\frame{\frametitle{Plan}\tableofcontents[currentsection]}  
 \subsection{Principe}
 \frame{\frametitle{Segmentation par expectation maximisation}Principe} 
 \frame{ \frametitle{La segmentation}
@@ -182,7 +183,7 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
 \frame{ \frametitle{R\'esum\'e de la segmentation par expectation-maximisation}
 \begin{center}
- \includegraphics[width=4cm]{Images/Graphics/EMSimple.png}
+ \includegraphics[width=3.5cm]{Images/Graphics/EMSimple.png}
  \end{center}
 }
 
@@ -220,9 +221,10 @@ $\Phi$ est initialis\'e par l'utilisateur.
  \end{center} 
 }
 
-\frame{\frametitle{Plan}\tableofcontents} 
+
 
 \section{Contributions} 
+\frame{\frametitle{Plan}\tableofcontents[currentsection]} 
 \subsection{Initialisation des tissus \`a segmenter}
 \frame{\frametitle{Contributions}Initialisation des tissus \`a segmenter} 
 \frame{\frametitle{Initialisation des tissus \`a segmenter}
@@ -400,15 +402,20 @@ $\Phi$ est initialis\'e par l'utilisateur.
 %\subsection{\'Evaluation des param\`etres hi\'erarchiques}
 %\frame{\frametitle{numbered lists with pause}}
 
-\frame{\frametitle{Plan}\tableofcontents} 
+
 
 \section{R\'esultats} 
+\frame{\frametitle{Plan}\tableofcontents[currentsection]} 
 \subsection{Segmentation sans contribution}
 \frame{\frametitle{R\'esultats}Segmentation sans contributions} 
 \frame{\frametitle{Segmentation sans contributions}
 
 \begin{block}{M\'ethode de tests} 
-
+  \begin{itemize}[<+->]  
+      \item Segmentation multi-canal
+      \item Suit un tutoriel
+      \item Images cibles contiennent des inhomog\'einit\'es d'intensit\'e
+    \end{itemize}
   \end{block}
 
 }
@@ -425,8 +432,9 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Point de vue de l'expert} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Mati\`ere grise surestim\'ee
+      \item Mauvaise segmentation
+      \item Inutilisable
     \end{itemize}
 
   \end{block}    
@@ -434,8 +442,8 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Discussion} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Mauvais recalage
+      \item Mauvaise distribution ds tissus
     \end{itemize}
 
   \end{block}    
@@ -451,7 +459,18 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
 \begin{block}{M\'ethode de tests} 
 
+\begin{itemize}[<+->]  
+      \item Segmentation multi-canal
+      \item Suit un tutoriel
+      \item Images cibles contiennent des inhomog\'einit\'es d'intensit\'e
+      \item Nouveau processus de segmentation
+    \end{itemize}
+
   \end{block}
+  
+          \begin{center}
+ \includegraphics<4>[width=10cm]{Images/Graphics/newalgo.png}
+ \end{center} 
 
 }
 
@@ -467,8 +486,8 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Point de vue de l'expert} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Erreurs de classification dans la zone de l'os
+      \item Effet de volume partiel
     \end{itemize}
 
   \end{block}    
@@ -476,8 +495,8 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Discussion} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Segementation meilleure
+      \item Probl\`eme li\'es \`a la segmentation de l'os peuvent \^etre r\'esolus
     \end{itemize}
 
   \end{block}    
@@ -493,6 +512,13 @@ $\Phi$ est initialis\'e par l'utilisateur.
 \frame{\frametitle{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}
 
 \begin{block}{M\'ethode de tests} 
+\begin{itemize}[<+->]  
+      \item Segmentation multi-canal
+      \item Suit un tutoriel
+      \item Images cibles contiennent des inhomog\'einit\'es d'intensit\'e
+      \item Nouveau processus de segmentation
+      \item Initialisation des tissus par Labelmap
+    \end{itemize}
 
   \end{block}
 
@@ -510,8 +536,8 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Point de vue de l'expert} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Os mieux segment\'e
+      \item Sous estimation de la mati\`ere blanche dans le cerebulum
     \end{itemize}
 
   \end{block}    
@@ -519,8 +545,8 @@ $\Phi$ est initialis\'e par l'utilisateur.
   \begin{block}{Discussion} 
   
     \begin{itemize}[<+->]
-      \item IRM c\'er\'ebrale
-      \item Nombre important de donn\'ees
+      \item Meilleure distribution des tissus, et notament de l'os
+      \item Segmentation du cerebulum, probl\`eme complexe
     \end{itemize}
 
   \end{block}    
@@ -530,13 +556,37 @@ $\Phi$ est initialis\'e par l'utilisateur.
 
 }
 
+
+
 \section{Perspectives}
+\frame{\frametitle{Plan}\tableofcontents[currentsection]} 
+\frame{\frametitle{Perspectives}Perspectives} 
 \frame{\frametitle{Perspectives}
+
+  \begin{block}{Priorit\'es} 
+  
+    \begin{itemize}[<+->]
+      \item Faire des efforts au niveau des algorithmes
+      \item Am\'eliorer la vitesse de l'agorithme d'EM segmenation
+      \item Am\'eliorer la vitesse de l'algorithme de correction du biais
+    \end{itemize}
+
+  \end{block}   
 
 }
 
 \section{Conclusion}
 \frame{\frametitle{Conclusion}
+
+  \begin{block}{} 
+  
+    \begin{itemize}[<+->]
+      \item Pr\'esentation d'un nouveau processus de segmentation
+      \item R\'esultats int\'eressants
+      \item Vitesse de traitement doit \^etre am\'elior\'ee
+    \end{itemize}
+
+  \end{block}  
 
 }
 

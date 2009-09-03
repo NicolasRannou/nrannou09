@@ -1,16 +1,16 @@
 \beamer@endinputifotherversion {3.07pt}
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Segmentation par expectation maximisation}{12}{0}{2}
+\beamer@sectionintoc {2}{Segmentation par expectation maximisation}{11}{0}{2}
 \beamer@subsectionintoc {2}{1}{Principe}{12}{0}{2}
 \beamer@subsectionintoc {2}{2}{EM segmentation dans Slicer 3}{19}{0}{2}
-\beamer@sectionintoc {3}{Contributions}{26}{0}{3}
+\beamer@sectionintoc {3}{Contributions}{25}{0}{3}
 \beamer@subsectionintoc {3}{1}{Initialisation des tissus \`a segmenter}{26}{0}{3}
 \beamer@subsectionintoc {3}{2}{\'Evaluation de la s\'election des tissus}{34}{0}{3}
 \beamer@subsectionintoc {3}{3}{Correction des inhomog\'einit\'es d'intensit\'e}{40}{0}{3}
 \beamer@subsectionintoc {3}{4}{\'Evaluation du param\`etre de normalisation}{51}{0}{3}
-\beamer@sectionintoc {4}{R\'esultats}{54}{0}{4}
+\beamer@sectionintoc {4}{R\'esultats}{53}{0}{4}
 \beamer@subsectionintoc {4}{1}{Segmentation sans contribution}{54}{0}{4}
-\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{60}{0}{4}
-\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{66}{0}{4}
-\beamer@sectionintoc {5}{Perspectives}{72}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{73}{0}{6}
+\beamer@subsectionintoc {4}{2}{Segmentation apr\`es correction des inhomog\'einit\'es d'intensit\'e}{63}{0}{4}
+\beamer@subsectionintoc {4}{3}{Segmentation avec la nouvelle m\'ethode d'initialisation des tissus}{72}{0}{4}
+\beamer@sectionintoc {5}{Perspectives}{82}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{87}{0}{6}
